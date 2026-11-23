@@ -12,7 +12,7 @@ description: Enforce the user's locked marco.tex and source-specific Beamer conv
 - Preserve commands: `\\NextLine`, `\\NextHalfLine`, `\\RemoveLine`, `\\figureLocation`, `\\refLocation`, `\\textFont`, `\\rightNote`, and custom theorem/column settings.
 ## Slide conventions seen in LSCM_intro
 - 10pt handout; title + outline + section navigation; descriptive short frame titles, `\\textsc{}` subheadings, emphasized alert/blue keywords, large white canvas, small source annotation, end bibliography.
-- Current lecture has `\\note{}` in every active frame with `Purpose`, `Leading Question`, and itemized script; preserve and improve depth as needed.
+- Current lecture must have `\\note{}` in every active frame with `Purpose`, `Leading Question`, and itemized script; preserve and improve depth as needed.
 - Overlays `\\only`, `\\uncover`, and `\\item<...>` are purposeful; compare handout versus presentation differently.
 - Figures use relative paths via `\\figureLocation{}` and existing image assets; never substitute generated images without permission.
 ## Context-specific warning
