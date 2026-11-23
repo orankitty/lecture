@@ -1,0 +1,1204 @@
+% ###################
+% ## Filename: lsCM_intro.tex
+% ## Location: D:\Project\Prej_Teaching\ISE\SupplyChainMgt\presentation\scm_01_intro
+% ## Created: Dec 1, 2010
+% ## Last updated: June 13, 2024
+% ## Figure Location: ..\Figures\
+% ## Note: Presentation, Teaching
+% ###################5
+
+%\documentclass[10pt,presentation]{beamer}
+\documentclass[10pt,handout]{beamer}
+%\documentclass[10pt,handout,notes=show]{beamer}
+
+%============================================================================================================--
+\input{../marco.tex}
+\title[LSCM v3.0]{Lecture 01:\\ Introduction to Course }
+\hypersetup{
+  pdftitle={01 Introduction to Course },
+  pdfsubject={2104509lscm & 2184408scm handout},
+  pdfproducer={XeLatex/WinEdt},
+  pdfcreator={oran.k@chula.ac.th}
+}
+
+%============================================================================================================--
+%\usebackgroundtemplate{%
+%\hskip-5pt \tikz\node[opacity=0.7] { \includegraphics[height=\paperheight]{../../../bg.png}};}
+%============================================================================================================--
+\begin{document}
+%\fontspec[BoldFont={TH Sarabun New Bold:script=thai}]{TH Sarabun New:script=thai}
+%============================================================================================================--
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Orient both sections to the course and introduce a shared supply-chain question.\\
+    \textbf{Leading Question:} What has to happen before an online order can reach you?\\
+    \textbf{Teaching cue:} Collect two answers, then group them as physical work, information, or payment. Return to the same order when introducing the flows.\par
+    \begin{itemize}
+      \item \textbf{intro} welcome 2184408/2104507 Logistics and Supply Chain Management, an elective class
+      \item \textbf{class structure} intro2SCM as extension of OM with case + current event based analysis
+      \item \textbf{OKC's disclaimer} review some theory and application, not all subjects in LSCM
+      \item \textbf{for UnderGrad.Stud} integrate your IE knowledge (OM, Intro2Manuf, management--case study)
+      \item \textbf{for Grad.Stud:} an intro to WHS, INV, TRANS, IT
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+%\usebackgroundtemplate{%
+%\tikz\node[opacity=0.5] {\includegraphics[width=\paperwidth]{../../../bg2.png}};}
+%============================================================================================================--
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \tableofcontents
+
+  \vfill
+  \begin{flushright}
+    \tiny{\textbf{General Reference:} \cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply} } \hskip3ex
+  \end{flushright}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Preview the path from course agreements to supply-chain decisions and terminology.\\
+    \textbf{Leading Question:} Which part of the outline will help explain a product arriving late?\\
+    \textbf{Teaching cue:} Take one prediction now and use it again in the closing terminology discussion. Connect the concept, example, and decision in that order.\par
+    \begin{itemize}
+      \item \textbf{Before class:} agreement, grading policy, and expectations
+      \item \textbf{LSCM101:} what is SCM, water and cloth SCM example, why IE must know (viewing process and material flow)
+      \item \textbf{SCM and ME:} important and motivation of LSCM, key concept, SCM now and how it relates to our life
+      \item \textbf{Terminology:} important terms \& scope, and original of "Supply Chain Managment"
+      \item \textbf{Ref:} ~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\section[Syllabus \& Rules]{Before Class: Contact Information, Syllabus, Roles and Agreement}
+%==============================================================================================================
+\begin{frame}
+  \frametitle{2184408 Syllabus: Before we start}
+
+  \textsc{Course Description}
+  \begin{flushleft} \small{
+    Definition of supply chain; \code{coordination difficulties}; \alert{pitfalls and opportunities in SCM}; \alert{inventory/ service level tradeoffs}; performance measurement and incentive; extensive SCM; mass customization; supplier management; \code{design and redesign of products and process for SCM}; analytical tools; \alert{industrial applications}; current industry initiatives.}
+  \end{flushleft}
+
+  \NextLine
+  \textsc{Objective}
+  \begin{tabular}{ll}
+  \begin{minipage}{0.30\textwidth}
+    \includegraphics[width=\textwidth]{\figureLocation{../../../learning.png}}
+  \end{minipage}
+  &
+  \begin{minipage}{0.65\textwidth}
+    \hskip-15pt \vskip-15pt
+    \begin{itemize}
+      \item Understanding concepts and issues in SCM, including \alert{trade-off, coordination, and recent developments} \hfill \textbf{[a]}
+      \item Noticing concurrent SCM topics and issues occurred in a \alert{business}  \hfill\textbf{[g]}
+      \item Applying \alert{analytical skill/technique} to improve logistic and SC \hfill\textbf{[b]}
+    \end{itemize}
+  \end{minipage}
+  \end{tabular}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Connect the official 2184408 objectives to the kinds of decisions students will practice.\\
+    \textbf{Leading Question:} Which objective would help you explain an inventory and service-level trade-off?\\
+    \textbf{Teaching cue:} Use a retailer deciding how much backup inventory to carry. Ask for one service measure and one cost measure. Keep official objective wording on the slide.\par
+    \begin{itemize}
+      \item \textbf{Aware:} tradeoffs, activities, drivers, terms, current issues
+      \item \textbf{Identify:} read/listen complex case study and link them with SCM topics
+      \item \textbf{Apply:} use \alert{MS Excel} to analysis and decide based on SCM concepts
+      \item \textbf{ABET Outcomes:}
+      \begin{itemize}
+        \item[a] Knowledge of Mathematics, Science and Engineering
+        \item[b] Engineering design that meet requirement, eco
+        \item[c] communicate
+        \item[d] recognize ethical and professional
+        \item[e] team work
+        \item[f] conduct experiment and interpreted data
+        \item[g] acquire and apply new knowledge as needed
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+%==============================================================================================================
+\begin{frame}
+  \frametitle{2104507 Syllabus: Before we start}
+
+  \textsc{Course Description}
+  \begin{flushleft} \small{
+    Definition of logistics and SCM; \code{distribution network design}; \alert{distribution strategies}; production-inventory models; transportation design; \code{coordination} and \alert{information technology}; \alert{international issues} }
+  \end{flushleft}
+
+  \NextLine
+  \textsc{Objective}
+  \begin{tabular}{ll}
+  \begin{minipage}{0.30\textwidth}
+    \includegraphics[width=\textwidth]{\figureLocation{../../../learning.png}}
+  \end{minipage}
+  &
+  \begin{minipage}{0.65\textwidth}
+    \hskip-15pt \vskip-15pt
+    \begin{itemize}
+      \item Aware of concepts and issues in logistics and SCM, i.e. \alert{trade-off \& recent development} \hfill \textbf{[a]}
+      \item Applying \alert{analytical skill/technique} to improve logistic and SCM  \hfill\textbf{[b]}
+      \item Analyzing problems in occurred in a \alert{case studies} and suggest reasonable improvements \hfill\textbf{[d]}
+    \end{itemize}
+  \end{minipage}
+  \end{tabular}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Connect the official 2104507 objectives to distribution and logistics design.\\
+    \textbf{Leading Question:} If a retailer can choose a central warehouse or several regional warehouses, what should it compare?\\
+    \textbf{Teaching cue:} Elicit delivery lead time, inventory, and transportation or facility cost. Relate the comparison to the stated analytical and case objectives.\par
+    \begin{itemize}
+      \item \textbf{Aware:} tradeoffs, activities, drivers, terms, current issues, development
+      \item \textbf{Identify:} read/listen complex case study and link them with SCM topics
+      \item \textbf{Apply:} use \alert{MS Excel} to analysis and decide based on SCM concepts
+      \item \textbf{ABET Outcomes:}
+      \begin{itemize}
+        \item[a] Knowledge of Mathematics, Science and Engineering
+        \item[b] Engineering design that meet requirement, economic
+        \item[c] communicate
+        \item[d] recognize ethical and professional
+        \item[e] team work
+        \item[f] conduct experiment and interpreted data
+        \item[g] acquire and apply new knowledge as needed
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Contact information}
+
+  \begin{tabular}{ll}
+    \textbf{Name:}   & Oran Kittithreerapronchai, PhD \\
+    \textbf{Office:} & Room 603, Engineering Building 4 \\
+    \textbf{Office Hour:} & After class or by appointment\\
+    \textbf{Email:} &\href{mailto:orankitti@gmail.com}{oran.k@chula.ac.th}\\
+    \textbf{Tel:} & 02-218-7881\\
+    \textbf{LMS:} & CourseVille  \\
+    \textbf{WWW:} & \href{https://sites.google.com/site/oranclasses}{\code{https://sites.google.com/site/oranclasses}} \\
+                  & \href{http://ie.eng.chula.ac.th/~oran/index.html}{\code{http://ie.eng.chula.ac.th/\~ \ oran}}
+  \end{tabular}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Show students where to find contact information and class materials.\\
+    \textbf{Leading Question:} Where would you look first for an assignment update?\\
+    \textbf{Teaching cue:} Point students to the listed course platform. Confirm the intended email link before sharing an updated course handout.\par
+    \begin{itemize}
+      \item \textbf{presentation:} full slides with animation (many slides in a single page)
+      \item \textbf{handout:} student can download handout from class website; student handout $\approx$ 85\% teaching presentation. Some parts are left out (and difference from presentation) for keeping attention and explain step by step
+      \item \textbf{reading materials:} copyright materials, hand in class, youtube (courseville)
+      \item \textbf{note:} If student needs time to copy down, let the lecturer knows
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Grading policy}
+
+  \textsc{Marking:} \\
+  \begin{center}
+  \begin{tabular}{lrrc} \hline
+    Item                    & ~~Option 1~~           & ~~Option 2~~             \\ \hline
+    $\bullet$ Homework                & 2 $\times\ \checkmark$ & 2 $\times\mbox{ avail.}$ \\
+    $\bullet$ Case Study              & 2 $\times\ \checkmark$ & 1 $\times\ \checkmark$   \\
+    $\bullet$ Participation \code{or} & $\checkmark$           &                          \\
+    \hskip1em Field Trip Report \code{or}    &                       &          \\
+    \hskip1em Quiz          \\
+    $\bullet$ Midterm exam            & $\checkmark$           & $\checkmark$             \\
+    $\bullet$ Final exam              &                        & $\checkmark$             \\ \hline
+  \end{tabular}
+  \end{center}
+  \textbf{Note:} see OKC proposal and its percentage in myCourseVille
+
+
+  \NextLine
+  \textsc{Grading and Scores}
+  \begin{itemize}
+    \item[] \hskip2em \textbf{85 and above:} final grade id \alert{definitely} 'A'
+    \item[] \hskip2em  \textbf{between 50 and 85:} A, $\mbox{B}^{+}$, B, $\mbox{C}^{+}, \ \ldots\ , \mbox{D}$
+    \item[] \hskip2em  \textbf{50 and below:} final grade is \alert{possibly} 'F'
+  \end{itemize}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Help students read the assessment table and identify the official source of details.\\
+    \textbf{Leading Question:} Where can you check assessment weights or clarify an ambiguous cutoff?\\
+    \textbf{Teaching cue:} Point to the published course grading details. Walk through one row under each option using the displayed policy and confirm boundary cases with the instructor.\par
+    \begin{itemize}
+      \item \textbf{Team:} team leader who contact to me $\rightarrow$ tell who works and who doesn't
+      \item \textbf{Exam:} if you work hard or project
+      \item \textbf{Option 1:} for regular class (Mon-Fri)
+      \item \textbf{Option 2:} for executive class (Sat-Sun)
+      \item \textbf{Homework:} examples in lecture are easy, but homework will be more difficult
+      \item \textbf{Note} Exams will be pretty much the same as Homework;
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Class rules and agreements}
+
+  \begin{itemize}
+    \item No point for class attendance
+    \item Don't interrupt others
+    \item Be responsible, esp. meeting time and assignment
+    \item If 25+\% students has conflict $\rightarrow$ MS Team online
+    \item 10 minutes before class to review \& participate
+    \item Participate during class; this is \alert{elective level} course
+    \item Participate points will be \alert{awarded in group} or \alert{whole class}
+  \end{itemize}
+
+  \NextHalfLine
+  \uncover<2->{
+  \begin{alertblock}{}{}
+    \begin{itemize}
+      \item Exams are designed to test student \alert{basic knowledge} of the course:
+      \begin{itemize}
+        \item in-class workshop
+        \item unmarked homework
+        \item presentation of case study
+      \end{itemize}
+    \end{itemize}
+  \end{alertblock}
+  }
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Set expectations for participation and use the listed workshop activities to explain exam preparation.\\
+    \textbf{Leading Question:} What can you do before class to take part in a group discussion?\\
+    \textbf{Teaching cue:} Ask for a concrete action such as reviewing the last example or bringing a question. Direct policy questions to the current course guidance.\par
+    \begin{itemize}
+      \item \textbf{Attendance:} easy subject, you can read from textbooks, youtube, talk
+      \item \textbf{Field Trip:} exercise for project
+      \item \textbf{Interrupt:} no cell, chat, late
+      \item \textbf{Participation:} shared experiences, have some goals in this class
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Code of honors}
+
+  \uncover<2->{
+    \begin{block}{\small{ChatGPT Policy: AI = \textbf{\alert{tools}} + emerging skill}}{}
+      \textbf{warning:} do not trust AI (inherently bias); user must be \alert{\textbf{responsible}}; any use must be clarified
+    \end{block}
+  }
+
+  \NextHalfLine
+  \begin{itemize}
+    \item Education must do with ethic standards and social responsibilities
+    \item Trust is integral and essential parts of learning process
+    \item Self-discipline is necessity for development
+    \item Dishonesty hurts the entire community (student, employer, TA)
+  \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{adapted from:} Georgia Institute of Technology --The Honor Code\hskip10em}\\
+  \end{flushright}
+
+  \begin{alertblock}{}{}
+    Any violation to code of honors will \alert{severely punished}, especially cheating and plagiarism
+  \end{alertblock}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Introduce the course honor and AI policies as displayed.\\
+    \textbf{Leading Question:} What makes a solution traceable when a tool helped you prepare it?\\
+    \textbf{Teaching cue:} Ask for an example of checking an output and identifying assistance. Use the published course policy to resolve what must be disclosed for a given assignment.\par
+    \begin{itemize}
+      \item \textbf{over-all:} yet many students violated and be punished; last warning
+      \item \textbf{points:} we will not check you, but if you get caught you will regret either to cheat or to take this class
+      \item[] \hskip3em If you think that you have many classes and too busy for assignments of this class, this is not a right class for you
+      \item \textbf{Frequency:} every year (copy from wikia or web); using chartGPT
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Textbook and references}
+
+  \textbf{Textbook}
+  \begin{flushleft}\small{
+  \begin{description}
+    \item[\cite{chopra2007supply}] \hskip2em Chopra, S. and Meindl, P. 2001. \emph{Supply chain management: Strategy, Planning and Operation}. Prentice Hall. New Jersey.
+    \item[\cite{levi2003designing}] \hskip2em Simchi-Levi, D. \emph{et. al.} 2001. \emph{Designing \& Managing the Supply Chain: Concepts, Strategies, and Cases}. McGraw-Hill, New York.
+  \end{description}
+
+  \NextLine
+  \textbf{Misc.}
+  \begin{description}
+    \item[\cite{goetschalckx2011supply}]  \hskip2em Goetschalckx, M. 2011. \emph{Supply Chain Engineering}, Springer, Boston
+    \item[\cite{ballou2007evolution}] \hskip2em Ballou, R. 2004. \emph{Business Logistics/ Supply Chain Management}. Prentice Hall. New Jersey.
+    \item[\cite{jacobs2010operations} ] \hskip2em Jacob, R. and Chase, R. 2010. \emph{Operation and Supply Management: The Core}. McGraw-Hill, New York.
+  \end{description}   }
+  \end{flushleft}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Distinguish the course textbooks from supporting references and show how to find the cited work.\\
+    \textbf{Leading Question:} Which source would you consult for a worked example of a supply-chain decision?\\
+    \textbf{Teaching cue:} Point students to a textbook entry, then show how the reference key matches the bibliography. Check editions and publishers against the original records before assigning pages.\par
+    \begin{itemize}
+      \item \textbf{no textbook:} mixed between business and engineering based on US business/company
+      \item \textbf{Suggestion}
+      \item[] \hskip3em $\bullet$ if you come across an unknown company, you must find it.
+      \item[] \hskip3em $\bullet$ wikipidia is a good source, but never use wiki for term paper
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\section[LSCM 101]{Fundamental of Logistics \& Supply Chain Management}
+%================================================================================================-
+\begin{frame}
+  \frametitle{What do you know about SCM?}
+
+  Supply Chain Management (SCM) is:
+  \begin{itemize}
+      \item \alert{recent/fresh} and \alert{well paid} area of study
+      \item \alert{around us} and the \alert{dynamic} topic
+      \item \alert{strategic} importance and matter to \alert{processes}
+  \end{itemize}
+
+  \NextLine
+  \textsc{\textbf{SCM and I}}
+  \begin{itemize}
+    \item How does SCM relate to your \alert{living} and \alert{fields of study}?
+    \item How does SCM impacts \alert{cost} and \alert{availability}?
+  \end{itemize}
+
+  \NextLine
+  \textsc{\textbf{Mis-Concept?}}
+  \begin{itemize}
+    \item SCM $\rightarrow\!\!\!\!\!?$ Cost reduction \& Investment in IT
+    \item SCM is for modern trade \alert{retailers} \& large \alert{manufacturers}
+    \item Logistics $=\!\!\!?$ Supply Chain $=\!\!\!?$ Value Chain
+  \end{itemize}
+
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Elicit assumptions about SCM before introducing a common worked example.\\
+    \textbf{Leading Question:} If a low-cost supplier delivers late, which supply-chain outcomes could change?\\
+    \textbf{Teaching cue:} Capture inventory, availability, and expedited freight. Ask which party experiences each effect and revisit the answers after the shirt example.\par
+    \begin{itemize}
+      \item \textbf{New?: no quite:} is 40-yrs multi-disciplinary; but has a root back in 5000 (great pyramid)
+      \item[] \textbf{SCM \& I: relate fields}
+      \begin{itemize}
+        \item \textbf{Business:} accounting, financial, marketing, administrative
+        \item \textbf{Politic:} national security, foreign investment, industry policy
+        \item \textbf{Economic:} trade-block/trade partner, FTA
+        \item \textbf{Construction:} infrastructure, mode of transportation
+        \item \textbf{Computer:} ERP, eCommerce, data, contents, technology
+        \item \textbf{Misc:} energy, industrial standard, laws/regulation
+      \end{itemize}
+      \item Scopes of SCM $\in\!\!\!?$ OM (e.g., inventory, warehouse, distribution)
+      \item why IE needs to know SCM $\rightarrow$ transportation, production, planning, inventory
+      \item \textbf{Mis-Concept}
+      \item SC helps responsiveness as \alert{customer service} increases
+      \item U.S. industry consultant in the early 1980s was coined by Keith Oliver, a Booz Allen Hamilton
+    \end{itemize}
+  }
+\end{frame}
+
+%%============================================================================================================--
+\begin{frame}
+  \frametitle{Example of SCM: Shirts Supply Chain}
+
+  \begin{center}
+    \only<1|handout:0>{\includegraphics[height=0.65\textheight]{\figureLocation{scm_intro/LiFungCountry.png}} }
+    \only<2|handout:0>{\includegraphics[height=0.65\textheight]{\figureLocation{scm_intro/clothingSC.png}} }
+    \only<3|handout:0>{\includegraphics[height=0.65\textheight]{\figureLocation{scm_intro/HowtoMadeAshirt.png}} }
+    \only<4->{ \includegraphics[height=0.65\textheight]{\figureLocation{scm_intro/shirtRelatedIndustry.png}} }
+  \end{center}
+
+  \begin{center}
+  \begin{tikzpicture}[xscale=4,yscale=2]
+    \tikzstyle{block}=[rectangle,draw=black!80,thick,fill=blue!25,text centered,text width=15mm,text height=3mm];
+
+    \node[block](manuf)        at (0.0,0) {\scriptsize{Manufacturer}};
+    \node[block](distr)        at (0.5,0) {\scriptsize{Distributor}};
+    \node[block](retail)       at (1.0,0) {\scriptsize{Retailer}};
+    \node[block](cust)         at (1.5,0) {\scriptsize{Customer}};
+
+    \draw[->,thick] (manuf) edge node[blue, below=0.5cm] {\footnotesize{\$20.45}} (distr);
+    \draw[->,thick] (distr) edge node[blue, below=0.5cm] {\footnotesize{\$41.34}} (retail);
+    \draw[->,thick] (retail) edge node[blue, below=0.5cm] {\footnotesize{\$52.72}} (cust);
+  \end{tikzpicture}
+  \end{center}
+
+  \RemoveHalfLine
+  \begin{flushright}
+    \tiny{\textbf{source:} Operations and supply management. 2010~\cite{jacobs2010operations} \hskip10em} \\
+  \end{flushright}
+
+  %%%-------
+  \note{
+    \textbf{Purpose:} Trace product movement and transaction prices through a familiar multistage chain.\\
+    \textbf{Leading Question:} What can we infer from the three prices, and what costs would we need to estimate profit?\\
+    \textbf{Teaching cue:} The distributor price spread is \$20.89 and the retailer price spread is \$11.38. Ask students to name operating costs before interpreting either spread as profit.\par
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/clothingSC.png}} &
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/HowtoMadeAshirt.png}}
+    \end{tabular}
+    \begin{itemize}
+      \item why do we need many parties/countries/industries?
+      \item how many company/ people involve and communicate?
+      \item what are common goal of stakeholder?
+    \end{itemize}
+  }
+\end{frame}
+
+%%%================================================================================================-
+\begin{frame}
+  \frametitle{What is a Supply Chain?}
+
+  \begin{alertblock}{}{}
+  A supply chain is a network of organizations connected by flows of \alert{products or services}, \alert{information}, and \alert{funds}.
+  \end{alertblock}
+
+  \NextLine
+  \begin{center}\small{
+    \begin{tabular}{l|rr} \hline
+                              & Upstream  & Downstream \\ \hline
+    \textbf{Materials:}   & returns for repair or recovery & materials, finished goods   \\
+    \textbf{Information:} & orders, demand signals          & availability, delivery status  \\
+    \textbf{Funds:}       & customer payments              & refunds\\ \hline
+    \end{tabular} }
+  \end{center}
+
+  \NextLine
+  \begin{block}{\small{Still hesitate, 2104507 Log \& SCM answers} }{}
+    \begin{itemize}
+      \item Why and how do we manufacture \& move products/services $\rightarrow$ logistics?
+      \item How to understand, analyze, and improve the logistics of \alert{company}?
+      \item What are \alert{better ways} and concurrent trends in SCM ?
+      %\item \textbf{Economics:} economy of scales,  JIT, Tax (ChipAct)
+      %\item \textbf{Geographic} raw material, markets, resources, practice (law \& accounting )
+      %\item \textbf{Proprietary & Environment:} tech (decaf cafee),  R\&D, hazard
+    \end{itemize}
+
+  \end{block}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Distinguish the network from its material, information, and financial flows.\\
+    \textbf{Leading Question:} When a customer returns a shirt for a refund, which flows move in each direction?\\
+    \textbf{Teaching cue:} Trace the item to the retailer, the refund to the customer, and return authorization in both directions. RM, WIP, and FG mean raw materials, work in process, and finished goods.\par
+    \begin{itemize}
+      \item Connected by transportation and storage activities
+      \item Integrated through information, planning, and integration activities
+      \item Trade-Off: Cost \textsc{VS} service levels \textsc{VS} Sustainability
+      \item \textbf{Product design:} shorten life cycle (cell phone), every products
+      \item \textbf{Service:} price, quality, efficiency are given $\rightarrow$ \alert{responsiveness}
+      \item \textbf{Trade:} trade agreement, globalization, communication
+      \item \textbf{Communication:} many parties and more complex ~~solved with IT
+      \item \textbf{Marketing:} pressure of price, product differentiation
+      \item \textbf{Channel:} power of consumer, emerge of modern trade
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\section[SCM \& me]{Why should engineers study Supply Chain Management?}
+%============================================================================================================--
+\begin{frame}[label=why_care]
+  \frametitle{Why care? What do you think about SCM? }
+
+  \begin{alertblock}{}{}
+     Always needs for a better way to \alert{moving/transforming} products/services [money/info] from raw materials/ideas to consumers \hfill \hyperlink{trade}{\beamerbutton{Pg:Trade}}
+  \end{alertblock}
+
+  \NextLine
+  \textsc{Importance of supply chain}
+  \begin{itemize}
+    \item SCM covers every \alert{products/ service} and impacts \alert{cost} and \alert{availability}
+    \item SCM is important to \alert{strategy} and \alert{value creation}
+    \item SCM involves \alert{many parties} and becomes ever increasing \alert{complex}
+  \end{itemize}
+
+  \NextLine
+  \textsc{Why SCM interested?}
+  \begin{itemize}
+    \item<2-> \textbf{Power:} globalization, decoupling, \alert{competition} \hfill \hyperlink{stat}{\beamerbutton{Pg:Ranking}}
+    \item<2-> \textbf{Facet:} connected many topics, conflicting objective, \alert{technology} \hfill  \hyperlink{multiDis}{\beamerbutton{Pg:Integration}}
+    \item<2-> \textbf{Dynamic:} strategy-operation, perspective, X-change practice       \hfill  \hyperlink{dynamics}{\beamerbutton{Pg:Eval factor}}
+  \end{itemize}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Connect SCM decisions to total cost, product availability, and conflicting objectives.\\
+    \textbf{Leading Question:} Why might shipping a full truck improve one metric while worsening another?\\
+    \textbf{Teaching cue:} Compare freight cost per unit with time spent waiting to accumulate a load. Ask which party owns the resulting service delay.\par
+    \includegraphics[width=0.40\textwidth]{\figureLocation{scm_intro/conflictObjective.png}}
+    \begin{itemize}
+      \item \textbf{OKC:} second nature, theme that tight every interests (history, computer, machine, warehouse)
+      \item \textbf{Other:} execute to increase price, no product, poor economy
+      \item \textbf{covered products/service} cannot produce, by need to consume
+      \item \textbf{covered strategy/ value creation:} $\in$ business canvas,
+      \item \textbf{many party:} invisible hand; 3$^{rd}$ party as solution
+      \item for OKC: second nature
+      \begin{itemize}
+        \item story of development $\subseteq$ history of \alert{civilization} and modernization
+        \item \alert{economy:} invisible hand  $\propto$ \alert{cost} and \alert{availability}
+        \item most of \alert{news} $\in$ geo-politic, finance, opportunity, technology, etc
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}[label=trade]
+  \frametitle{Reasons for globalization \forIE}
+
+  \begin{center} \footnotesize{
+  \textbf{Local consumption}\\
+  \begin{tabular}{lrrr} \hline
+    Consumer in   & Suit   &  Software    & Total \\ \hline
+    Thailand      & \$250  &  \$500       & \$750 \\
+    USA           & \$500  &  \$200       & \$700 \\ \hline
+  \end{tabular}
+
+  \uncover<2->{
+  \NextLine
+  \textbf{Global consumption}\\
+  \begin{tabular}{lrrr} \hline
+    Consumer in   & Suit   &  Software    & Total \\ \hline
+    Thailand      & \$250  &  \$250       & \$500 \\
+    USA           & \$300  &  \$200       & \$500 \\ \hline
+  \end{tabular}
+  } \\
+  \textbf{Note:} Import prices include \$50 of transport per imported item. \hfill
+  }
+  \end{center}
+
+
+  \NextLine
+  \textbf{Is this good idea? Why not?}
+  \begin{itemize}
+    \item<3-> Political pressure e.g., local sourcing, growing industry
+    \item<3-> Inefficient market e.g., under crisis
+  \end{itemize}
+
+  \hfill \hyperlink{why_care}{\beamerbutton{Pg:Why care}}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Compare the two consumption scenarios and identify the cost assumptions behind the savings.\\
+    \textbf{Leading Question:} How much does each country save, and what happens if import cost rises?\\
+    \textbf{Teaching cue:} Thailand saves \$250 and the USA saves \$200, for \$450 combined. Under the example assumptions, the import cost can rise from \$50 to \$300 for software or to \$250 for the suit before the corresponding savings reach zero.\par
+    \begin{itemize}
+      \item \textbf{Common:} historically, production area and consumption area are same, but with trade/transportation they become different
+      \item \textbf{Conflict of interest:} what good for country may not be good for the world
+      \item \textbf{Responsibility:} Wal-Mart on illegal immigrant, sexism, imbalance trade
+      \item \textbf{Trade as political tool:}
+    \end{itemize}
+
+ }
+ \end{frame}
+
+%============================================================================================================--
+\begin{frame}[label=stat]
+  \frametitle{Logistics/SCM and Economy? \forIE}
+
+  \begin{center}
+    \only<1|handout:1>{ \includegraphics [width=0.70\textwidth]{\figureLocation{scm_intro/LogisticVsGDP1.png}} \\ \includegraphics [width=0.40\textwidth]{\figureLocation{scm_intro/LogisticVsGDP2.png}} }
+    \only<2|handout:0>{ \includegraphics [width=0.70\textwidth]{\figureLocation{scm_intro/worldLogisticPerGDP.png}} }
+    \only<3-|handout:0>{\includegraphics [width=0.70\textwidth]{\figureLocation{scm_intro/workBank2014.png}} }
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Designing and managing the supply chain. 2003~\cite{levi2003designing} \hskip10em \\
+    Martin Christopher, 2011~\cite{christopher2016logistics} \hskip10em}\\
+  \end{flushright}
+  \hfill \hyperlink{why_care}{\beamerbutton{Pg:Why care}}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Interpret dated logistics-cost figures and examine what a comparison needs to establish.\\
+    \textbf{Leading Question:} What should we check before comparing two countries on logistics cost as a share of GDP?\\
+    \textbf{Teaching cue:} Ask for the observation year, the numerator and denominator, and whether data use the same definition. Treat the charts as historical illustrations.\par
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/worldLogisticPerGDP.png}} &
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/workBank2014.png}}
+    \end{tabular}
+    \begin{itemize}
+      \item \textbf{Main:} Global Event and effects on SCM
+      \item \textbf{Fact:} Thailand and LPI
+      \item Needs $\rightarrow$  product \& service $\rightarrow$ newer or better
+      \item[] \hskip8em $\rightarrow$ manufacturing $\rightarrow$ inventory
+      \item[] \hskip8em $\rightarrow$ ordering $\rightarrow$ fulfillment $\rightarrow$ SCM
+    \end{itemize}
+  }
+\end{frame}
+
+%%%================================================================================================-
+\begin{frame}[label=multiDis]
+  \frametitle{Is supply chain new 'thing'? Why IE? \forIE}
+
+  \begin{center}
+    \only<1>{\includegraphics[height=0.60\textheight]{\figureLocation{scm_intro/Development02.png}}}
+    \only<2-|handout:0>{\includegraphics[height=0.60\textheight]{\figureLocation{scm_intro/conflictObjective.png}}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Center for Supply Chain Research, Penn State University~\cite{jacobs2010operations}\hskip10em }\\
+  \end{flushright}
+  \hfill \hyperlink{why_care}{\beamerbutton{Pg:Why care}}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Use the integration diagram to show how independent functions can coordinate their decisions.\\
+    \textbf{Leading Question:} Which functions need to coordinate if a plant changes its production schedule?\\
+    \textbf{Teaching cue:} Elicit purchasing, operations, and outbound distribution, then follow the diagram to locate the two handoffs that need a shared plan.\par
+    \begin{itemize}
+      \item \textbf{Individual:} movement and time allocation of resources
+      \item \textbf{Mat's Mgt} Planning \& Production  $\rightarrow$ \textbf{Inbound logistic}
+      \item \textbf{Phy Dist:} Delivery   $\rightarrow$ \textbf{outbound logistics:}
+      \item \textbf{Logistics} combine in-out for a single company
+      \item \textbf{SCM} less inventory \& high response \& $\rightarrow$ reliable and logistics cost
+      \item \textbf{note:} warehouse, inventory, packaging as overlab
+    \end{itemize}
+  }
+\end{frame}
+
+%%================================================================================================-
+\begin{frame}
+  \frametitle{Discussing Q1: Background check \forIE}
+
+  \begin{itemize}
+    \item What are factors that fuels SCM development?
+    \item Which \alert{companies/industries} do excel in supply chain?
+    \begin{itemize}
+      \item Why do they need to focus on SCM (any pressure) ?
+      \item How do they achieve (operation, technology, management, strategy)?
+      \item What are \alert{activities} that they do focus \NextHalfLine
+    \end{itemize}
+    \item What do these companies/industries have in common?
+  \end{itemize}
+  \hfill \hyperlink{why_care}{\beamerbutton{Pg:Why care}}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Move the company discussion from reputation to an observable practice and outcome.\\
+    \textbf{Leading Question:} Which company practice can you link to a measurable supply-chain outcome?\\
+    \textbf{Teaching cue:} Give groups one minute to propose a practice, a metric, and a point of comparison. Ask them to separate observations from guesses.\par
+    \begin{itemize}
+      \item \textbf{Consumer Elec:} Apple, Samsung $\rightarrow$ speed and ramp-up
+      \item \textbf{Retailer:} Wal-Mart, CP-ALL, Tesco $\rightarrow$ qty and no middle man
+      \item \textbf{Transporter:} DHL, UPS  $\rightarrow$ specializing
+      \item \textbf{Food \& Pharma:} Nestle, P\&G, DKSH $\rightarrow$ operation, change-over, global-local model
+      \item \textbf{Automotive:} toyota, benz, ford $\rightarrow$ diversify and trade block
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}[label=dynamic]
+  \frametitle{Factors in SC Evaluation \forIE}
+
+  \begin{center}
+    \includegraphics [width=0.50\textwidth]{\figureLocation{scm_intro/dvdVSvcd}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Martin Christopher, 2011~\cite{christopher2016logistics} \hskip10em}\\
+  \end{flushright}
+
+  \small{
+  \begin{itemize}
+    \item \textbf{Compete through time:} shorten LC (DVD), low inventory, but volatile
+    \item \textbf{Product design:} format change (songs)
+    \item \textbf{Make/Buy/Outsource:} core (SCG1997), diversify (PepsiCo), EcoSystem (iPhone)
+    \item \textbf{Trade/Captital/Global:} economic growth, regulation (Sihanouk-ville)
+    \item \textbf{Information:} ERP, service, traceability (fake pharma)
+    \item \textbf{Relationship:} trust, sourcing, replenishment (Toy'R Us)
+  \end{itemize} }
+  \hfill \hyperlink{why_care}{\beamerbutton{Pg:Why care}}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Explain how product life cycles affect inventory, flexibility, and time-based competition.\\
+    \textbf{Leading Question:} If demand moves from one format to the next, what happens to the value of inventory already committed?\\
+    \textbf{Teaching cue:} Use the VCR and DVD chart as a historical example. Ask for one benefit of a shorter replenishment lead time and one cost of buying flexibility.\par
+      \begin{itemize}
+    \item \textbf{Product design:} Song--live,vinyl,tape, CD, mp3, streaming, Communication
+    \item \textbf{Make/Buy \textsc{VS} outsource:} core value VS. used material; Pepsi (fun for you, good for you, better for you (lay baked) )
+    \item \textbf{Compete through time:} shorten LC, low inventory, volatile market
+    \item \textbf{Trade/ Capital:} weapon-ization of trade, foreign investment, deregulation/privatization
+    \item \textbf{Information:} development of AI and IT/ERP
+    \item \textbf{Relationship:} few sources, priority of suppliers
+      \end{itemize}
+
+ }
+ \end{frame}
+
+%%%================================================================================================-
+\begin{frame}
+  \frametitle{What Changes with SCM?}
+
+  \begin{center}
+    \only<1- >{\includegraphics[height=0.45\textheight]{\figureLocation{scm_intro/SCM_MatFlow.png}}}
+  \end{center}
+
+
+  \NextHalfLine
+  \textsc{Supply Chain Management VS Material Control Management}
+  \begin{itemize}
+    \item Plan for \alert{total chain performance} across firms
+    \item Align \alert{strategic decisions} with dependable \alert{processes}
+    \item Balance \alert{inventory cost} with service and resilience
+    \item Coordinate decisions through \alert{shared plans and information}
+  \end{itemize}
+
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Explain joint planning and use inventory as an example of a deliberate system-level trade-off.\\
+    \textbf{Leading Question:} When should a supply chain hold buffer stock even if each site wants to reduce inventory?\\
+    \textbf{Teaching cue:} Compare its carrying cost with the expected effect of shortages or disruptions. Ask whose decision determines the total cost and service outcome.\par
+    \begin{itemize}
+      \item \textbf{Total performance:} shifting costs to another stage can hurt the chain
+      \item \textbf{strategic} SCM needs to serve business
+      \item \textbf{process:} SCM = operation, scale and scope
+      \item \textbf{Inventory:} a buffer can protect service and can also mask recurring process problems
+      \item \textbf{integration} sense-of-us, info sharing, risk/reward taking,
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{SCM today: searching for value}
+
+  \begin{itemize}
+    \item \textbf{Specialization:} access assets and expertise through providers such as DHL
+    \item \textbf{Retail scale:} large retailers shape assortment and supplier requirements
+    \item \textbf{Fragmentation:} local incentives can weaken resilience during disruptions
+    \item \textbf{Digital operations:} use demand and fulfillment data to guide decisions
+  \end{itemize}
+
+  \NextLine
+  \textsc{How to create value into supply chain}
+  \begin{itemize}
+    \item Minimize \alert{total costs} $\rightarrow$ Efficiency
+    \item Maximize \alert{customer satisfaction} $\rightarrow$ Responsiveness/ Service
+    \item Build \alert{distinctive capabilities} $\rightarrow$ Differentiation and resilience
+  \end{itemize}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Translate efficiency, responsiveness, and differentiation into measurable choices.\\
+    \textbf{Leading Question:} If faster delivery raises cost, what would let a manager decide whether it creates value?\\
+    \textbf{Teaching cue:} Ask for total landed cost, time to delivery, and a customer outcome. Use the company names as examples to verify, then identify the trade-off each metric reveals.\par
+    \textsc{Background}
+    \begin{itemize}
+      \item Companies focuses on \alert{core competencies}  (Apple -- designed in CA)
+      \item Cooperate are managed by \alert{profit centers} (CP ALL -- Dynamics Mgt)
+      \item \alert{Information system} revolutionizes \alert{global trade} (Alibaba --market place)
+      \item People moves to \alert{cities} with \alert{high pay} job (Amazon --online market)
+    \end{itemize}
+    \begin{itemize}
+      \item \textbf{Specialist:} hidden party/disconnected
+      \item \textbf{Modern Trade:} as customer proxy and economy of scales and scopes
+      \item \textbf{Fragmented:} cost driven by tech, qty, and time $\rightarrow$ few companies
+      \item \textbf{Computerized:} volume $\rightarrow$ data and IT centric
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Issues in LSCM}
+
+  \begin{itemize}
+    \item \textbf{Revenue management:} early leisure fares \textsc{VS} seats for late bookings
+    \item \textbf{Omnichannel:} consolidate store deliveries \textsc{VS} fulfill online orders quickly
+    \item \textbf{Postponement:} standardize early production \textsc{VS} configure late for local markets
+    \item \textbf{Sourcing:} lower unit cost \textsc{VS} faster response to demand
+    \item \textbf{Outsourcing:} supplier capability \textsc{VS} direct control of quality and integration
+    \item \textbf{Distribution risk:} centralized scale \textsc{VS} backup capacity after disruption
+  \end{itemize}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Practice framing a managerial decision across the cases on the slide.\\
+    \textbf{Leading Question:} For a distribution network facing disruption, what evidence would justify a backup facility?\\
+    \textbf{Teaching cue:} Ask for an option, its additional cost, a service measure, and a disruption scenario. Case leads include American Airlines, Home Depot, HP, Zara, Boeing 787, and KFC UK/DHL. Check the case facts before teaching them as evidence.\par
+  \textbf{Zara:} apparel manufacturer \& retail
+  \begin{itemize}
+    \item 4-6 weeks of cycle time (average 3-6 months)
+    \item quick order in Euro \& low cost in Asia
+    \item located with 24(40) hours of DC
+  \end{itemize}
+
+  \NextHalfLine
+  \textbf{Amazon}: e-Business retailer
+  \begin{itemize}
+    \item centralized distribution centers (DCs)
+    \item develop market place
+  \end{itemize}
+
+  \NextHalfLine
+  \textbf{American Airline:} revenue management
+  \begin{itemize}
+    \item overbook prevents empty seat after takeoff
+    \item charge different prices to customers
+  \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{SCM Future}
+
+  \RemoveLine
+  \begin{center}
+    %\only<1 |handout:0>{\includegraphics[width=0.7\textwidth]{\figureLocation{scm_intro/futureSCM1.png}} }
+    %\only<2 |handout:0>{\includegraphics[width=0.7\textwidth]{\figureLocation{scm_intro/futureSCM2.png}} }
+    %\only<3 |handout:0>{\includegraphics[width=0.7\textwidth]{\figureLocation{scm_intro/futureSCM3.png}} }
+    \only<1 |handout:0>{\includegraphics[width=0.7\textwidth]{\figureLocation{scm_intro/futureSCM4.png}} }
+    \only<2-|handout:1>{\includegraphics[width=0.7\textwidth]{\figureLocation{scm_intro/futureSCM5.png}} }       \\
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} ``Supply Chain Priorities in the Near Future''~\texttt{www.apqc.org} \hskip10em \\
+     "Technological Innovations in Logistics and Supply Chain Industry"~\texttt{www.apogaeis.com} \hskip10em\\}
+  \end{flushright}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Turn a technology forecast into a testable operating hypothesis.\\
+    \textbf{Leading Question:} What would convince you that a tracking or automation investment improved performance?\\
+    \textbf{Teaching cue:} Ask students to name the current process, choose a baseline metric such as order errors, and propose a small pilot with a comparison group or period.\par
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/futureSCM2.png}} &
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_intro/futureSCM3.png}}
+    \end{tabular}
+    \begin{itemize}
+      \item IT and SCM go hand-in-hand
+      \item less man more connectivity/automation
+      \item comparing and improving
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\section[Terminology]{Important Terminology in Logistics and Supply Chain Management}
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Logistics/ Supply Chain/ Value Chain}
+
+  \begin{center}
+  \begin{tikzpicture}[xscale=4,yscale=2]
+    \usetikzlibrary{positioning}
+    \tikzstyle{scmBlock}=[rectangle,draw=black!80,thick,fill=yellow!25,text centered,text width=12mm,text height=3mm];
+    \tikzstyle{valueBlock}=[rectangle,draw=black!80,thick,fill=blue!25,text centered,text width=12mm,text height=3mm];
+    \tikzstyle{reverseBlock}=[rectangle,draw=black!80,thick,fill=green!25,text centered,text width=12mm,text height=3mm];
+
+    \node[scmBlock](factory)      at (1.0,1.25)  {\textFont{Factory}};
+    \only<1|handout:0>{
+      \node[above=0.2cm of factory] (dummy) {};
+      \draw[->,thick] (dummy.west) -- node[blue, pos=0.5, above] {\textFont{Inbound}}  ++(-0.35,0) ;
+      \draw[->,thick] (dummy.east) -- node[blue, pos=0.5, above] {\textFont{Outbound}} ++(0.35,0)  ;
+    }
+
+    \uncover<2->{
+    \node[scmBlock](supplier)     at (0.5,1.25)  {\textFont{Supplier}};
+    \node[scmBlock](wholesale)    at (1.5,1.25)  {\textFont{Wholesale}};
+    }
+
+    \only<2|handout:0>{
+    \node[scmBlock](supplier1)     at (0.5,0.5)  {\textFont{Supplier}};
+    \node[scmBlock](wholesale1)    at (1.5,0.5)  {\textFont{Wholesale}};
+    \node[scmBlock](supplier2)     at (0.5,2.00)  {\textFont{Supplier}};
+    \node[scmBlock](wholesale2)    at (1.5,2.00)  {\textFont{Wholesale}};
+    \draw[->,thick] (factory) -- (wholesale);
+    \draw[<-,thick] (factory) -- (supplier);
+    \draw[->,thick] (factory) -- (wholesale1);
+    \draw[<-,thick] (factory) -- (supplier1);
+    \draw[->,thick] (factory) -- (wholesale2);
+    \draw[<-,thick] (factory) -- (supplier2);
+    }
+
+
+    \uncover<3->{
+    \node[scmBlock](raw)          at (0.0,1.25)  {\textFont{R.Supplier}};
+    \node[scmBlock](retail)       at (2.00,1.25) {\textFont{Retailer}};
+    \node[scmBlock](cust)         at (2.50,1.25) {\textFont{Consumer}};
+    \path[->,thick] (raw)  edge[bend left] (supplier);
+    \path[->,thick] (supplier) edge[bend left] (factory);
+    \path[->,thick] (factory)  edge[bend left] (wholesale);
+    \path[->,thick] (wholesale) edge[bend left] (retail);
+    \path[->,thick] (retail) edge[bend left] (cust);
+    \path[<-,thick,blue] (raw)  edge[bend right] (supplier);
+    \path[<-,thick,blue] (supplier) edge[bend right] (factory);
+    \path[<-,thick,blue] (factory)  edge[bend right] (wholesale);
+    \path[<-,thick,blue] (wholesale) edge[bend right] (retail);
+    \path[<-,thick,blue] (retail) edge[bend right] (cust);
+    }
+
+    \uncover<4->{
+    \node[reverseBlock](reuse)      at (2.5,0.5) {\textFont{Reuse}};
+    \node[reverseBlock](reprocess)  at (2.0,0.5) {\textFont{Reprocess}};
+    \node[reverseBlock](recycle)    at (1.5,0.5) {\textFont{Recycle}};
+    \node[reverseBlock](landfill)   at (1.0,0.5) {\textFont{Landfill}};
+    \path[->,thick] (cust) edge[bend left] (reuse);
+    \path[->,thick] (reuse) edge[bend left] (reprocess);
+    \path[->,thick] (reprocess) edge[bend left] (recycle);
+    \path[->,thick] (recycle) edge[bend left] (landfill);
+    \path[<-,thick,blue] (cust) edge[bend right] (reuse);
+    \path[<-,thick,blue] (reuse) edge[bend right] (reprocess);
+    \path[<-,thick,blue] (reprocess) edge[bend right] (recycle);
+    \path[<-,thick,blue] (recycle) edge[bend right] (landfill);
+    }
+
+    \uncover<5->{
+    \node[valueBlock](market)     at (1.0,2.0) {\textFont{Marketing}};
+    \node[valueBlock](rd)         at (0.5,2.0) {\textFont{R\&D}};
+    \path[->,thick,blue] (factory) edge[bend left] (market);
+    \path[->,thick,blue] (market) edge[bend left] (rd);
+    \path[<-,thick,blue] (factory) edge[bend right] (market);
+    \path[<-,thick,blue] (market) edge[bend right] (rd);
+    }
+
+   \draw[-,dotted](0.0,0.00) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+   \draw[->,thick] (0.1,-0.20) -- node[pos=0.5,auto] {\textFont{materials}} ++(0.25,0.0);
+   \draw[->,thick,blue] (0.6,-0.20) -- node[blue, pos=0.5,auto] {\textFont{information}} ++(0.25,0.0);
+
+  \end{tikzpicture}
+  \end{center}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Compare logistics, supply-chain coordination, and value creation using the network diagram.\\
+    \textbf{Leading Question:} Where does a product return fit, and which business activities could redesign that flow?\\
+    \textbf{Teaching cue:} Trace the return from the customer toward recovery or disposal. Use the added design and marketing nodes to discuss customer value and cross-functional decisions.\par
+    \textsc{\textbf{SCM is bad term to explain,}} here is why?
+    \begin{itemize}
+      \item not only \alert{supply}. However, material and consumption are major parts.
+      \item not \alert{chain} structure. However, there is hierarchy
+      \item but \alert{management}. Using any means and based on practical.
+      \item \textbf{better terms:}
+      \begin{itemize}
+        \item 'The management of chain/network of supply using information + movement + payment+ relation'
+        \item 'The management of material out of the ground and back into it’
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+  \begin{frame}
+    \frametitle{Terminology}
+      \begin{itemize}
+        \item<1-> \textbf{Logistics}
+        \begin{itemize}
+          \item<2-> ``Time related positioning of \alert{resources}'' (Man, Machine, Materials, Money)
+          \item<2-> \textbf{Military logistics:} can food, computer, petrolatum, tanker, GPS
+          \item<2-> \textbf{Social logistics:} taxation, transportation infrastructure, law
+          \item<2-> \textbf{Business logistics:} company related \NextHalfLine
+        \end{itemize}
+        \item<1-> \textbf{Supply Chain}
+        \begin{itemize}
+          \item<3-> Network of organizations that supply products or services to customers
+          \item<3-> \textbf{Inbound}: logistic of \alert{raw materials}
+          \item<3-> \textbf{Outbound}: logistic of \alert{finished goods}
+          \item<3-> Concurrent term: Retailer business, Distribution network \NextHalfLine
+        \end{itemize}
+        \item<1-> \textbf{Reverse Supply Chain}
+        \begin{itemize}
+          \item<3-> Moves \alert{used products} toward reuse, repair, recycling, or disposal \NextLine
+        \end{itemize}
+        \item<1-> \textbf{Value Chain}
+        \begin{itemize}
+          \item<4-> Activities that create customer value, including design, operations, marketing, and service
+        \end{itemize}
+    \end{itemize}
+
+    %%%------
+    \note{
+      \textbf{Purpose:} Use the terminology to classify operating decisions and explain the boundaries of each concept.\\
+      \textbf{Leading Question:} How would you classify delivery scheduling, joint replenishment, and redesigning a product for repair?\\
+      \textbf{Teaching cue:} Elicit logistics, supply-chain coordination, and value creation respectively. Discuss how the activities overlap and where a return can create recoverable value.\par
+      \begin{itemize}
+        \item assess recovery benefits against handling, energy, and transport costs
+        \item \textbf{re-use} old cloths, second hand products
+        \item \textbf{re-cycle} Aluminum (50+ cheaper than virgin), glass, and paper
+        \item non-transportation nor production, activity adds value
+        \item \textbf{R\&D} ``Green design'', easy to transport, localization,
+        \item \textbf{Marketing} No word, our focus is on operation
+      \end{itemize}
+    }
+  \end{frame}
+
+
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{Reference}
+
+  \begin{footnotesize}
+    \bibliography{\refLocation{Coordination},\refLocation{logisticProvider}}
+  \end{footnotesize}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Show students how to trace an example or chart back to its source.\\
+    \textbf{Leading Question:} Which edition or data year would you check before reusing a claim from this lecture?\\
+    \textbf{Teaching cue:} Use the logistics-cost charts as a quick exercise. Match a citation key to the bibliography and identify what still needs verification in the original publication.\par
+  }
+
+\end{frame}
+
+
+
+%================================================================================================-
+\end{document}
+
+
+%============================================================================================================--
+\begin{frame}
+
+
+  \NextLine
+  \begin{alertblock}{Keep in mind that}{} \small{
+    \begin{itemize}
+      \item Fluctuation of products $\rightarrow$ 1$^{st}$ problem in SCM
+      \item \alert{All costs} will \alert{eventually} pay by \alert{consumers}
+      \item Good SCM requires \alert{measuring total values}, not individual profit
+    \end{itemize} }
+  \end{alertblock}
+
+  \begin{block}{Discussing Question 2 \forIE}{}
+    What should do we measure?
+  \end{block}
+
+  %%%-----
+  \note{
+    \textbf{Purpose:} Important Concept in SCM \\
+    \textbf{Leading Question:} What are goals when managing SCM?\\
+    \begin{itemize}
+      \item \textbf{Supply Chain:} typical thinking of transp and inventory. What is exactly SC?
+      \item \textbf{Right time/condition/price} why use 'right'
+      \item \textbf{Organization:} target customers; business strategy
+    \end{itemize}
+
+  \textsc{End-to-end target}
+  \begin{itemize}
+    \item \textbf{on-time delivery:} how reliable of the committed date?
+    \item \textbf{order fulfillment lead time:} how responsive?
+    \item \textbf{cash2cash cycle time:} cashflow required for business?
+    \item \textbf{total SCM cost:} how much customers paid/ what are surplus?
+  \end{itemize}
+  }
+\end{frame}
+
+
+
+
+
+
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Other Definitions of SCM}
+
+  \begin{flushleft}     \small{
+  \begin{itemize}
+    \item \code{Supply Chain Management} [Chopra \& Meindl]: \alert{Managing} supply chain flows and assets, to maximize \alert{supply chain surplus} \NextHalfLine
+    \item \code{Supply Chain Management} [Institute for Supply Management]: The \alert{design and management} of seamless, \alert{value-added process} across organizational boundaries to meet the real needs of the end customer. \NextHalfLine
+    \item \code{Supply Chain Management} [The Supply Chain Council]: \alert{Managing} supply and demand, sourcing \alert{raw materials} and parts, manufacturing and assembly, warehousing and inventory tracking, order entry and order management, distribution across all channels, and delivery to the \alert{customer}.
+  \end{itemize} }
+  \end{flushleft}
+
+  \RemoveHalfLine
+  \begin{alertblock}{}{}
+    Flows of \alert{products} (service), \alert{funds} and \alert{information} from \alert{raw materials} to \alert{end consumers}
+  \end{alertblock}
+
+
+  \note{
+    \begin{itemize}
+      \item Sources of supply chain revenue: the customer
+      \item Sources of supply chain cost: flows of information, products, or funds between stages of the supply chain
+    \end{itemize}
+  }
+\end{frame}
+
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Inventory in automotive industry }
+
+  \begin{center}
+    \includegraphics[width=0.60\textwidth]{\figureLocation{scm_intro/inv4AutoIndustry.png}}\\
+      \small{logistics costs $\approx$ 12\% of material costs}
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Martin Christopher, 2011~\cite{christopher2016logistics} \hskip10em}\\
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Hidden SCM opportunity in every where\\
+    \textbf{Leading Question:} What is the lean/mean industry in the world? Using Auto Industry as Example\\
+    \begin{itemize}
+      \item \textbf{Main:} Auto Industry has high inventory at RM and WIP. Why?
+      \item \textbf{RM:} economy of scale, price fluctuation, legitime
+      \item \textbf{WIP:}---very lean---
+      \item \textbf{FG:} sale and customer response
+    \end{itemize}
+
+  }
+\end{frame}
+
+
+%==============================================================================================================
+  \begin{frame}
+  \frametitle{What is }
+
+  \begin{itemize}
+    \item \textbf{Obstruction:} Why have businesses just care about SCM \alert{recently}?
+    \item[] \hskip5ex \uncover<2- >{~~ $\exists$ many persecutive}
+    \item \textbf{Strategy:} SCM $\neq$ One-Size-Fit-All What is a good SCM strategy?  \uncover<2- >{}
+    \item[] \hskip5ex \uncover<2- >{~~ uncertainty $\rightarrow$ lean \textsc{VS} agile }
+    \item \textbf{Strategy:} SCM $\neq$ One-Size-Fit-All What is a good SCM strategy?  \uncover<2- >{}
+  \end{itemize}
+
+    %%%------
+    \note{
+    \textbf{Purpose:} Definition \\
+    \textbf{Leading Question:} <<None>>\\
+      \begin{itemize}
+        \item reverse $=$ green
+        \item \textbf{re-use} old cloths, second hand products
+        \item \textbf{re-cycle} Aluminum (50+ cheaper than virgin), glass, and paper
+        \item non-transportation nor production, activity adds value
+        \item \textbf{R\&D} ``Green design'', easy to transport, localization,
+        \item \textbf{Marketing} No word, our focus is on operation
+      \end{itemize}
+    }
+  \end{frame}
+
+
