@@ -1,0 +1,139 @@
+name: Git_Action - Beamer Lecture Improvement
+
+on:
+  workflow_dispatch:
+    inputs:
+      lecture:
+        description: 'Lecture basename, e.g., LSCM_intro (without extension)'
+        type: string
+        required: true
+      mode:
+        description: 'Audit only or audit plus revise and verify'
+        type: choice
+        options: [revise, audit]
+        default: revise
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  lecture:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out repository without persisting push credentials
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Validate lecture and baseline inputs
+        shell: bash
+        env:
+          LECTURE: ${{ inputs.lecture }}
+        run: |
+          set -euo pipefail
+          [[ "$LECTURE" =~ ^[A-Za-z0-9_-]+$ ]] || { echo 'Invalid lecture basename'; exit 1; }
+          test -s "lectures/$LECTURE.tex"
+          test -s "lectures/$LECTURE.pdf"
+          test -s "marco.tex"
+          test -s "Beamer_Lecture_Improvement_Project.md"
+
+      - name: Install PDF and XeLaTeX verification tools
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            latexmk texlive-xetex texlive-latex-extra texlive-science \
+            texlive-fonts-recommended poppler-utils python3-pip
+          python3 -m pip install --user --break-system-packages PyMuPDF
+
+      - name: Create isolated review branch
+        id: branch
+        shell: bash
+        env:
+          LECTURE: ${{ inputs.lecture }}
+        run: |
+          set -euo pipefail
+          BRANCH="codex/lecture-${LECTURE}-${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Run Codex review, revision, and verification
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':workspace'
+          prompt: |
+            Follow AGENTS.md and Beamer_Lecture_Improvement_Project.md exactly.
+            Read automation/lecture_prompt.md for the full instructions.
+            Lecture basename: ${{ inputs.lecture }}
+            Operating mode: ${{ inputs.mode }}
+            Work from this checked-out Git repository only.
+            Produce report files even if compilation is BLOCKED.
+            Never edit marco.tex, original lecture TEX/PDF, or original figures.
+            Do not commit, push, create pull requests, or request credentials.
+
+      - name: Check preservation and required outputs
+        shell: bash
+        env:
+          LECTURE: ${{ inputs.lecture }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          git diff --quiet -- marco.tex "lectures/${LECTURE}.tex" "lectures/${LECTURE}.pdf" || {
+            echo 'Codex changed protected baseline inputs'; exit 1;
+          }
+          test -s "lectures/reports/${LECTURE}/lecture_audit.md"
+          test -s "lectures/reports/${LECTURE}/improvement_list.md"
+          test -s "lectures/reports/${LECTURE}/figure_requests.md"
+          test -s "lectures/reports/${LECTURE}/lecture_QA.md"
+          if [ "$MODE" = revise ]; then
+            test -s "lectures/${LECTURE}_revised.tex"
+          fi
+
+      - name: Commit outputs on review branch
+        id: commit
+        shell: bash
+        env:
+          LECTURE: ${{ inputs.lecture }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "lectures/reports/$LECTURE/"
+          if [ "$MODE" = revise ]; then
+            git add "lectures/${LECTURE}_revised.tex"
+            if [ -f "lectures/${LECTURE}_revised.pdf" ]; then
+              git add "lectures/${LECTURE}_revised.pdf"
+            fi
+          fi
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Review ${LECTURE} lecture (${MODE})"
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push branch and open pull request
+        if: steps.commit.outputs.changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.branch.outputs.branch }}
+          BASE: ${{ github.ref_name }}
+          LECTURE: ${{ inputs.lecture }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          git push --set-upstream origin "$BRANCH"
+          gh pr create \
+            --base "$BASE" \
+            --head "$BRANCH" \
+            --title "Lecture improvement: $LECTURE ($MODE)" \
+            --body "Automated Codex $MODE run for $LECTURE. Review lecture_QA.md before merging. A missing compiled PDF means verification was blocked; see reports."

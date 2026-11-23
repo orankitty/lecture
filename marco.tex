@@ -1,0 +1,140 @@
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{beamerthemesplit}
+\usepackage{beamerbasetemplates}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{tikz,pgfplots}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{soul,xcolor}
+\usepackage{colortbl}
+\usepackage{multicol}
+
+\XeTeXlinebreaklocale"th"
+\defaultfontfeatures{Scale=1.5, Mapping=tex-text} %{Scale=1.23}
+
+
+
+\usetheme{Madrid}  % JuanLesPins  Rochester
+           %  Berkeley  Palo Alto    with sidebar and top
+           % Goettingen  Marburg     with sidebar
+           %  Copenhagen  Luebeck  Warsaw
+
+\setbeamertemplate{headline}
+{%
+    \begin{beamercolorbox}{section in head/foot}
+        \vskip-2pt \hskip5pt
+        \insertsectionnavigationhorizontal{\textwidth}{}{}
+        \hskip5pt \vskip-2pt
+    \end{beamercolorbox}
+}%
+\setbeamertemplate{footline}
+{%
+    \begin{beamercolorbox}{section in head/foot}
+        \vskip-2pt \hskip5pt
+        \insertshorttitle \hfill \insertshortdate \hskip10pt \insertframenumber / \inserttotalframenumber
+        \vskip-2pt\hskip5pt
+    \end{beamercolorbox}
+}%
+\definecolor{alertedOrange}{RGB}{255,36,0}
+\setbeamercolor{alerted text}{fg=alertedOrange}
+\useinnertheme{rounded}
+\usecolortheme{rose}
+%\setbeamercovered{transparent}
+\usefonttheme{structuresmallcapsserif}
+\definecolor{LRed}{rgb} {1,.8,.8}
+\definecolor{LBlue}{rgb}{.8,.8,1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notation:
+\newtheorem{observation}{Observation}
+\newcommand{\figureLocation}[1]{../figures/#1}
+\newcommand{\figureLoc}[1]{../figures/#1}
+\newcommand{\refLocation}[1]{../../../../Reference/#1}
+\newcommand{\NextLine}{\vskip 0.05\textheight}
+\newcommand{\NextHalfLine}{\vskip 0.02\textheight}
+\newcommand{\RemoveLine}{\vskip -0.1\textheight}
+\newcommand{\RemoveHalfLine}{\vskip -0.02\textheight}
+\newcommand{\BackTab}{\hskip -0.15\textwidth}
+\newcommand{\HalfBackTab}{\hskip -0.11\textwidth}
+\newcommand{\DualFigureSize}{1.10\textwidth}
+\newcommand{\MiniPageSize}{0.52\textwidth}
+\newcommand{\code}[1]{\textcolor{blue}{#1} }
+\newcommand{\rightNote}[2]{\hfill \uncover<#1>{\textbf{\code{\#\# {#2}  }}}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}<{}}
+
+\author[Kittithreerapronchai]{%
+  Oran~Kittithreerapronchai\inst{1} }
+\institute[IE Chula]{
+  \inst{1}%
+  Department of Industrial Engineering, Chulalongkorn University\\
+  Bangkok 10330 THAILAND \\
+  }
+\subject{}
+\date{}
+
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{bibliography item}[text]
+\bibliographystyle{alpha}
+\newcommand{\textFont}[1]{\footnotesize{#1}}
+\setcounter{MaxMatrixCols}{20}
+
+%%%--------------------------------
+
+\makeatletter
+\defbeamertemplate{note page}{infolines}
+{%
+  {%
+    \small
+    \insertvrule{.25\paperheight}{white!90!black}
+    \vskip-.25\paperheight
+    \nointerlineskip
+    \vbox{
+      \hfill\insertslideintonotes{0.25}\hskip-\Gm@rmargin\hskip0pt%
+      \vskip-0.25\paperheight%
+      \nointerlineskip
+      \begin{pgfpicture}{0cm}{0cm}{0cm}{0cm}
+        \begin{pgflowlevelscope}{\pgftransformrotate{90}}
+          {\pgftransformshift{\pgfpoint{-2cm}{0.2cm}}%
+          \pgftext[base,left]{\footnotesize\the\year-\ifnum\month<10\relax0\fi\the\month-\ifnum\day<10\relax0\fi\the\day}}
+        \end{pgflowlevelscope}
+      \end{pgfpicture}}
+    \nointerlineskip
+    \vbox to .25\paperheight{\vskip0.5em
+      \hbox{\insertshorttitle[width=8cm]}%
+      \setbox\beamer@tempbox=\hbox{\insertsection}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip4pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsection\end{minipage}}\fi%
+      }%
+      \setbox\beamer@tempbox=\hbox{\insertsubsection}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip17.4pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsubsection\end{minipage}}\fi%
+      }%
+      \setbox\beamer@tempbox=\hbox{\insertshortframetitle}%
+      \hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip30.8pt\raise3pt\hbox{\vrule
+            width0.4pt height7pt\vrule width 9pt
+            height0.4pt}}\hskip1pt\hbox{\insertshortframetitle[width=7cm]}\fi%
+      }%
+      \vfil}%
+  }%
+  \vskip.25em
+  \nointerlineskip
+  %\setmainfont{TH Sarabun New}
+  \begin{minipage}{\textwidth} % this is an addition
+  \footnotesize{\fontspec{TH Sarabun New} \insertnote}
+  \end{minipage}               % this is an addition
+  %\setmainfont{Computer Modern}
+
+}
+\makeatother
+
+\setbeamertemplate{note page}[infolines]
