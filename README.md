@@ -2,6 +2,12 @@
 ## Purpose
 Based on uploaded `marco.tex` (locked), `LSCM_intro.tex` and the 25-page `LSCM_intro.pdf`, plus prior course-generator requirements. Ready to copy into a local Codex project root.
 
+## Work from this repository
+
+The pilot archive supplies the Codex skills, an example course profile, and the initial audit materials. For the first lecture task, make the lecture `.tex`, compiled baseline `.pdf`, locked `marco.tex`, figures, and bibliography available in the working copy. Preserve the lecture's relative paths and install the fonts its preamble requires. The slide map in `pilot_slide_map.csv` is tentative until checked against the source and baseline PDF.
+
+Open the repository root in Codex so it can find `AGENTS.md` and `.agents/skills/`. Use the course profile and review prompt below to start the audit. After approving the proposed edits, use a branch for the revision and verify the result with XeLaTeX against the baseline PDF.
+
 ## Installation
 1. Copy `AGENTS.md` and `.agents/skills/` to the root of your own existing lecture repository.
 2. Retain `marco.tex` exactly as-is in its actual location; do not install or copy the supplied macro as a replacement.

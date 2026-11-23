@@ -1,0 +1,26 @@
+course_id: '2184408'
+course_name: 'Supply Chain Management'
+audience: 'Undergraduate Industrial Engineering'
+lecture_id: 'LSCM_intro'
+mode: 'improve_existing'
+files:
+  immutable_configuration: '../marco.tex'
+  source: 'LSCM_intro.tex'
+  compiled_baseline: 'LSCM_intro.pdf'
+compilation:
+  engine: 'xelatex'
+  baseline_pdf_is_authoritative_for_visuals: true
+  dependency_files_must_be_supplied: true
+style:
+  inherit_from_marco_tex: true
+  do_not_override_aspect_ratio: true
+  preserve_overlays: true
+  preserve_note_page_format: true
+pedagogy:
+  review_existing_structure_first: true
+  retain_problem_and_discussion_prompts: true
+  notes_require: ['Purpose', 'Leading Question']
+  figures: 'recommend_only_until_authorized'
+approval:
+  audit_before_edit: true
+  substantive_changes_require_approval: true
