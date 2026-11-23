@@ -1,0 +1,42 @@
+# LSCM_inventory lecture audit
+
+The source has 34 active frames and 1 dormant frames. The supplied PDF has 34 slide pages and 34 instructor-note pages. All pages were assigned using the numbered slide footer and, for notes, the preceding slide. Repeated footer numbers identify presentation overlays. The mapping records page correspondence from the supplied baseline.
+
+Every frame was checked against source structure, note coverage, and PDF text. Targeted baseline images were visually inspected on PDF pages 19, 25, 33, 55. The layout heuristics count text and rendered assets in the PDF body. A frame without a detected flag still needs an instructor judgment about the original case facts and final projection layout.
+
+| Frame | Section | Title | TeX line | PDF slides | PDF notes | Severity | Evidence | Leading question in draft |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Opening | Title page | 28 | 1 | 2 | Low | Small live text detected. Embedded visual asset present. | Where have you encountered this kind of supply-chain decision? |
+| 2 | Opening | Outline | 49 | 3 | 4 | Low | Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Which topic would you consult first for the decision raised at the opening? |
+| 3 | Why do we have an inventory | What is Inventory? | 76 | 5 | 6 | Low | Embedded visual asset present. | What physical and financial consequences follow from holding a unit in stock? |
+| 4 | Why do we have an inventory | Demand ± Supply = Inventory | 122 | 7 | 8 | Low | Embedded visual asset present. | Which terms belong in an inventory balance over one period? |
+| 5 | Why do we have an inventory | Why inventory is bad? | 154 | 9 | 10 | Low | Embedded visual asset present. | When does inventory support service and when can it hide a problem? |
+| 6 | Why do we have an inventory | Hierarchy of inventory decision | 186 | 11 | 12 | Low | Source frame matched the supplied PDF footer. | Which inventory choices are made by item, location, and network? |
+| 7 | Economic Order Quantity | Main inventory control questions in IE | 239 | 13 | 14 | Low | Embedded visual asset present. | What is the difference between how much to order and when to order? |
+| 8 | Economic Order Quantity | Inventory costs | 278 | 15 | 16 | Low | Embedded visual asset present. | Which costs move when order frequency changes? |
+| 9 | Economic Order Quantity | Economic Order Quantity: Simplest model | 320 | 17 | 18 | Low | Embedded visual asset present. | Under what assumptions is the economic order quantity defensible? |
+| 10 | Economic Order Quantity | Derivation of EOQ | 349 | 19 | 20 | High | The cost term h multiplies average units of inventory, but the parameter is called handling cost without a time basis. Embedded visual asset present. Original leading question missing or a placeholder. | How do the order and average-stock terms change as quantity increases? |
+| 11 | Economic Order Quantity | Holding cost VS Ordering cost | 403 | 21 | 22 | Low | Embedded visual asset present. | Why is the EOQ total-cost curve relatively flat near its minimum? |
+| 12 | Economic Order Quantity | Derivation of EOQ | 425 | 23 | 24 | Low | Embedded visual asset present. Original leading question missing or a placeholder. | How can you verify the EOQ expression without memorizing it? |
+| 13 | Economic Order Quantity | Example of EOQ | 469 | 25 | 26 | High | The example describes televisions but identifies demand as computers. The displayed radicand 96,040,000 conflicts with the inputs and the reported EOQ near 980. Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | What annual holding cost per TV belongs in the formula? |
+| 14 | Economic Order Quantity | EOQ Insight to inventory control | 510 | 27 | 28 | Low | Embedded visual asset present. | When can a nearby feasible order size be preferable to the formula quantity? |
+| 15 | Economic Order Quantity | Academic Extension of EOQ Model | 560 | 29 | 30 | Low | Source frame matched the supplied PDF footer. | Which assumption breaks when the supplier offers a price break? |
+| 16 | Economic Order Quantity | Example: Ordering carton | 594 | 31 | 32 | Low | Dense text in the PDF body. | How should the carton answer change when the in-house limit starts to bind? |
+| 17 | Economic Order Quantity | Solution: Ordering carton | 620 | 33 | 34 | High | The free-delivery condition is strictly more than 30,000 THB. An order of 3,000 at 10 THB per unit does not qualify. Embedded visual asset present. Original leading question missing or a placeholder. | Which carton order size first meets a strictly greater-than free-delivery threshold? |
+| 18 | Economic Order Quantity | Can EOQ apply to real world? | 657 | 35 | 36 | Low | Embedded visual asset present. | Which practical constraint could move the recommended lot size away from EOQ? |
+| 19 | Economic Order Quantity | Real world: Random demand and lead time | 693 | 37 | 38 | Low | Embedded visual asset present. | Which uncertainty contributes to demand during lead time? |
+| 20 | Economic Order Quantity | Safety stock | 716 | 39 | 40 | Low | Embedded visual asset present. | What service measure is the buffer intended to protect? |
+| 21 | Inventory Review System | How often inventory should be determined? | 752 | 41 | 42 | Low | Embedded visual asset present. | How does review frequency change the period inventory must protect? |
+| 22 | Inventory Review System | Periodic review | 793 | 43 | 44 | Low | Embedded visual asset present. | How do you calculate the order at a scheduled review? |
+| 23 | Inventory Review System | Continuous review | 812 | 45 | 46 | Low | Embedded visual asset present. | What changes the inventory position and triggers a replenishment in continuous review? |
+| 24 | Inventory Review System | Do we have good inventory management? | 831 | 47 | 48 | Low | Embedded visual asset present. | How can a lower inventory balance conceal worse service? |
+| 25 | Inventory Review System | Inventory turnover | 867 | 49 | 50 | Low | Source frame matched the supplied PDF footer. | Which units and time period define inventory turnover? |
+| 26 | Stochastic Demand with Newsvendor Model | Perishable Products | 903 | 51 | 52 | Low | Dense text in the PDF body. Embedded visual asset present. | What makes an unsold perishable unit costly at the end of the selling period? |
+| 27 | Stochastic Demand with Newsvendor Model | Optimal Newsvendor | 947 | 53 | 54 | Low | Dense text in the PDF body. Small live text detected. Embedded visual asset present. | Why is the newsvendor critical fractile a service probability? |
+| 28 | Stochastic Demand with Newsvendor Model | Example of Newsvendor | 992 | 55 | 56 | High | The single-period example labels the critical fractile as probability of sale and rounds the ratio before taking the inverse normal CDF. Dense text in the PDF body. Small live text detected. Original leading question missing or a placeholder. | Where does rounding the critical ratio change the ski order quantity? |
+| 29 | Stochastic Demand with Newsvendor Model | Insight to Inventory Control | 1023 | 57 | 58 | Low | Embedded visual asset present. | Which policy fits a stable recurring item versus a one-season item? |
+| 30 | Stochastic Demand with Newsvendor Model | Reference | 1055 | 59 | 60 | Low | Original leading question missing or a placeholder. | What would you check before reusing a figure, fact, or model from this lecture? |
+| 31 | Stochastic Demand with Newsvendor Model | How to play Pharmaceutical Inventory Game | 1075 | 61 | 62 | Low | Embedded visual asset present. | Which decision does the inventory game ask the team to make each period? |
+| 32 | Stochastic Demand with Newsvendor Model | Historical Data | 1105 | 63 | 64 | Low | Source frame matched the supplied PDF footer. | What portion of the historical demand should be held out for a policy check? |
+| 33 | Stochastic Demand with Newsvendor Model | What are products in the game? | 1141 | 65 | 66 | Low | Embedded visual asset present. | Why might the game require a different policy for each product? |
+| 34 | Stochastic Demand with Newsvendor Model | Important Insights: Cost VS Service | 1183 | 67 | 68 | Low | Embedded visual asset present. | Which inventory actions improved service and which only shifted cost? |

@@ -1,0 +1,30 @@
+# LSCM_decision improvement list
+
+Source lines and page numbers refer to the supplied originals. All teaching cues are in the revised TeX.
+
+| PDF pages | Title | TeX line | Severity | Finding and evidence | Action | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | Title page | 29 | Low | Small live text detected. Embedded visual asset present. | Get one example and identify who owns the decision and what outcome they want. | Applied in notes |
+| 3 | Outline | 51 | Low | Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Point to the relevant section and ask which question should be resolved by the end. | Applied in notes |
+| 5 | Supply chain as Math modeling | 76 | Low | Embedded visual asset present. | Use a replenishment example to distinguish controlled quantities from inputs such as demand. | Applied in notes |
+| 7 | Decision/Driver in Supply Chain | 117 | Low | Embedded visual asset present. | Ask for a concrete facility, inventory, or transport decision and its countervailing cost. | Applied in notes |
+| 9 | Example of decisions in Supply Chain | 159 | Low | Small live text detected. Original leading question missing or a placeholder. | Classify facility placement, inventory targets, and dispatch as long-term or operating choices. | Applied in notes |
+| 11 | 7-Eleven Background | 211 | Low | Embedded visual asset present. | Separate the historical observations from principles that another retailer could test. | Applied in notes |
+| 13 | Convenience Store Industry and 7-Eleven | 252 | Low | Embedded visual asset present. Original leading question missing or a placeholder. | Link limited shelf space and demand variation to replenishment cadence and route cost. | Applied in notes |
+| 15 | 7-Eleven Operation | 283 | Medium | The franchise, food-mix, and payment figures refer to a historical case. They need an observation date and an original source for reuse. Embedded visual asset present. | Treat the numbers as case context and test the cluster strategy with cost and service measures. | Note applied. Source check deferred |
+| 17 | 7-Eleven IT | 323 | Medium | Terminal images illustrate the interface, but the causal link between captured data and orders is implicit. Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Trace a sale from point of sale to inventory records and replenishment. | Applied in notes |
+| 19 | 7-Eleven Distribution System | 372 | Low | Embedded visual asset present. | Ask how temperature zones and delivery windows change the consolidation decision. | Applied in notes |
+| 21 | 7-Eleven Outlet Locations | 406 | Low | Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Compare candidate sites using customer reach, route distance, and existing outlet overlap. | Applied in notes |
+| 23 | Study Questions | 425 | Low | Embedded visual asset present. Original leading question missing or a placeholder. | Require a group to state one conclusion, a comparison, and a source or missing datum. | Applied in notes |
+| 25 | How to do a business case study | 456 | Low | Small live text detected. | Identify a problem owner, alternatives, criteria, and an assumption to test. | Applied in notes |
+| 27 | Role of Distribution in Supply Chain | 488 | Low | Embedded visual asset present. | Trace availability and response time from a customer promise back to network design. | Applied in notes |
+| 29 | Trade-off: Areas of influencing | 522 | Low | Source frame matched the supplied PDF footer. | Compare response time and availability with facilities, transport, and inventory cost. | Applied in notes |
+| 31 | # Facility VS Responding Time | 555 | Medium | The declining facility-count/response-time curve is qualitative and its response-time label needs consistent wording. Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Use response time consistently and ask which geography and load assumptions determine the curve. | Applied |
+| 33 | Cost as function of # facility | 580 | High | The minimum of an illustrative U-shaped total-cost curve cannot establish the cost-minimizing facility count for a real network. Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Check customer response-time constraints and demand geography before optimizing facility count. | Applied in notes |
+| 35 | Distribution Design | 648 | Low | Embedded visual asset present. | Track who holds stock, who arranges final delivery, and where orders are consolidated. | Applied in notes |
+| 37 | Direct shipments | 692 | Low | Original leading question missing or a placeholder. | Compare handling avoided with consolidation lost, then add the customer lead-time requirement. | Applied in notes |
+| 39 | Direct shipping with in-transit merge | 744 | Medium | The diagram distinguishes information from physical movement, but small labels can hide the synchronization decision. Original leading question missing or a placeholder. | Walk through a late component at the merge point and ask how the consolidated promise changes. | Note applied. Figure queued |
+| 41 | Carrier delivery by distributors | 799 | Low | Original leading question missing or a placeholder. | Compare order dispersion, parcel cost, and utilization against local-stock alternatives. | Applied in notes |
+| 43 | Last mile delivery by distributors | 850 | Low | Original leading question missing or a placeholder. | Ask for orders per route, cost per stop, and the effect of delivery windows. | Applied in notes |
+| 45 | Customer pick up | 903 | Low | Original leading question missing or a placeholder. | Compare delivery, collection waiting time, inventory placement, and order accuracy. | Applied in notes |
+| 47 | Reference | 965 | Low | Original leading question missing or a placeholder. | Trace a citation to its original source and verify the year, scope, and assumptions. | Applied in notes |

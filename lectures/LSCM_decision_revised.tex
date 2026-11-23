@@ -1,0 +1,1140 @@
+% ###################
+% ## Filename: sCM_drivers.tex
+% ## Location: D:\Project\Prej_Teaching\ISE\SupplyChainMgt\presentation\scm_02_drivers
+% ## Created: Dec 14, 2010
+% ## Last updated: Dec 14, 2010
+% ## Figure Location: ..\Figures\
+% ## Note: Presentation, Teaching
+% ###################
+
+
+%\documentclass[10pt,presentation]{beamer}
+%\documentclass[10pt,handout]{beamer}
+\documentclass[10pt,handout,notes=show]{beamer}
+
+%============================================================================================================--
+\input{../marco.tex}
+\title[LSCM v3.0]{Lecture 03:\\ Decision and Drivers in Supply Chain Management}
+\hypersetup{
+  pdftitle={03 Decision and Drivers in Supply Chain Management},
+  pdfsubject={2104509lscm & 2184408scm handout},
+  pdfproducer={XeLatex/WinEdt},
+  pdfcreator={oran.k@chula.ac.th}
+}
+
+
+\begin{document}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \noindent\textbf{Purpose:} Transition from SCM strategy to SCM operation\par
+    \noindent\textbf{Leading Question:} Where have you encountered this kind of supply-chain decision?\par
+    \noindent\textbf{Teaching cue:} Get one example and identify who owns the decision and what outcome they want.\par
+    \begin{itemize}
+      \item \textbf{BBA:} For BBA (non-engineering) student, this is their SCM last topic
+      \item \textbf{Decision:} How do we view/formulate SCM decison/problem? What are scopes?  \textbf{hint:} same with OM
+      \item \textbf{Drivers:} How key SCM costs (facility, inventory, transportation) and response time affect by \# stores? What are other factors invovled?
+      \item \textbf{Network:} Development of distribution network.
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \tableofcontents
+
+  \vfill
+  \begin{flushright}
+    \tiny{\textbf{General Reference:} \cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply} } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \noindent\textbf{Purpose:} Outline topics\par
+    \noindent\textbf{Leading Question:} Which topic would you consult first for the decision raised at the opening?\par
+    \noindent\textbf{Teaching cue:} Point to the relevant section and ask which question should be resolved by the end.\par
+    \begin{itemize}
+      \item \textbf{Decision:} how IE/OM from topic and make SCM decision. What are popular decisions that you may face?
+      \item \textbf{7Eleven:} an example of case study:  (from US perspective, this is radical retailer)
+      \item \textbf{Conceptual Design:} In general, what are factors that you should think before design network? and how they interact?
+      \item \textbf{Conceptual Distribution:} how 7Eleven JPN distribute? and general development
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\section[Decisions]{Driven Factors and Decisions in Supply Chain Management}
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Supply chain as Math modeling}
+
+
+  \begin{itemize}
+    \item \textbf{Stakeholder:} retailer, shipper, \alert{consumer}
+    \item \textbf{Objective:} maximize \alert{value} of \alert{every stakeholder}
+    \item \textbf{Decision:}
+    \begin{itemize}
+      \item \textbf{Supply Mgt:} \alert{sourcing}, strategic alliance, inventory
+      \item \textbf{Product Mgt:} make or buy, MRP, JIT
+      \item \textbf{Transportation Mgt:} location, mode-vehicle, routing
+      \item \textbf{Integration/Collaboration:} IT (bullwhip effect), EDI, virtual integration \\[5ex]
+    \end{itemize}
+    \item \textbf{Information:}  forecasting, supplier evaluation, sales, network
+    \item \textbf{Constraints:} \alert{law}, technology-infrastructure, \alert{time-capacity}, service level, quality
+  \end{itemize}
+
+
+  \note{
+    \noindent\textbf{Purpose:} Systematic view of SCM decision\par
+    \noindent\textbf{Leading Question:} Which decision, constraint, and objective belong in a supply-chain model?\par
+    \noindent\textbf{Teaching cue:} Use a replenishment example to distinguish controlled quantities from inputs such as demand.\par
+    \begin{itemize}
+      \item \textbf{B/G} OR as Science of Better
+      \item \textbf{Stakeholder:} how to form problem/desion? do we have to care? Which shoes/roles you are in?
+      \item \textbf{Objective:} how to objectively measure \alert{value}. Utility $\gg$ Profit $\gg$ Cost
+      \item \textbf{Decision:} four related topics
+      \item \textbf{Information:} integrated through information, planning, and integration activities. how to obtain? does it reliable?
+      \item \textbf{Constraint:} what we should aware?
+      \begin{itemize} \scriptsize{
+        \item \textbf{Law:} load/weight, zoning, speed, load checking
+        \item \textbf{Tech:} lift, hoist, GPS, inventory, RFID, software
+        \item \textbf{Time:} lead time, cycle time, seasonal,
+        \item \textbf{misc:} capacity \& service lv \& quality \& quantity }
+      \end{itemize}
+      \item \textbf{Cheating:} usually we need to focus $\rightarrow$ which one?
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Decision/Driver in Supply Chain}
+
+  \textsc{Time Horizon}
+  \begin{itemize}
+    \item \textbf{SC Strategy:} structure of the supply chain; \alert{long-term}
+    \item \textbf{SC Planning:} policies governing short-term operations; \alert{few months}
+    \item \textbf{SC Operation:} \alert{weekly} to maximize efficiency of supply chain
+  \end{itemize}
+
+  \NextLine
+  \textsc{Drivers in Supply Chain}
+  \begin{itemize}
+    \item \textbf{Facilities:} \alert{location} for manufacturing products and housing inventory
+    \item \textbf{Inventory:} raw materials, WIP, F/G to \alert{smooth operations}
+    \item \textbf{Transportation:} \alert{moving} products from $A$ to $B$
+    \item \textbf{Information:} data and analysis to \alert{coordinate} between stages (best drivers)
+    \item \textbf{Sourcing:} managing raw material and relationship with supplier
+    \item \textbf{Pricing:} pricing goods and services provided by a firm to the supply chain
+  \end{itemize}
+
+  \note{
+    \noindent\textbf{Purpose:} How to simplify decision making in SCM\par
+    \noindent\textbf{Leading Question:} Which supply-chain driver can improve response time and raise cost at the same time?\par
+    \noindent\textbf{Teaching cue:} Ask for a concrete facility, inventory, or transport decision and its countervailing cost.\par
+    \begin{itemize}
+      \item \textbf{Supply Chain Strategy:} structure of the supply chain and locations; \alert{long-term} and \alert{expensive};
+      \item[] \hskip3exLocations and capacities of facilities; Manufacturing and Storage locations; Modes of transportation \& IT systems \NextHalfLine
+      \item \textbf{Supply Chain Planning:} tactical policies that govern short-term operations usually \alert{few months} or \alert{quarter}
+      \item[] \hskip3ex Markets allocations and promotions; Inventory policies, Batch  sizing; Subcontracting, backup locations \NextHalfLine
+      \item \textbf{Supply Chain Operation:}  \alert{weekly} or daily operations to maximize efficiency of supply chain
+      \item[] \hskip3ex allocate orders to inventory, production, shipment; Set order due dates, routing, or delivery schedules;Replenish and product orders
+    \end{itemize}
+    \textbf{Driver:} inter-related topics in SCM (\textbf{note} continue next page)
+    \begin{itemize}
+      \item \textbf{Facilities:} manufacturing products and housing inventory to achieve \alert{economy of scales}
+      \item[] \hskip3ex Number, Location, Capacity (manufacturing \& warehousing methodology)
+    \end{itemize}
+    }
+
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Example of decisions in Supply Chain}
+
+  \begin{center}\small{
+  \begin{tabular}{rlll} \hline \hline
+    Area                      & \multicolumn{3}{c}{ \textbf{Levels} } \\ \cline{2-4}
+    ~                         & Strategic         & Tactical          & Operation \\ \hline \hline
+    Facility$^\pounds$           & number, size,     &                   &            \\
+                              & location          &                   &  \\
+    Inventory$^\pounds$          & form, policy      & safety stock      & qty, freq \\
+                              &                   &                   &  \\
+    Transportation$^\pounds$     & mode              & equipments        & routing \\
+                              &                   &                   &  \\[6pt]
+    Information$^\dag$        & OS, vendor        & interface         & process \\
+                              &                   &                   &  \\
+    Sourcing$^\dag$           & relationship~~    & selection, eval~~ & purchasing\\
+                              &                   & contracts         &  \\
+    Pricing$^\dag$            & scale, M/C        & mkt position      &  discount \\
+                              & manuf. method     &                   &  \\    \hline \hline
+  \end{tabular}
+  }
+  \end{center}
+
+  \begin{flushleft}
+    \begin{itemize}
+      \item[] \code{$^\pounds$} \footnotesize{ \textbf{logistic driver:} physical movement $\multimap^{direct}\rightarrow$ operation }
+      \item[] \code{$^\dag$} \footnotesize{ \textbf{cross-functional driver:} indirect related to physical movement  }
+    \end{itemize}
+  \end{flushleft}
+
+  %%%------
+  \note{
+    \noindent\textbf{Purpose:} How to simplify decision making in SCM (cont)\par
+    \noindent\textbf{Leading Question:} Which choices can be reversed next week and which commit the network for years?\par
+    \noindent\textbf{Teaching cue:} Classify facility placement, inventory targets, and dispatch as long-term or operating choices.\par
+    \begin{itemize}
+      \item \textbf{Inventory:} raw materials, WIP, F/G to \alert{smooth operations}
+      \item[] \hskip3ex Cycle inventory  (expected demands); Safety inventory (unexpected demands); Seasonal inventory (predicted increasing demands) \NextHalfLine
+      \item \textbf{Transportation:} moving products from $A$ to $B$
+      \item[] \hskip3exMode of transportation; Route and network selection ; In-house \textbf{VS} outsource     \NextHalfLine
+      \item \textbf{Information:} data and analysis to coordinate between stages (best drivers)
+      \item[] \hskip3ex Push (MRP) \textbf{VS} pull (JIT); Coordination and information sharing;  Forecasting and aggregate planning ; Enabling technologies; IT infrastructure, KPI, assessing, evaluating parties \NextHalfLine
+      \item \textbf{Sourcing:} functions a firm performs and functions that are outsourced
+        \item[] \hskip3ex In-house \textbf{VS} outsource decisions ; Supplier evaluation and selection ; Procurement process ; identifying, certifying, and evaluating supplier of goods/services\NextHalfLine
+      \item \textbf{Pricing:} Price associated with goods and services provided by a firm to the supply chain  $<<$unlikly topic for IE$>>$
+      \item[] \hskip3ex pricing and qty ; Everyday low pricing \textbf{VS} high-low pricing ; fixed price \textbf{VS} menu pricing
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\section[7-Eleven]{Case Study: 7-Eleven (Japan) Supply Chain}
+%=================================================================================================
+\begin{frame}
+  \frametitle{7-Eleven Background}
+
+    \begin{itemize}
+      \item \textbf{Nature of business:} food and grocery Retailer
+      \item \textbf{Status:} largest convenience store chain in Japan
+      \item \textbf{Owned by:} Ito-Yokado Group (IYG) $\rightarrow$ Ito-Yokado (superstores) + Seven-Eleven Japan
+      \item \textbf{Ex-Partner:} Southland Corp
+      \item \textbf{Growths:} 1985 $\rightarrow$ 2007
+      \begin{itemize}
+        \item (519 in 1979) 2,299 $\rightarrow$ 12,304 stores
+        \item 386 $\rightarrow$ 2,574 Billion JPY of Sales (7\% of IYG revenue)
+        \item 9 $\rightarrow$ 91.5 Billion JPY of Income (47\% of IYG income)
+        \item 12.6\% yearly avg revenue growth
+        \item 20.9\%  yearly net income \NextHalfLine
+      \end{itemize}
+      \item \textbf{Performance:} decent even during recession (1990s) (why?)
+    \end{itemize}
+
+
+
+  \note{
+    \noindent\textbf{Purpose:} 7Eleven JPN B/G and success story\par
+    \noindent\textbf{Leading Question:} Which parts of this retailer case depend on its market and year?\par
+    \noindent\textbf{Teaching cue:} Separate the historical observations from principles that another retailer could test.\par
+    \begin{itemize}
+      \item \textbf{why 7Elven?} Ito-Yokado group also owns super stores. Guess what IYG needs from southland? (CP fresh mart \textsc{VS} 7Eleven)
+      \item \textbf{history:} story of southland and impact to 7Eleven JPN
+      \item \textbf{key idea of clip:} growth from acquiring and driving
+      \item \textbf{Interesting Stat:}
+      \begin{itemize} \scriptsize{
+        \item 65\% of customer are male
+        \item 55\% of customer live less than 5.0 minute
+        \item 63\% of customer visit 2.0+ a week }
+      \end{itemize}
+      \item \textbf{lifestyle:} convenince store and JPN lifestyle
+      \item \textbf{performance:} part timer who buys minimum only for survive after work. no car, no space, no time
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Convenience Store Industry and 7-Eleven}
+
+  \textbf{Convenience Store Industry}
+  \begin{description}
+    \item[1991] 1.2\% (1991) of retailer outlet and 2.2\% (1991) of annual sales
+    \item[1990s] 19,600 $\rightarrow$ 42,000 of retailer outlets (one for 3,000)
+    \item[2004] 10 store chain $\approx$ 90\%
+  \end{description}
+
+  \NextLine
+  \textbf{7-Eleven}
+  \begin{itemize}
+    \item \textbf{Big player:} 51\% of convenience store outlets ($2^{nd}$ Lawson by Mitsubishi)
+    \item \textbf{Big Sales:} 31.5\% of total sales (30\% per store higher)
+    \item \textbf{High Growth:} accounting for 60\% of industry growth
+    \item \textbf{Focus products:} 70\% of total sales is food
+  \end{itemize}
+
+  \note{
+    \noindent\textbf{Purpose:} Overview of 7Elven and Convenience industry\par
+    \noindent\textbf{Leading Question:} Why might small convenience outlets need higher delivery frequency?\par
+    \noindent\textbf{Teaching cue:} Link limited shelf space and demand variation to replenishment cadence and route cost.\par
+    \begin{itemize}
+      \item \textbf{key idea of clip:} b/g of connection, stocks, distribution network, break-bulk
+      \item \textbf{culture} USA $\leftrightarrow$ JPN $\rightarrow$ THA
+      \item \textbf{risk} face-off energy conservation (24 hours operating) by safe place from stalker and criminal
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{7-Eleven Operation}
+
+
+  \begin{itemize}
+    \item \textbf{Franchise System:} attractive (1\% awarded)
+    \begin{itemize}
+      \item<2-> new store \alert{within cluster of 50-60} old stores $\rightarrow$ limited present
+      \item<2-> IYG got 45\% of total profits (68\% total revenues)
+      \item<2-> 3 million JPY (training, initial inventory) \NextHalfLine
+    \end{itemize}
+    \item \textbf{Contents:} food items, beverage, magazine, consumer products
+    \begin{itemize}
+      \item<3-> high sales per area (3,000 SKU)
+      \item<3-> \alert{food items} $\approx$ 40\% of total sales
+      \item<3-> private soft drink \NextHalfLine
+    \end{itemize}
+    \item \textbf{Bill Payment Service:} convenient place to shop
+    \begin{itemize}
+      \item<4-> 10 million bills in 1994
+      \item<4-> pick-up internet order at 7-Eleven
+      \item<4-> utilization of IT
+    \end{itemize}
+  \end{itemize}
+
+
+  \note{
+    \noindent\textbf{Purpose:} operation component of 7Eleven JPN\par
+    \noindent\textbf{Leading Question:} What would you measure before copying the clustered store strategy?\par
+    \noindent\textbf{Teaching cue:} Compare delivery cost per stop, spoilage, and availability while checking the original case period.\par
+    \begin{itemize}
+      \item \textbf{Franchise:} good location is hard to own; why not partner? 'Right store' $\in$ walk, size, cluster, money
+      \item \textbf{Content:} single uses, product analysis, private brand, 24/7 need energy and worker
+      \item \textbf{Service:} service mail, utility payment, micro bank, money exchange, WiFi
+      \item \textbf{Note} 7Catalog and 7pay was out-of-date and hacked. They eventually suspended
+    \end{itemize}
+  }
+\end{frame}
+%
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{7-Eleven IT}
+
+
+  \begin{center}
+    \only<1 |handout:1>{ \includegraphics[width=0.5\linewidth]{\figureLocation{scm_decision/info7eleven.jpg}} }
+    \only<2-|handout:0>{
+    \begin{tabular}{cc}
+      \includegraphics[width=0.30\linewidth]{\figureLocation{scm_decision/gpTerm7eleven.jpg}}
+    &
+      \includegraphics[width=0.30\linewidth]{\figureLocation{scm_decision/ticketBuyer.jpg}}
+    \end{tabular}
+    }
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Attaran, M. 2004 ``Exploring the relationship between information technology and business process reengineering''}\\
+  \end{flushright}
+
+  \begin{itemize}
+    \item \textbf{Graphic Order Terminal:} portable item analysis and order device
+    \item \textbf{Scanner Terminal:} enable drop-off orders by drivers
+    \item \textbf{Store computer:} processing house, link all terminals
+    \item \textbf{POS Terminal:} record sales
+  \end{itemize}
+
+
+  \note{
+    \noindent\textbf{Purpose:} IT as substitution of inventory\par
+    \noindent\textbf{Leading Question:} How does a store transaction lead to a replenishment decision?\par
+    \noindent\textbf{Teaching cue:} Trace point-of-sale data through item records, forecast, order, and exception handling.\par
+    \begin{tabular}{ccc}
+      \includegraphics[width=0.3\linewidth]{\figureLocation{scm_decision/gpTerm7eleven.jpg}}
+      &
+      \includegraphics[width=0.3\linewidth]{\figureLocation{scm_decision/pos7eleven.jpg}}
+      &
+      \includegraphics[width=0.3\linewidth]{\figureLocation{scm_decision/ticketBuyer.jpg}}
+    \end{tabular}
+
+    \begin{itemize}
+      \item first to introduce point-of-sale (POS) information
+      \item computer link to HQ and vendors $\rightarrow$ largest ISDN
+      \item optical fiber to transfer voice, data, graphic information
+      \item Hardware $\rightarrow$ inventory visibility
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{7-Eleven Distribution System}
+
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.35\linewidth]{\figureLocation{scm_decision/truck7eleven.jpg}}
+      &
+      \includegraphics[width=0.35\linewidth]{\figureLocation{scm_decision/network7eleven.jpg}} \\
+    \end{tabular}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Jeffrey Hays 2009 \hskip10em}\\
+  \end{flushright}
+
+  \begin{itemize}
+    \item short cycle time (3 for rices, 2 for fresh food)
+    \item customize delivery time
+    \item cut-off-time for breakfast, lunch, dinner
+    \item combined delivery (products \& store)
+    \item "Transfleet" provides transportation service
+  \end{itemize}
+
+  \note{
+    \noindent\textbf{Purpose:} logistic of 7Eleven JN\par
+    \noindent\textbf{Leading Question:} Which loads can be combined without breaking cold-chain or delivery constraints?\par
+    \noindent\textbf{Teaching cue:} Ask how temperature zones and delivery windows change the consolidation decision.\par
+    \begin{itemize}
+      \item \textbf{info} 72 dedicated plants for food items
+      \item \textbf{imply} delivery time \& multiple shipment $\rightarrow$ no checking
+      \item \textbf{outsource} transportation, DC operator, DC location
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{7-Eleven Outlet Locations}
+
+  \begin{center}
+    \only<1 |handout:0>{ \includegraphics [height=0.75\textheight]{\figureLocation{scm_decision/SevenElevenMap.png}} }
+    \only<2 |handout:1>{ \includegraphics [height=0.75\textheight]{\figureLocation{scm_decision/SevenElevenMap02.png}} }
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Seven\& i HLDFS. Co~ \href{https://www.7andi.com/en/ir/library/co\_financial/2022/convenience\_store}{\code{https://www.7andi.com/en/ir/library/co\_financial/2022/convenience\_store}} \hskip10em}\\
+  \end{flushright}
+
+  \note{
+    \noindent\textbf{Purpose:} Connect 7-Eleven Outlet Locations to a decision and the evidence needed to explain it.\par
+    \noindent\textbf{Leading Question:} Where would adding a store improve coverage but raise cannibalization risk?\par
+    \noindent\textbf{Teaching cue:} Compare candidate sites using customer reach, route distance, and existing outlet overlap.\par
+    \begin{itemize}
+      \item \textbf{cluster} High concentration $\rightarrow$ cannibalising its own share
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Study Questions}
+
+  \begin{itemize}
+    \item What are natures of business and core competencies?
+    \item What are other rapid response supply chain similar?
+    \item How does locations, inventory, IT, transportation support 7-Eleven SC strategy?
+    \item Why do Seven Eleven stores offer many services?
+    \item What are similarities and differences between 7Eleven Japan and 7Eleven Thailand
+    \item What are \alert{trade-off} found in 7Eleven (comparing with Wal-mart)?
+    \item<2-> What are concurrent issues about 7Eleven Japan? \hfill \code{\#\# out-of-scope}
+    \item<2-> PRO and CON \alert{Couche-Tard} take-over? \hfill \code{\#\# out-of-scope}
+  \end{itemize}
+
+
+  \note{
+    \noindent\textbf{Purpose:} example of question in case study\par
+    \noindent\textbf{Leading Question:} What evidence would support your answer to the case question?\par
+    \noindent\textbf{Teaching cue:} Require a group to state one conclusion, a comparison, and a source or missing datum.\par
+    \begin{itemize}
+      \item \textbf{What Core:} convenience food retailer (full price with IT)
+      \item \textbf{Other rapid:} fast fashion, package delivery
+      \item \textbf{SC Strategy:} premire location with people, few qty but many SKUs using IT and clustering
+      \item \textbf{Other services:} $<<$reserch questions$>>$
+      \item \textbf{Diff from Thai:} location and size of store-DC, food choices, \#delivery
+      \item \textbf{Trade-Off:} location \textsc{VS} info \textsc{VS} qty
+      \item \textbf{Thinking Points:} how do wal-mart and trader-Jo work?
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{How to do a business case study}
+
+  \begin{itemize}
+    \item[1] Examine \alert{business environment} and \alert{information}
+    \item[2] Analyze structure and size of \alert{main business}
+    \item[3] Identify key issue or problem
+    \item[4] Trace a chronological progression of how business responds
+    \item[5] Learn successful aspects of responses as well as failures
+    \item[6] \alert{Suggest alternative} successes, failures, unforeseen results, and measures
+    \item[7] Describe \alert{what changes you would make} in business
+  \end{itemize}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} How to Analyse a Case Study (\href{http://www.wikihow.com}{http://www.wikihow.com}) \hskip10em}\\
+  \end{flushright}
+
+
+  \note{
+    \noindent\textbf{Purpose:} guideline for case study\par
+    \noindent\textbf{Leading Question:} What makes a recommendation in a case study testable?\par
+    \noindent\textbf{Teaching cue:} Identify a problem owner, alternatives, criteria, and an assumption to test.\par
+    \begin{itemize}
+      \item $<<$explain bullets$>>$
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+%=================================================================================================
+\section[Conceptual design]{Conceptual Designing of Distribution Network}
+%=================================================================================================
+\begin{frame}
+  \frametitle{Role of Distribution in Supply Chain}
+
+
+  \begin{center}
+      \includegraphics[width=0.35\linewidth]{\figureLocation{scm_decision/distNetwork.jpg}}
+  \end{center}
+
+
+  \begin{itemize}
+    \item Distribution $\rightarrow$ cost and customer experience; hence drives profitability
+    \item Choice of distribution network $\rightarrow$ SC performance
+    \item[] \hskip10em low cost $\leftrightarrow$ high responsiveness
+  \end{itemize}
+
+  \NextLine
+  \textbf{Factors Influencing Network Design}
+  \begin{itemize}
+    \item Customer service
+    \item Costs provided at level of service
+  \end{itemize}
+
+  \note{
+    \noindent\textbf{Purpose:} trade-off between lv. customer service and cost\par
+    \noindent\textbf{Leading Question:} What customer outcome does a distribution network enable?\par
+    \noindent\textbf{Teaching cue:} Trace availability and response time from a customer promise back to network design.\par
+    \begin{itemize}
+      \item \textbf{Role:} distribution network is strategic issue $\rightarrow$ daily shipment \& outsoucing
+      \item \textbf{Selection of network:} cost, performance, operation, availability
+      \item \textbf{What are design/thinking factors?}
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Trade-off: Areas of influencing}
+
+  \begin{center}
+      \begin{tabular}{ll}\hline
+        Customer Service      & Cost \\ \hline
+        \alert{Response time} & \alert{Inventories} \\
+        Product variety       & \alert{Facilities \& handling cost}\\
+        Product availability  & \alert{Transportation} \\
+        Customer experience   & Information\\
+        Order visibility      & \\
+        Returnability         & \\ \hline
+      \end{tabular}
+  \end{center}
+
+
+  \note{
+    \noindent\textbf{Purpose:} service as qualitative \textsc{VS} cost as quantitative\par
+    \noindent\textbf{Leading Question:} Which costs rise when we improve one service dimension?\par
+    \noindent\textbf{Teaching cue:} Compare response time and availability with facilities, transport, and inventory cost.\par
+    \begin{itemize}
+      \item \textbf{Service:} with exception of \alert{time}, other is difficult to measure and vary
+      \item \textbf{Cost:} money paid easy to measure
+      \begin{itemize} \scriptsize{
+        \item \textbf{facility:} rent, utility, training, admin, and infrastructure
+        \item \textbf{inventory:} stock cost and opportunity
+        \item \textbf{transportation:} movement and distribution network
+        \item \textbf{information:} know cost but may or may not relate to \#stores as it depends on product and nature }
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Number of Facilities vs. Response Time}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics[width=\FigRatio\linewidth]{\figureLocation{scm_decision/Facility_RespTime.png}}\\
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl. 2010.~\cite{chopra2007supply} \hskip10em}\\
+  \end{flushright}
+
+
+  \note{
+    \noindent\textbf{Purpose:} trade-off between \#store and response\par
+    \noindent\textbf{Leading Question:} How does an extra facility change response time under this illustration?\par
+    \noindent\textbf{Teaching cue:} Trace both axes and explain why the relationship is qualitative until geography and capacity are specified.\par
+    \begin{itemize}
+      \item \textbf{example} 400 Borders vs. 5 Amazon.com storage centers $\rightarrow$ wholefood and Amazon GO
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\renewcommand{\FigRatio}{0.85}
+%=================================================================================================
+\begin{frame}
+  \frametitle{Cost as a Function of Facility Count}
+
+  \RemoveLine
+
+  \only<1|handout:0>{
+%    \textbf{\# Facility \textbf{VS} Facility Cost  }
+%    \RemoveLine
+    \begin{center}
+      \includegraphics[width=\FigRatio\linewidth]{\figureLocation{scm_decision/Facility_Facility.png}}
+    \end{center}
+  }
+
+  \only<2|handout:0>{
+%    \textbf{\# Facility \textbf{VS} Inventory Cost }
+%    \RemoveLine
+    \begin{center}
+      \includegraphics[width=\FigRatio\linewidth]{\figureLocation{scm_decision/Invent_Facility.png}}
+    \end{center}
+  }
+
+  \only<3|handout:0>{
+%    \textbf{\# Facility \textbf{VS} Transportation Cost}
+%    \RemoveLine
+    \begin{center}
+      \includegraphics[width=\FigRatio\linewidth]{\figureLocation{scm_decision/Trans_Facility.png}}
+    \end{center}
+  }
+
+  \only<4-|handout:1>{
+%    \textbf{\# Facility \textbf{VS} Total Costs}
+%    \RemoveLine
+    \begin{center}
+    \includegraphics[width=\FigRatio\linewidth]{\figureLocation{scm_decision/Total_Facility.png}}
+    \end{center}
+  }
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl. 2010.~\cite{chopra2007supply}\hskip10em}\\
+  \end{flushright}
+
+  \note{
+    \noindent\textbf{Purpose:} Outline topics\par
+    \noindent\textbf{Leading Question:} Which facility count would you consider after imposing a delivery-time target?\par
+    \noindent\textbf{Teaching cue:} Read the qualitative cost curves and screen alternatives by service feasibility before comparing total cost.\par
+    \begin{itemize}
+      \item \textbf{facility} Increase number of facilities $\rightarrow$ improve responsiveness.
+      \item[] \hskip3ex If a firm is focusing on improving responsiveness, it may be beneficial for the company to increase the number of facilities beyond the total minimum cost point. Because better responsiveness $\rightarrow$ more revenue.
+      \item \textbf{inventory:} reduction of safety stock from pooling effect
+      \item \textbf{transportation} No distribution network will outperform others along all dimensions. Thus, it is important to ensure that the strengths of the distribution network fit with the strategic position of the firm
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+% Standardize how tikz displays vendors, crossdock, and stores
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,positioning,decorations.pathmorphing}
+\tikzstyle{factory}= [rectangle,draw=black!80,thick,fill=green!25,inner sep=0pt,minimum size=5mm]
+\tikzstyle{retail}=  [diamond,draw=black!80,thick,fill=red!25,inner sep=0pt,minimum size=5mm,below]
+\tikzstyle{customer}=[circle,draw=black!80,thick,fill=blue!25,inner sep=0pt,minimum size=5mm]
+\tikzstyle{facility}=[rectangle,draw=black!80,thick,fill=yellow!25,text centered,text width=15mm,text height=3mm]
+\tikzstyle{pFlow}=[->, black]
+\tikzstyle{cFlow}=[draw=orange,ultra thick,decorate,decoration=snake]
+\tikzstyle{dFlow}=[->,thick, blue, dotted]
+\newcommand{\tikztext}[1]{\footnotesize{#1}}
+%============================================================================================================--
+\section[Distribution]{Conceptual Distribution Design }
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Distribution Design}
+
+  \begin{center} \small{
+  \begin{block}{Question: How to buy and pay for these items? }{}
+    \begin{itemize}
+      \item \textbf{FMCG:}: shampoo, shaving razor \hfill \uncover<2->{\code{anywhere}}
+      \item \textbf{Hi-End Consumer:}: iPhone, lenovo X1 \hfill \uncover<2->{\code{few place}}
+      \item \textbf{Luxury Products:} ferrari, home appliance, jewelry
+      \item \textbf{One-Of-Kinds:} machine, house, event
+    \end{itemize}
+  \end{block} }
+  \end{center}
+
+
+  \begin{itemize}
+    \item \textbf{Channel of Distribution:} network of firms collaborates to provide products to consumers
+    \item \textbf{Channel type:}
+    \begin{itemize}
+      \item \textbf{distributor:} \alert{firms} who provides assortment, break-bulk, finance, and inventory
+      \item \textbf{value added retailer (VAR):} \alert{specialists} who works with manufacturers
+      \item \textbf{broker/agent:} \alert{individuals} who represent manufacturers  \NextHalfLine
+    \end{itemize}
+    \item \textbf{Network:} intensive (many-in-TH) $\gg$ selective $\gg$ exclusive (1-in-TH)
+  \end{itemize}
+
+  \note{
+    \noindent\textbf{Purpose:} Overview of how to distribute\par
+    \noindent\textbf{Leading Question:} Which decision features distinguish the distribution options?\par
+    \noindent\textbf{Teaching cue:} Track who holds stock, who arranges final delivery, and where orders are consolidated.\par
+    \begin{itemize}
+      \item \textbf{reverse phycology:} rarity and price as signal of class
+      \item \textbf{Type of Mkt distribution Network:}
+      \begin{itemize} \scriptsize{
+        \item \textbf{intensive:} available and \alert{saturated} everywhere; otherwise lost sale. e.g., common FMCG
+        \item \textbf{selected:} available in some regions or some store. partner with training e.g., cosmetic
+        \item \textbf{extensive:} extreme case of selective. e.g. [ex] hermes, rolex, super car     }
+      \end{itemize}
+      \item \textbf{note:} how to track information flow in supply chain
+      \item \textbf{more info} \href{https://www.yourarticlelibrary.com/distribution/types-of-distribution-intensive-selective-and-exclusive-distribution/5780}{\code{more info}}
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Direct shipments}
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2.5]
+
+      \node[factory] (f1) at (0,1.0) {};
+      \node[factory] (fn) at (0,0.0) {};
+      \node[customer] (c1) at (2.5,1.0) {};
+      \node[customer] (c2) at (2.5,0.5) {};
+      \node[customer] (cn) at (2.5,0.0) {};
+
+      %\node at (0,0.5) {$\vdots$};
+      \node at (0,-0.5) {\tikztext{Factories}};
+
+      %\node at (1,0.5) {$\vdots$};
+      \node at (2.5,-0.5) {\tikztext{Customer}};
+
+      \draw [pFlow] (f1) -- (c1);
+      \draw [pFlow] (f1) -- (c2);
+      \draw [pFlow] (f1) -- (cn);
+      \draw [pFlow] (fn) -- (c1);
+      \draw [pFlow] (fn) -- (c2);
+      \draw [pFlow] (fn) -- (cn);
+
+      \node[retail]  (r1) at (1.0,1.55) {};
+      \node[above=0.2cm of r1] (rName) {\tikztext{Retailer}};
+      \draw [dFlow] (c1) -- (r1);
+      \draw [dFlow] (c2) -- (r1);
+      \draw [dFlow] (cn) -- (r1);
+      \draw [dFlow] (r1) -- (f1);
+      \draw [dFlow] (r1) -- (fn);
+
+      \draw[-,dotted](0.5,-0.35) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+      \draw[pFlow] (0.6,-0.55) -- node[pos=0.5,auto] {\tikztext{product}} ++(0.25,0.0);
+      \draw[dFlow] (1.1,-0.55) -- node[blue, pos=0.5,auto] {\tikztext{info}} ++(0.25,0.0);
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \noindent\textbf{Purpose:} show direct shipment\par
+    \noindent\textbf{Leading Question:} When can a direct shipment beat a distributor shipment?\par
+    \noindent\textbf{Teaching cue:} Compare handling avoided with consolidation lost, then add the customer lead-time requirement.\par
+    \begin{itemize}
+      \item explain flow of phy and info
+      \item simple
+    \end{itemize}
+  }
+\end{frame}
+
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Direct shipping with in-transit merge}
+
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2.5]
+
+      \node[factory] (f1) at (0,1.0) {};
+      \node[factory] (fn) at (0,0.0) {};
+      \node[facility] (facility) at (1.75,0.5) {\tikztext{Transit}};
+      \node[customer] (c1) at (2.5,1.0) {};
+      \node[customer] (c2) at (2.5,0.5) {};
+      \node[customer] (cn) at (2.5,0.0) {};
+
+      %\node at (0,0.5) {$\vdots$};
+      \node at (0,-0.5) {\tikztext{Factories}};
+
+      %\node at (1,0.5) {$\vdots$};
+      \node at (2.5,-0.5) {\tikztext{Customer}};
+
+      \draw [pFlow] (f1) -- (facility);
+      \draw [pFlow] (fn) -- (facility);
+      \draw [pFlow] (facility) -- (c1);
+      \draw [pFlow] (facility) -- (c2);
+      \draw [pFlow] (facility) -- (cn);
+
+      \node[retail]  (r1) at (1.0,1.55) {};
+      \node[above=0.2cm of r1] (rName) {\tikztext{Retailer}};
+      \draw [dFlow] (c1) -- (r1);
+      \draw [dFlow] (c2) -- (r1);
+      \draw [dFlow] (cn) -- (r1);
+      \draw [dFlow] (r1) -- (f1);
+      \draw [dFlow] (r1) -- (fn);
+
+      \draw[-,dotted](0.5,-0.35) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+      \draw[pFlow] (0.6,-0.55) -- node[pos=0.5,auto] {\tikztext{product}} ++(0.25,0.0);
+      \draw[dFlow] (1.1,-0.55) -- node[blue, pos=0.5,auto] {\tikztext{info}} ++(0.25,0.0);
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \noindent\textbf{Purpose:} how to modify direct for response\par
+    \noindent\textbf{Leading Question:} What must be coordinated at the merge point for one customer delivery?\par
+    \noindent\textbf{Teaching cue:} Trace the physical and information arrows and explain what happens when one component misses the cutoff.\par
+    \begin{itemize}
+      \item explain flow of phy and info
+      \item Both slide are a trading company with/without hub
+      \item retail needs to coordinate shipment
+      \item retail does not own transit facility
+      \item increasing effort
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Carrier delivery by distributors}
+
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2.5]
+
+      \node[factory] (f1) at (0,1.0) {};
+      \node[factory] (fn) at (0,0.0) {};
+      \node[facility] (facility) at (1.25,0.5) {\tikztext{Warehouse}};
+      \node[customer] (c1) at (2.5,1.0) {};
+      \node[customer] (c2) at (2.5,0.5) {};
+      \node[customer] (cn) at (2.5,0.0) {};
+
+      %\node at (0,0.5) {$\vdots$};
+      \node at (0,-0.5) {\tikztext{Factories}};
+
+      %\node at (1,0.5) {$\vdots$};
+      \node at (2.5,-0.5) {\tikztext{Customer}};
+
+      \draw [pFlow] (f1) -- (facility);
+      \draw [pFlow] (fn) -- (facility);
+      \path [pFlow] (facility.east) edge[bend left] (c1);
+      \path [pFlow] (facility.east) edge[bend left] (c2);
+      \path [pFlow] (facility.east) edge[bend left] (cn);
+
+      %\node[retail]  (r1) at (1.0,1.55) {};
+      %\node[above=0.2cm of r1] (rName) {\tikztext{Retailer}};
+      \path[dFlow] (c1) edge[bend left] (facility.east);
+      \path[dFlow] (c2) edge[bend left] (facility.east);
+      \path[dFlow] (cn) edge[bend left] (facility.east);
+
+
+      \draw[-,dotted](0.5,-0.35) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+      \draw[pFlow] (0.6,-0.55) -- node[pos=0.5,auto] {\tikztext{product}} ++(0.25,0.0);
+      \draw[dFlow] (1.1,-0.55) -- node[blue, pos=0.5,auto] {\tikztext{info}} ++(0.25,0.0);
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \noindent\textbf{Purpose:} further modification with inventory\par
+    \noindent\textbf{Leading Question:} When can centralized stocking and parcel carriage deliver good service?\par
+    \noindent\textbf{Teaching cue:} Compare order dispersion, parcel cost, and utilization against local-stock alternatives.\par
+    \alert{Intro}
+    \begin{itemize}
+      \item there is inventory
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Last mile delivery by distributors}
+
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2.5]
+
+      \node[factory] (f1) at (0,1.0) {};
+      \node[factory] (fn) at (0,0.0) {};
+      \node[facility] (facility) at (1.25,0.5) {\tikztext{Warehouse}};
+      \node[customer] (c1) at (2.5,1.0) {};
+      \node[customer] (c2) at (2.5,0.5) {};
+      \node[customer] (cn) at (2.5,0.0) {};
+
+      %\node at (0,0.5) {$\vdots$};
+      \node at (0,-0.5) {\tikztext{Factories}};
+
+      %\node at (1,0.5) {$\vdots$};
+      \node at (2.5,-0.5) {\tikztext{Customer}};
+
+      \draw [pFlow] (f1) -- (facility);
+      \draw [pFlow] (fn) -- (facility);
+      \draw [pFlow,red] (c1) -- (c2);
+      %\draw [pFlow] (c2) -- (cn);
+      \path [pFlow,red] (facility.east) edge[bend left] (c1);
+      \path [pFlow,red] (c2.south) edge[bend left] (facility.east);
+      \path [pFlow,red] (facility.east) edge[bend left] (cn.north);
+      \path [pFlow,red] (cn.south) edge[bend left]  (facility.east);
+
+      %\node[retail]  (r1) at (1.0,1.55) {};
+      %\node[above=0.2cm of r1] (rName) {\tikztext{Retailer}};
+      \path[dFlow] (c1) edge[bend left] (facility.east);
+      \path[dFlow] (c2) edge[bend left] (facility.east);
+      \path[dFlow] (cn) edge[bend left] (facility.east);
+
+
+      \draw[-,dotted](0.5,-0.35) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+      \draw[pFlow] (0.6,-0.55) -- node[pos=0.5,auto] {\tikztext{product}} ++(0.25,0.0);
+      \draw[dFlow] (1.1,-0.55) -- node[blue, pos=0.5,auto] {\tikztext{info}} ++(0.25,0.0);
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \noindent\textbf{Purpose:} further modification with transportation\par
+    \noindent\textbf{Leading Question:} What delivery density would make an owned last-mile route attractive?\par
+    \noindent\textbf{Teaching cue:} Ask for orders per route, cost per stop, and the effect of delivery windows.\par
+    \begin{itemize}
+      \item improve transportation
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Customer pick up}
+
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2.5]
+
+      \node[factory] (f1) at (0,1.0) {};
+      \node[factory] (fn) at (0,0.0) {};
+      \node[facility] (p1) at (1.85,0.75) {\tikztext{site \#1}};
+      \node[facility] (pn) at (1.85,0.25) {\tikztext{site \#2}};
+      \node[facility] (dock) at (1.0,0.75) {\tikztext{Crossdock}};
+      \node[customer] (c1) at (2.5,1.0) {};
+      \node[customer] (c2) at (2.5,0.5) {};
+      \node[customer] (cn) at (2.5,0.0) {};
+
+      %\node at (0,0.5) {$\vdots$};
+      \node at (0,-0.5) {\tikztext{Factories}};
+
+      %\node at (1,0.5) {$\vdots$};
+      \node at (2.5,-0.5) {\tikztext{Customer}};
+
+      \uncover<2->{
+      \draw [pFlow] (f1) -- (dock.west);
+      \draw [pFlow] (fn) -- (dock.west);
+      \draw [pFlow] (dock.east) -- (p1.west);
+      \draw [pFlow] (dock.east) -- (pn.west);
+      \path [cFlow] (c1.west) -- (p1);
+      \path [cFlow] (c2.west) -- (pn);
+      \path [cFlow] (cn.west) -- (pn);
+      }
+
+      \node[retail]  (r1) at (1.0,0.25) {};
+      \node at (1.0,0.05) {\tikztext{Retailer}};
+      \draw[dFlow] (c1) -- (r1.east);
+      \draw[dFlow] (c2) -- (r1.east);
+      \draw[dFlow] (cn) -- (r1.east);
+      \draw[dFlow] (r1.west) -- (f1);
+      \draw[dFlow] (r1.west) -- (fn);
+
+
+
+      \draw[-,dotted](0.5,-0.55) -- node[pos=0.5,auto] {legend} ++(1.05,0.00) -- ++(0.0,-0.3) -- ++(-1.05,0.0) -- ++(0.0,0.3) ;
+      \draw[pFlow] (0.6,-0.75) -- node[pos=0.5,auto] {\tikztext{product}} ++(0.25,0.0);
+      \draw[dFlow] (1.1,-0.75) -- node[blue, pos=0.5,auto] {\tikztext{info}} ++(0.25,0.0);
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \noindent\textbf{Purpose:} current practice and origin of omni-channel\par
+    \noindent\textbf{Leading Question:} Which costs and risks move to the customer when we offer pickup?\par
+    \noindent\textbf{Teaching cue:} Compare delivery, collection waiting time, inventory placement, and order accuracy.\par
+    \begin{itemize}
+      \item increase flexibility, like 7Eleven JPN
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{Reference}
+
+  \begin{footnotesize}
+    \bibliography{\refLocation{Coordination}}
+  \end{footnotesize}
+
+  \note{
+    \noindent\textbf{Purpose:} Help students verify and reuse evidence from the lecture.\par
+    \noindent\textbf{Leading Question:} What would you check before reusing a figure, fact, or model from this lecture?\par
+    \noindent\textbf{Teaching cue:} Trace a citation to its original source and verify the year, scope, and assumptions.\par
+  }
+
+\end{frame}
+
+%=================================================================================================
+\end{document}
+
+
+
+
+
+
+
+
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Frame Title Here}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Responsibility}
+
+    \begin{center}
+    \begin{tabular}{rr} \hline
+      7-Eleven   & Owner   \\ \hline
+      \alert{Supply products}
+    &
+      \alert{Operate} \& \alert{maintain} store
+    \\
+      Accounting, Advertising, IT Systems
+    &
+      Hiring staff \& customer service
+    \\
+      Install and remodel
+    &
+      Order products
+    \\ \hline
+    \end{tabular}
+    \end{center}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Though exercises}
+
+  Reason for outsoucing
+ Restructuring the supply bass
+•  Capital circumstance no longer the
+same
+•  Shift on “what we are good at”
+•  Change to world capabilities
+•  More pressure on cost control
+•  Resources no-longer available internally
+•  Customer demand changed
+
+
+  \begin{alertblock}{}{}
+    Name a company that \alert{bad} in supply chain and elaborate
+  \end{alertblock}
+
+  \NextHalfLine
+  \textsc{What are characteristic of \alert{bad} supply chain?}
+  \begin{itemize}
+    \item \textbf{Product:} items, quantities, condition
+    \item \textbf{Time:} delay, early
+    \item \textbf{Cost:}
+    \item \textbf{Place:}
+  \end{itemize}
+
+
+  \note{
+    \begin{itemize}
+      \item important and motivation of SCM~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}
+      \item SCM is an elective class/key application of ICE
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Factors affected supply chain}
+
+  \begin{itemize}
+    \item \textbf{Supply management:} \alert{forecasting}, sourcing, supplier evaluation, supplier certification, strategic partnership
+    \item \textbf{Production management:} \alert{production planning} (flow/job shop), \alert{JIT \textsc{VS} MRP}, \alert{Inventory planning}
+    \item \textbf{Transportation management:} \alert{mode selection}, \alert{distribution network}
+    \item \textbf{Integration:} Process integration
+  \end{itemize}
+
+  \NextLine
+  \begin{alertblock}{Message}{}
+    Every activities affect efficiency and responsiveness of supply chain
+  \end{alertblock}
+
+  \note{
+    \begin{itemize}
+     \item \alert{Production planning:} Aggregated planning, S\&OP
+     \item \alert{Inventory management}: EOQ (deterministic), newsvendor (perishable \& stochastic)
+    \end{itemize}
+
+  \textbf{Trends}
+  \begin{itemize}
+    \item Supplier improvement, e.g., evaluation and certification
+    \item Long-term relationship and information sharing
+    \item Strategic partnerships = successful and trusting relationships with top-performing suppliers
+    \item In-house or outsourcing
+    \item Flexible Vs Dedicated
+  \end{itemize}
+
+  \begin{itemize}
+    \item \textbf{Coordinating between separated organizations:} wake of outsourcing $\rightarrow$ complex supply chain. Hence, better communication in product process development, manufacturing, packaging, testing, after sale services \NextHalfLine
+    \item \textbf{Optimizing Global Supply Chain:} expanding partnerships and building facilities in foreign markets.
+    \begin{itemize}
+      \item \textbf{breadth} foreign manufacturing, office \& retail sites, foreign suppliers \& customers
+      \item \textbf{depth} involving second and third tier suppliers \& customers \NextHalfLine
+    \end{itemize}
+    \item \textbf{Supply Chain Responsiveness:} more flexible and responsive to customer needs; required industry benchmark and continuous improve \NextHalfLine
+    \item \textbf{Social Responsibility:} creating \alert{long-lasting brand} by \alert{triple bottom line}
+    \begin{itemize}
+      \item \textbf{economic} profit, value
+      \item \textbf{employee} job security, positive work condition, equal opportunity
+      \item \textbf{environmental} carbon emission, recycle, green logistic
+    \end{itemize}
+  \end{itemize}
+
+  }
+\end{frame} 
