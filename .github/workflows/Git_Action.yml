@@ -1,4 +1,5 @@
 name: Git_Action - Beamer Lecture Improvement
+run-name: Review ${{ inputs.lecture }} (${{ inputs.mode }})
 
 on:
   workflow_dispatch:
@@ -36,11 +37,22 @@ jobs:
           LECTURE: ${{ inputs.lecture }}
         run: |
           set -euo pipefail
-          [[ "$LECTURE" =~ ^[A-Za-z0-9_-]+$ ]] || { echo 'Invalid lecture basename'; exit 1; }
+          allowed_basename='^[A-Za-z0-9_-]+( [A-Za-z0-9_-]+)*$'
+          [[ "$LECTURE" =~ $allowed_basename ]] || { echo 'Invalid lecture basename'; exit 1; }
           test -s "lectures/$LECTURE.tex"
           test -s "lectures/$LECTURE.pdf"
           test -s "marco.tex"
           test -s "Beamer_Lecture_Improvement_Project.md"
+
+      - name: Validate Codex API secret
+        shell: bash
+        env:
+          CODEX_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [[ -z "$CODEX_API_KEY" ]]; then
+            echo '::error::Set the OPENAI_API_KEY repository Actions secret before running this workflow.'
+            exit 1
+          fi
 
       - name: Install PDF and XeLaTeX verification tools
         shell: bash
@@ -58,7 +70,7 @@ jobs:
           LECTURE: ${{ inputs.lecture }}
         run: |
           set -euo pipefail
-          BRANCH="codex/lecture-${LECTURE}-${GITHUB_RUN_ID}"
+          BRANCH="codex/lecture-${LECTURE// /-}-${GITHUB_RUN_ID}"
           git switch -c "$BRANCH"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 

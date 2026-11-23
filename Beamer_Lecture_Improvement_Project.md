@@ -1,6 +1,6 @@
 # Beamer lecture improvement project
 
-`lectures/LSCM_intro.tex` is the editable source for the introductory undergraduate logistics and supply chain lecture. `lectures/LSCM_intro.pdf` is the supplied 25-page visual baseline. The locked root `marco.tex` sets the presentation theme, shared commands, bibliography style, and note layout.
+Each undergraduate logistics and supply chain lecture has an original `.tex` and a supplied visual baseline `.pdf` in `lectures/`. Select the pair by its exact basename, including capitalization and any spaces. The locked root `marco.tex` sets the presentation theme, shared commands, bibliography style, and note layout for lectures that import it.
 
 Review the active source against the corresponding PDF pages. Retain the instructor's original examples and overlay structure. Use the notes to teach the decision, trade-off, and assumptions behind each example. Keep historical examples dated and distinguish evidence from hypotheses. Retain all text after `\end{document}` as dormant source.
 

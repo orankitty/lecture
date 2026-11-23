@@ -1,0 +1,1072 @@
+% ###################
+% ## Filename: sCM_mode.tex
+% ## Location: D:\Project\Prej_Teaching\ISE\SupplyChainMgt\presentation\scm_06_mode
+% ## Created: Jan 26, 2011
+% ## Last updated: Feb 2, 2010
+% ## Figure Location: ..\Figures\
+% ## Note: Presentation, Teaching
+% ###################
+
+\documentclass[10pt,presentation]{beamer}
+%\documentclass[10pt,handout]{beamer}
+%\documentclass[10pt,handout,notes=show]{beamer}
+
+
+%==============================================================================================================
+\input{../marco.tex}
+\title[LSCM v3.0]{Lecture 07: \\ Modes of Transportation  \\ ~~}
+\hypersetup{
+  pdftitle={07 Modes of Transportation},
+  pdfsubject={2104509lscm & 2184408scm handout},
+  pdfproducer={XeLatex/WinEdt},
+  pdfcreator={oran.k@chula.ac.th}
+}
+
+
+\begin{document}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Overview and Introduction to modes of transportation \\
+    \textbf{Leading Question:} How many way in which we can move product from A to B?
+    \begin{itemize}
+      \item \textbf{Goal1:} understand each mode/ requirement/ situation
+      \item \textbf{Goal2:} relationship between modes and product|country
+      \item \textbf{Goal3:} critical Thailand infrastructure of each mode
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+%==============================================================================================================
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \tableofcontents
+  \vfill
+  \begin{flushright}
+    \tiny{ \textbf{Key Ref.:}~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}} \hskip3ex
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Overview of Transportation \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Statistic} introduction to standard modes and assess your knowledge in each modes
+      \item \textbf{Issue:} detail operation and critical components/nature of each mode
+      \item \textbf{Infrastructure:} a case study of Thappline
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\section[Mode 101]{Statistics of Modes}
+%==============================================================================================================
+
+\begin{frame}
+  \frametitle{US Domestic Statistic 2013}
+  \small{
+  \begin{tabular}{lrrr|rrr} \hline		
+    Mode               & Tons      & Value    & Ton-miles$^{07}$ & \multicolumn{3}{|c}{Percentage} \\
+                       & (million) & (billion \$)& (billion) & Tons  & Value  &Ton-miles$^{07}$ \\ \hline
+    Truck	             &13,732	 &10,841	&2349	&77\% &75\% 	&41\% \\
+    Rail	             &1,681	   &424	    &1522	&9\% 	&3\% 	&27\% \\
+    Water	             &410	     &131	    &450	&2\% 	&1\% 	&8\% \\
+    Air	               &3	       &134	    &9	  &0\% 	&1\% 	&0\%  \\
+    Mail               &459 &1,695	  &469	&3\% 	&12\% 	&8\% \\
+    Pipeline	         &1,391	   &1,003	  &855	&8\% 	&7\% 	&15\% \\
+    Other              &274	     &270	    &86	  &2\% 	&2\% 	&1\% \\ \hline
+  \end{tabular}
+  }
+
+%Truck	11,520,318	12,421,511
+%Rail	1,738,346	690,459
+%Water	766,322	363,500
+%Air (including truck-air)	5,871	591,253
+%Multiple modes and mail	495,680	2,328,112
+%Pipeline	3,049,857	942,007
+%Other and unknown	39,210	97,633
+
+
+  \begin{flushright}
+    \tiny{\textbf{source:} US Bureau of Transportation}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Overview of modes in US and how to measure \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Truck:} major in all terms, esp value $\rightarrow$ why? (as last mile)
+      \item \textbf{Rail:} low value \& bulky products (grain/car/oil), long haul $\rightarrow$ unique to USA
+      \item \textbf{Water:} two agriculture waterways: Mississippi System and Great lakes System $\rightarrow$ which items
+      \item \textbf{Air:} expensive mode for parcels and special items $\rightarrow$ do applicable to Thailand?
+      \item \textbf{Pipeline:} unique infrastructure for energy and utility (oil/gas/coal/water)
+      \item \textbf{Parcel/Intramodel/Mail:}
+    \end{itemize}
+  }
+  \end{frame}
+
+
+%%==============================================================================================================
+\begin{frame}
+  \frametitle{US freight map}
+
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{\figureLocation{scm_mode/US_map_freigt_mode.png}}
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} US Bureau of Transportation}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Detail features by distance \\
+    \textbf{Leading Question:} how you choose modes of transportation for your goods?
+    \begin{itemize}
+      \item \textbf{Distance:} long $\rightarrow$ cheap (exception of Air)
+      \item \textbf{Value:} truck and pipeline
+      \item \textbf{Tonage:}
+      \item \textbf{Other:} OD, nature of goods, time,
+    \end{itemize}
+    \begin{itemize}
+      \item \textbf{case:} similar to weight; low value
+      \item \textbf{points:} not just truck, depends on mode of transportation; different products,
+    \end{itemize}
+  }
+  \end{frame}
+
+%%==============================================================================================================
+%\begin{frame}
+%  \frametitle{US freight by distance band \fo}
+%
+%  \begin{tabular}{cc}
+%    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/valueBand2007.png}}
+%    &
+%    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/tonBand2007.png}}
+%    \\
+%    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/tonMileBand2007.png}}
+%    &
+%    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/legendBand2007.png}}
+%  \end{tabular}
+%
+%
+%  \begin{flushright}
+%    \tiny{\textbf{source:} US Bureau of Transportation}
+%  \end{flushright}
+%
+%  \note{
+%    \textbf{Purpose:} Detail features by distance \\
+%    \textbf{Leading Question:} how you choose modes of transportation for your goods?
+%    \begin{itemize}
+%      \item \textbf{Distance:} long $\rightarrow$ cheap (exception of Air)
+%      \item \textbf{Value:} truck and pipeline
+%      \item \textbf{Tonage:}
+%      \item \textbf{Other:} OD, nature of goods, time,
+%    \end{itemize}
+%    \begin{itemize}
+%      \item \textbf{case:} similar to weight; low value
+%      \item \textbf{points:} not just truck, depends on mode of transportation; different products,
+%    \end{itemize}
+%  }
+%  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{How about Thailand?}
+
+  \begin{center}\small{
+  \begin{tabular}{lrrcc} \cline{1-3}
+    Mode  & USA     & Thailand & ~ & \multirow{6}{*}{ \begin{minipage}{0.40\textwidth} \includegraphics [width=\textwidth]{\figureLocation{scm_mode/modeUSA_THAI.png}}  \end{minipage}}\\ \cline{1-3}
+    Truck	& 13,732	& 426.1 & \\
+    Rail	& 1,681	  & 11.8 \\
+    Water	& 410	    & 91.7 \\
+    Air	  & 3	      & 0.1 \\
+    Pipeline	& 1,391	& - \\
+    Other	& 733	    & - \\ \cline{1-3}
+  \end{tabular} }
+  \end{center}
+        \begin{flushright}
+          \tiny{\textbf{source:} US Bureau of Transportation and TH Ministry of Transportation}
+        \end{flushright}
+
+  \begin{block}{What do these data imply?}{}{}
+    \begin{itemize}
+      \item $\exists$ relationship between mode and type of product
+      \item preference of modes is difference by country (infrastructure)
+      \item truck dominates \alert{last mile delivery}, whereas sea dominates \alert{global trade}
+    \end{itemize}
+  \end{block}
+
+  \note{
+    \textbf{Purpose:} Introduce mode nature in Thailand   \\
+    \textbf{Leading Question:} how these observations applied to Thailand
+    \begin{itemize}
+      \item \textbf{Truck:} are major mode for both nations, all nations
+      \item \textbf{USA:} uses more pipeline and rail
+      \item \textbf{Thailand:} uses more water
+    \end{itemize}
+    \textsc{\textbf{Note}}
+    \begin{itemize}
+      \item \textbf{Thailand:} Truck 80\%; river 9\%; sea 8.5\%; rail 2.5\%
+      \item \textbf{points:} not just truck, depends on mode of transportation; different products,
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{What is a suitable mode?}
+
+  \begin{itemize}
+    \item \textbf{Air:} expensive, any where, quick, safely (e.g., CPU, produces)
+    \item \textbf{Rail:} \alert{city-to-city}, bulky (e.g., ores, coals, grains, automobiles)
+    \item \textbf{Truck:} accessability, \alert{control}, \alert{responsive}
+    \item \textbf{Water:} international, bulky, cheap, \alert{low emission} (e.g., cargo)
+    \item \textbf{Pipeline:} special infrastructure (e.g., oil, natural gas)
+    \item \textbf{Parcel:} postal services (e.g., Dell computer, Amazon)
+    \item \textbf{Intermodal:} more than one mode (e.g., rail+truck, water+rail)
+  \end{itemize}
+
+  \NextLine
+  \textbf{Modern Marvel: Delivery it}
+  \begin{itemize}
+    \item \textbf{Story:} Extreme delivery and transportation
+    \item \textbf{Observation:}
+    \begin{itemize}
+      \item What is information necessary for planning and execute each type of delivery?
+      \item What are equipments and/or innovation in each type of delivery?
+      \item What are challenges in each type of delivery?
+    \end{itemize}
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview/Summary of each mode \\
+    \textbf{Leading Question:} $<<$None$>>$\\
+    \textbf{Trivial of each mode}
+      \begin{itemize}
+        \item \textbf{Air} charter flight, mixed passenger+cargo flight
+        \item \textbf{Rail} common unitload for rail and truck $\rightarrow$ carload (CL)
+        \item \textbf{Truck} ownership for vehicle, size of truck, pricing,  TL-VS-LTL; Class
+        \item \textbf{Water} 80\% of international freight, slowest
+        \item \textbf{Pipeline} grounded coal
+    \end{itemize}
+  }
+
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Air System: High speed and expensive }
+
+  \begin{itemize}
+    \item \textbf{Historical:} recent last couple of decades
+    \item \textbf{Concurrent Uses:} passenger, air mail, produces, electronic gadgets, jewelry
+    \item \textbf{Opportunity:} \alert{passenge+cargo}, revenue management
+    \item \textbf{Issues:} \alert{security}, hub location, crew scheduling, fuel consumption, maintenance
+    \item \textbf{Carriers:} UPS, FedEx, TNT, carter flight
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview of Air transportation \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Airport Free Zone:} no tax, yet. for import-export + avoid tax refund redtap
+      \item \textbf{THCargo:} THAI , charge everything, always look at manual for answer
+      \item \textbf{Cargo:} produce , gold, harzard chem, bicycle
+      \item \textbf{authority of caption:} own nation, priority between goods VS passenger, similarity between air and sea
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Main Air Shipping Routes}
+
+  \begin{center}
+    \includegraphics[width=0.80\textwidth]{\figureLocation{scm_mode/mainAirRoutes.png}}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} Air transportation system \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{dominate by:} USA-EUR transportation
+      \item \textbf{jet stream:} JPN to USA (during WWII)
+      \item \textbf{3D lane of airplane:} depend on height
+    \end{itemize}
+  }
+  \end{frame}
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Rail System: Opportunity or Legacy}
+
+  \begin{itemize}
+    \item \textbf{Historical:} key infrastructure, creating many metropolis
+    \item \textbf{Pricing:} High fixed cost (locomotive, rail way)
+    \item \textbf{Concurrent Uses:} vary depends largely on region
+    \begin{itemize}
+      \item \textbf{Europe:} high-speed passengers
+      \item \textbf{N. America:} bulky freight + passengers
+      \item \textbf{Asia Pacific:} budget transportation for passengers
+    \end{itemize}
+    \item \textbf{Opportunity:} \alert{intermodal transportation}, landbridge
+    \item \textbf{Issues:} locomotive management, inventory, \alert{scheduling}, gauge
+    \item \textbf{Carriers:} Norfolk Southern, CSX Transportation
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview of Rail System \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Note:} 60\% transportation cost is fuel
+      \item \textbf{rail:} underestimate mode of transportation; obsolete
+      \item \textbf{benefits:} connect one metropolis to other; scalable capacity
+      \item \textbf{rail size:} CL(carload), no design, no hub
+      \item Very small number of carriers; likely only one will be able to serve any one customer location
+      \item Trend is to merge smaller companies into larger ones with ultimate goal of having perhaps two transcontinental rail carriers
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Track gauge and Double Track}
+
+  \begin{center}
+    \only<1|handout:1>{  \includegraphics[width=\textwidth]{\figureLocation{scm_mode/trackGauge.png}}}
+    \only<3-|handout:0>{ \includegraphics[width=0.8\textwidth]{\figureLocation{scm_mode/doubleRailThailand.jpg}}}
+    \only<2|handout:0>{ \includegraphics[width=0.8\textwidth]{\figureLocation{scm_mode/interModal.png}}}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} Thailand rail infrastructure \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Infrastructure problem:} how go south, Inland Container Depot
+      \item \textbf{Railway Cost:} 100.0 M.THB /km (dual track)
+      \item \textbf{Thailand rail length} 4,070 km; metre gauge (1.0 m) same as every else
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Types of Rail Car }
+
+  \begin{tabular}{cc}
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/flatCar.jpg}}
+    &
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/boxCar.jpg}}
+    \\
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/gondolaCar.jpg}}
+    &
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/hopperCar.jpeg}}
+  \end{tabular}
+
+
+  \note{
+    \textbf{Purpose:} Type of cargo \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Bogie Type:}
+      \item \textbf{Daqin Railway, China} 130 tonnes of coal per wagon and tens of thousands of tonnes per train.
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Truck System: Dominated Mode}
+
+  \begin{itemize}
+    \item \textbf{Classification:} less-than truckload (LTL), Full truckload (TL)
+    \item \textbf{Pricing:} weight, weight-distance, area
+    \begin{itemize}
+      \item \textbf{weight:} TL \textbf{VS} LTL
+      \item \textbf{distance:} national \textbf{VS} regional
+      \item \textbf{class:} hazard, special equipment
+    \end{itemize}
+    \item \textbf{Opportunity:} \alert{network design}, consolidation, realtime management
+    \item \textbf{Issues:} \alert{fleet management}, gas price, backhaul
+    \item \textbf{Carriers:} Schneider National, JB Hunt, Ryder Integrated
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview of truck system \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item High accessibility
+      \item Cost of construction: 20 M.THB /km
+      \item weight limit 50 ton for two trailer; 15 ton for 5W; 25ton for 10w
+      \item TH Road 1 (1000) + Road 2 (510) + Road 3 (488) + Road 4 (1222)
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Water System: international trade }
+
+  \begin{itemize}
+    \item \textbf{Important:} dominated international trade
+    \item \textbf{Pricing:} volume, class, term (e.g., FOB)
+    \item \textbf{Opportunity:} \alert{efficiency}, environmental friendly, safety
+    \item \textbf{Issues:} \alert{fleet management}, pirate, capacity, leadtime
+    \item \textbf{Carriers:} Maersk Sealand, Evergreen, Hanjin Shipping Co
+    \item \textbf{nautical VS statute mile}  1.0 nautical mile/hr = 1.0 knot = 1.8 km/hr
+  \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} Overview of water system \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item charge for everything similar to air (extra waiting, dock area, equipment)
+      \item costal and river; River: 200/3,701 km
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Main Maritime Shipping Routes}
+
+  \begin{center}
+    \includegraphics[width=0.80\textwidth]{\figureLocation{scm_mode/mainMaritimeRoutes.png}}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} infrastructure of water system\\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{key transit point:} strait of Hormuz, Malaccar (Singapore), gibraltar. CapeTown, Bosporus
+      \item \textbf{Priate:} Nigeria, Bangladesh, Malagar, Aden
+      \item \textbf{port cap}
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{General type of marine vessels \forIE}
+
+  \begin{tabular}{ccc}
+    \includegraphics [width=0.30\textwidth]{\figureLocation{scm_mode/riverVessel.jpg}}
+    &
+    \includegraphics [width=0.30\textwidth]{\figureLocation{scm_mode/costalVessel.jpg}}
+    &
+    \includegraphics [width=0.30\textwidth]{\figureLocation{scm_mode/oceanVessel.jpg}}    \\
+    \multicolumn{3}{c}{
+      \only<1|handout:1>{\includegraphics [width=0.60\textwidth]{\figureLocation{scm_mode/marineType01.png}}}
+      \only<2|handout:0>{\includegraphics [width=0.60\textwidth]{\figureLocation{scm_mode/marineType02.png}}}
+      \only<3-|handout:0>{\includegraphics [width=0.60\textwidth]{\figureLocation{scm_mode/dryBulkCarrierSize.jpg}}}
+      }
+
+  \end{tabular}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} shippipedia.com}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} maritime vessel \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Depth:} bigger sea + stronger wave, bigger depth + larger capacity $\rightarrow$ diff ocean, costal, and river
+      \item \textbf{Name:} vessel type $\rightarrow$ infrastructure
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Type of vessels by freight \forIE}
+
+  \begin{center} \footnotesize{
+  \begin{tabular}{lrlrlr}
+    \multicolumn{2}{c}{\includegraphics [width=0.27\textwidth]{\figureLocation{scm_mode/tankerShip.jpg}}}
+    &
+    \multicolumn{2}{c}{\includegraphics [width=0.27\textwidth]{\figureLocation{scm_mode/bulkerShip.jpg}} }
+    &
+    \multicolumn{2}{c}{\includegraphics [width=0.27\textwidth]{\figureLocation{scm_mode/containerShip.jpg}} }\\
+    ~ \\
+    Tanker	  & DWT	            & Bulker	  & DWT	          & Container 	& TEU	\\ \hline
+    Seawaymax	& 10.0k–60.0k	  & Handysize	& 10.0k–35.0k	& Panamax	    & 4.5k–5.0k	\\
+    Panamax	  & 60.0k–80.0k	  & Handymax	& 35.0k–59.0k	& New Panamax & 5.0k–10.0k	\\
+    Aframax	  & 80.0k–120.0k	& Panamax	  & 60.0k–80.0k	& Suezmax	    & 10.0k-15.5k	\\
+    Suezmax	  & 120.0k–200.0k	& Capesize	& 80.k +	      & 	& \\ \hline
+    Speed     & 10-15 knots     &           & 12-15 knots   &               & 15-25 knots \\ \hline
+  \end{tabular} }
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} shippipedia.com}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Overview Inventory in SCM \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Seawaymax} can pass lock within N.America (CAN-USA) at Great Lake
+      \item \textbf{Aframax} 	Tankers up to 120 000 deadweight tonnes, designed for the entry into North American Atlantic ports, with a maximum load. Afra = American Freight Rate Association.
+      \item \textbf{Panamax} 	Vessels that meet at least one of the following criteria, width 106 ft (30.5 m), length 965 feet (294.1 meters) deep or 39.5 feet (12.04 meters).Panamax is also a term for the bulk of 50000-80000 tons dw. Approximately 80,000 tons dw is the maximum size for a fully loaded vessel to cross the Panama Canal, hence the name “panmax”
+      \item \textbf{Suezmax} 	Tankers of about 150,000 tons dw. Approximately 150,000 tons dw is the maximum size for a fully loaded vessel to cross the Suez Canal, hence the name “Suezmax”.
+      \item \textbf{Capesize} 	Bulk of the order of 100 000-150 000 tons deadweight. cannot pass suze and panama
+      \item \textbf{Handysize} 	Bulk of 20000-50000 tonnes deadweight.
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Main seaports in Thailand}
+
+  \begin{center} \footnotesize{
+  \begin{tabular}{cc}
+    \includegraphics [width=0.6\textwidth]{\figureLocation{scm_mode/thaiSeaports.png}}
+    &
+    \includegraphics [width=0.3\textwidth]{\figureLocation{scm_mode/thaiSeaportsMap.png}}
+  \end{tabular} }
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Thailand Marine Department (http://www.md.go.th/md/) }
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} infrastructure sea port in Thailand \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Key Gov Ports:} Bangkok (Dry) + Lamchabang (Dry) + Maptapute (CHE)
+      \item \textbf{Key Private Port:} SSI, Seeracha
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Package Carriers: eCommerce backbone}
+
+  \begin{itemize}
+    \item \textbf{Important:} light ($\leq$ 60kg), \alert{consolidation}, multiple-mode
+    \item \textbf{Pricing:} weight, class, destination
+    \item \textbf{Opportunity:} \alert{responsive}
+    \item \textbf{Issues:} \alert{transit facility}
+    \item \textbf{Carriers:} UPS, FedEx, DHL, USPS, Kerry, Flash, J\&C
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview package \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Important to eBusiness} risk of super-market place; cashvan
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Other Systems}
+
+  \textbf{Pipeline:}
+  \begin{itemize}
+    \item \textbf{Important:} dominated by crude petroleum, refined petroleum products, natural gas
+    \item \textbf{Issues:} \alert{security}, environmental, construction cost, inventory
+  \end{itemize}
+
+  \NextHalfLine
+  \textbf{Intermodal:}
+  \begin{itemize}
+    \item \textbf{Important:} multiple-mode to avoid bottleneck in network
+    \item \textbf{Combination:} Train-Truck, Water-Train-Truck
+    \item \textbf{Opportunity:} high profit margin, unitization
+    \item \textbf{Issues:} \alert{communication}, Land bride and Containerization
+   \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} Overview of other mode \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item Biggest disadvantage is that carriers are reluctant to participate.
+      \item Cultural bias towards using only one mode and this makes change more difficult
+    \end{itemize}
+  }
+  \end{frame}
+
+
+%%%==============================================================================================================
+%%\begin{frame}
+%%  \frametitle{Ranking of transportation Modes}
+%%
+%%  \begin{center}
+%%  \begin{tabular}{lccccc} \hline
+%%    Size  & Lot       & Safety    & In-Transit  & Transportation  & Transportation \\
+%%          & Inventory & Stock     & Cost        & Time            & Cost        \\  \hline
+%%    Rail  & 5         & 5         & 5           & 2               & 5 \\
+%%    Truckload& 4      & 4         & 4           & 3               & 3 \\
+%%    LTL   & 3         & 3         & 3           & 4               & 4 \\
+%%    Package& 1        & 1         & 1           & 6               & 1 \\
+%%    Air   & 2         & 2         & 2           & 5               & 2 \\
+%%    Water  & 6        & 6         & 6           & 1               & 6 \\    \hline
+%%  \end{tabular}
+%%  \end{center}
+%%
+%%  \note{
+%%    \begin{itemize}
+%%      \item
+%%    \end{itemize}
+%%  }
+%%  \end{frame}
+%
+%==============================================================================================================
+\section[Issue]{Current Issues on Transportation}
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Mode Comparison}
+
+  \begin{center}
+  \footnotesize{
+  \begin{tabular}{lrrrrr} \hline
+                   & Road                 & Rail        & Air         & Water           & Pipeline        \\  \hline
+    \$/ton-mile    & medium               & low/med     & high        & \alert{low/v. low}      & v. low  \\
+    Speed (mph)    & 0-60                 & 0-50        & \alert{0-600}& 0-20           & 0-5 \\
+    Frequency      & \alert{v.good}               & good        & good        & limited         & \alert{continuous} \\
+    Network        & \alert{extensive}    & limited     & limited     & \alert{restricted}      & dedicated \\
+    Security       & good                 & average     & average+    & poor          & good \\
+    Reliability    & v.good               & good        & \alert{v.good}      & limited     & v. good \\
+    Advantage      & mixed/\# vehicle     & heavy load  & low inv.    & cost    & continuous \\
+    Limitation     & $\bullet$ loading    & $\bullet$ connectivity    & $\bullet$ cost     & $\bullet$ min qty    & $\bullet$ liquid\\
+                   & $\bullet$ dimension  & $\bullet$ network         & $\bullet$ weather  & $\bullet$ speed      & $\bullet$ capital \\
+                   & $\bullet$ capacity   &                           & $\bullet$ capacity & $\bullet$ seasonality&   \\ \hline
+  \end{tabular}
+  }
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Adopted from \textsl{Frazelle} 2001. }
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Summary of all mode \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Recall} Limitation \& red text
+    \end{itemize}
+  }
+  \end{frame}
+
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Article: The Threat of Global GridLock \forIE}
+
+    \begin{itemize}
+      \item \textbf{Purpose:} warning about transportation infrastructure
+      \item \textbf{Infrastructure:} truck, rail, ship, air
+      \item \textbf{Effects to company:} SC is longer and more complex $\rightarrow$ severe congestions
+      \begin{itemize}
+        \item delay has cascade effect
+        \item distant souring is deterred by  high fuel cost
+        \item rapid change product $\rightarrow$ ``double dips'' \NextHalfLine
+      \end{itemize}
+      \item \textbf{Remedies:} goal is to maximize profit, not minimize costs
+      \begin{itemize}
+        \item cost \textbf{VS} time
+        \item premium service (``hot-hatching'', door-to-door, reserve cap)
+        \item source closer, using Air, using best practice
+      \end{itemize}
+    \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Recent review of modes of transportation \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{hot-hatching} key inventory concept that lead to division
+      \item \textbf{door-to-door} key inventory concept that lead to division
+      \item \textbf{double dips} key inventory concept that lead to division
+    \end{itemize}  }
+  \end{frame}
+
+%==============================================================================================================
+\section[Thappline]{Pipeline Infrastructure in Thailand: a case study}
+%=================================================================================================
+\begin{frame}
+  \frametitle{Pipeline Network in Thailand \forIE}
+
+  \begin{tabular}{cc}
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/existingPipeline.png}}
+    &
+    \includegraphics [width=0.45\textwidth]{\figureLocation{scm_mode/thappline.png}}
+  \end{tabular}
+
+  \note{
+    \textbf{Purpose:} Overview of pipeline infrastructure in Thailand \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Pipeline:} limited on ground for refined oils and gas transportation; extensive in water for gas and electricity production
+      \item \textbf{Thappline:} Thai Petrolumn pipeline found by TH gov and PTT. Currently, it privatizes and operates ground pipeline.
+    \end{itemize}  }
+  \end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Pipeline Network in Thailand}
+
+  \begin{itemize}
+    \item \textbf{Background:} Thappline (1990; former subsidiary of PTT)
+    \item \textbf{Products} mixed product (GB-1, GB-2, ULG, \& HSD) in single pipe
+    \item \textbf{Piping Tech:} 24"-12" diameter; 76 Block Valve Station
+    \begin{itemize}
+      \item \textsl{Open Cut:} removing soil surface 1.5m before place pipe for general
+      \item \textsl{Bored Crossing/Pipe jacking:} pushing pipeline underground for small intersection
+      \item \textsl{Horz Drilling:} several drilling deep with guide sys for river
+    \end{itemize}
+    \item \textbf{Piping Route:} existing major road and railway
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview Inventory in SCM \\
+    \textbf{Leading Question:} $<<$None$>>$
+    \begin{itemize}
+      \item \textbf{Operation:} Given time, each refinery must pump specific type of oil in pipeline with meter $\rightarrow$ sale volume
+      \item \textbf{Pig} equipment to separate and track oil
+      \item \textbf{Oil Type} GB-1: Gasohol Benzene 91/ GB-2: 95 ULG: Unleaded gasolene / HSD: High speed Diesel
+    \end{itemize}
+  }
+  \end{frame}
+
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{Reference}
+
+  \begin{footnotesize}
+    \bibliography{\refLocation{Coordination}}
+    %\bibliography{\refLocation{logisticProvider}}
+  \end{footnotesize}
+
+  \note{
+    \textbf{Purpose:} Show reference\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item [empty] note for citation page
+    \end{itemize}
+  }
+
+\end{frame}
+
+%=================================================================================================
+\end{document}
+
+
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{Proposed Oil Pipeline \& Stations}
+
+  \small{
+    \begin{tabular}{cl}
+      %\multirow{2}{*}{
+        \includegraphics[width=0.40\textwidth]{\figureLocation{pipelineProject.png}}
+      %}
+    &
+    \includegraphics [width=0.45\textwidth]{\figureLocation{oilStationLayout.png}} \\
+    & \textbf{Center:} RA, SA, WA \\
+    & \textbf{North:} LA, KA\\
+    & \textbf{Northeast:} NA, KH
+  \end{tabular}
+  }
+
+  \note{
+    \begin{itemize}
+      \item Pipeline of ligure 67.0 km
+      \item Pipeline of gas 350.0 km	
+    \end{itemize}
+  }
+  \end{frame}
+
+%==============================================================================================================
+\section[LSP]{Logistics Service Provider}
+%=================================================================================================
+\begin{frame}
+  \frametitle{Why Outsourcing and Types of LSP}
+
+  \begin{itemize}
+    \item \textbf{Reasons:} reduce costs, gain expertise | flexibility  \& core competency
+    \item \textbf{Other consideration:} computability, politic \& suitability (FoodStar)
+    \item \textbf{Concerns:} loss control, no information \& knowledge, \alert{partnership}
+    \item \textbf{Types:}
+    \begin{itemize}
+      \item \textsc{asset-based:} physical asset, e.g., refrigerated trucks; chemical warehouse (WHA)
+      \item \textsc{management-based:} knowledge, connection, IT
+      \item \textsc{integration-based:} single service providers,
+      \item \textsc{administrative-based:} e.g. payment,
+    \end{itemize}
+  \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{source:} \textsl{Bourlakis, M. and Melewar, T.} 2011.~\cite{bourlakis2011marketing}~~ }
+  \end{flushright}
+
+
+  \note{
+    \begin{itemize}
+      \item
+    \end{itemize}
+  }
+  \end{frame}
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{Survey of LSP usage in W.Europe \& US}
+
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{\figureLocation{3plWE_US.png}} \\
+    \includegraphics[width=0.80\textwidth]{\figureLocation{3plSatis.png}}
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} \textsl{Lieb, R, et al.} 1993.~\cite{lieb1993third}~~~ }
+  \end{flushright}
+
+  \note{
+    \begin{itemize}
+      \item
+    \end{itemize}
+  }
+  \end{frame}
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{Managing Expectation}
+
+  \footnotesize{
+  \begin{tabular}{lllll} \hline \hline
+                   & \textbf{Expectation} $\Rightarrow$ & \textbf{Realization} $\Rightarrow$ & \textbf{Stagnation} $\Rightarrow$    & \textbf{Frustration}  \\ \cline{2-5}
+    \textbf{State} & $\bullet$ excitement               & $\bullet$ diff. imple.        & $\bullet$ operating         & $\bullet$ separated \\
+                   & $\bullet$ enthusiasm               &                               & $\bullet$ not expected      & \\[6pt]  \hline
+    \textbf{Owner} & $\bullet$ expect turnover          & $\bullet$ cost$+ \rightarrow$ ROI & $\bullet$ do kaizen     & $\bullet$ need change \\
+                   &                                    & $\bullet$ feel distrust/bad   & $\bullet$ little improvement& $\bullet$ find new provider \\[6pt] \hline
+    \textbf{Provider}& $\bullet$ put 'best' team        & $\bullet$ cost$+ \rightarrow$ time& $\bullet$ commun. brkDwn& $\bullet$ know oper.  \\
+                   &                                    &                               & $\bullet$ not enough kaizen & $\bullet$ hi bidding                 \\ \hline    \hline
+  \end{tabular}
+  }
+
+  \NextHalfLine
+  \textsc{Warnings:} outsourcing $\approx$ marriage
+  \begin{itemize}
+    \item understand \alert{current operation}, never outsource problems
+    \item understand \alert{cost structure} before/after outsource
+    \item understand \alert{service provider market}, consult/search for 'right' LSP
+  \end{itemize}
+
+
+  \note{
+      \begin{itemize}
+        \item \textbf{Dimension:} Fiance, Long-term relationship, Operation Performance, Risk
+        \item \textbf{distances:} road distance (know exact location), point-point
+        \item \textbf{service levels:} specific safety stock
+        \item \textbf{Facility cost:} time horizon, discounted factor
+      \end{itemize}
+   }
+ \end{frame}
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{LSP selection}
+
+  \begin{itemize}
+    \item \textbf{Determinant:} \alert{Compatibility}, Cost, Quality, Reputation
+    \item \textbf{Specifically,} performance, data sharing, assets, experience, market shares, range of services, network
+    \item \textbf{How to find LSP?}
+    \begin{itemize}
+      \item[1] determine service objectives $\rightarrow$ gap \& specification
+      \item[2] list of potential LSPs
+      \item[3] develop and evaluate RFI $\rightarrow$ RFQ
+      \item[4] survey and site visits $\rightarrow$ sign contract
+      \item[5] evaluate performance
+    \end{itemize}
+  \end{itemize}
+
+  \NextHalfLine
+  \begin{center}
+  \textsc{Decision Matrix}\\[5pt]
+  \footnotesize{
+  \begin{tabular}{llrr} \hline
+                                  &~& \multicolumn{2}{c}{Own Expertise} \\    \cline{3-4}
+                                  &~& \textbf{Low} & \textbf{High} \\ \hline
+    \multirow{2}{*}{Value} & \textbf{High} &  partnership outsourcing & do not outsource     \\
+                           & \textbf{Low}  &  transactional outsourcing & depends on finance    \\ \hline
+  \end{tabular}
+  \NextHalfLine
+  \begin{itemize}
+    \item \textbf{Partnership:} long term \& focus on efficiency (PharmInd \& BioTech)
+    \item \textbf{Transactional/Tactical:} short term \& focus on cost  (PharmaInd--1970)
+  \end{itemize}
+  }
+  \end{center}
+
+
+  \begin{flushright}
+    \tiny{\textbf{source:} \textsl{Vitasek, T.} 2010.~\cite{vitasek2010marketing}~~ }
+  \end{flushright}
+
+
+  \note{
+      \begin{itemize}
+        \item \textbf{Dimension:} Fiance, Long-term relationship, Operation Performance, Risk
+        \item \textbf{distances:} road distance (know exact location), point-point
+        \item \textbf{service levels:} specific safety stock
+        \item \textbf{Facility cost:} time horizon, discounted factor
+    \item \textbf{Partnership:} long term \& efficiency, share culture, technology, infrastructure (PharmInd \& BioTech)
+    \item \textbf{Transactional/Tactical:} short term| cost focus, no collaborative nor business alignment (PharmaInd--1970)
+      \end{itemize}
+   }
+ \end{frame}
+
+%%=================================================================================================
+%\begin{frame}
+%  \frametitle{Tailored Network}
+%
+%  \begin{itemize}
+%    \item \textbf{What:} customized network
+%    \item \textbf{Goal:} using appropriate options in each situation
+%    \item \textbf{Challenge:} no concrete network, required near-perfect planning and execution
+%    \item \textbf{Criteria:} customer density and size, distance, product demand, value
+%  \end{itemize}
+%
+%  \note{
+%      \begin{itemize}
+%        \item A company focuses on inbound b/c easy to pressure supplier than customers
+%      \end{itemize}
+% }
+% \end{frame}
+%
+%%==============================================================================================================
+%\begin{frame}
+%  \frametitle{Land Transportation Options}
+%
+%  \begin{center}
+%  \small{
+%  \begin{tabular}{rlll} \hline %\hline
+%                   & Short distance                  & Medium distance         & Long distance        \\  \hline %\hline
+%    High density   & $\bullet$ Private fleet            & $\bullet$ Cross-dock       & $\bullet$ Cross-dock    \\
+%                   & with milk runs                  & with milk runs          & with milk runs       \\  %\hline
+%    Medium density & $\bullet$ 3PL with milk runs       & $\bullet$ LTL carrier      & $\bullet$ LTL carrier   \\
+%                   &                                 &                         &   or package carrier \\  %\hline
+%    Low density    & $\bullet$ 3PL with milk runs    & $\bullet$ LTL carrier      & $\bullet$ Package carrier \\
+%                   & or LTL carrier                  & or package carrier      & \\    \hline %\hline
+%  \end{tabular}
+%  }
+%  \end{center}
+%
+%  \note{
+%    \begin{itemize}
+%      \item
+%    \end{itemize}
+%  }
+%  \end{frame}
+
+
+%%=================================================================================================
+%\section[Modeling]{Distribution Network Modeling in Operation Management}
+%\begin{frame}
+%  \frametitle{Why do we need a model?}
+%  \begin{itemize}
+%    \item understand and analyze network
+%    \item predict and determine decisions
+%  \end{itemize}
+%
+%  \NextLine
+%  \textbf{Related Costs}
+%  \begin{itemize}
+%    \item \textbf{Production/Purchasing cost:} qualities discount
+%    \item \textbf{Transportation cost:} \alert{distance}, weight, volume, \# shipments
+%    \item \textbf{Inventory cost:} \alert{service levels}, safety stock, pipeline,
+%    \item \textbf{Facility cost:} rental, equipments (e.g. sorting machine, forklifts)
+%  \end{itemize}
+%
+%  \note{
+%      \begin{itemize}
+%        \item \textbf{so far:} introduction on terminology
+%        \item \textbf{distances:} road distance (know exact location), point-point
+%        \item \textbf{service levels:} specific safety stock
+%        \item \textbf{Facility cost:} time horizon, discounted factor
+%      \end{itemize}
+%   }
+% \end{frame}
+
+%========================================================================================================
+\begin{frame}
+  \frametitle{Key Questions in Distribution Design}
+
+  \begin{itemize}
+    \item \textbf{Strategic level}
+    \begin{itemize}
+      \item<2-> Mode of transportation, In-house logistics
+      \item<2-> \alert{Locations and numbers of transit facilities}
+      \item<2-> Sizes of transit facilities and their equipments \NextLine
+    \end{itemize}
+    \item \textbf{Operation levels}
+    \begin{itemize}
+      \item<3-> Storage space of each product and its inventory policy
+      \item<3-> Routing and time window of each destination
+      \item<3-> Fleet management (crew/driver, empty truck)
+    \end{itemize}
+  \end{itemize}
+
+  \note{
+    \begin{itemize}
+      \item
+    \end{itemize}
+  }
+\end{frame}
+
+%========================================================================================================
+  \begin{frame}
+  \frametitle{Distribution Network Design}
+
+  \textbf{Components}
+  \begin{itemize}
+    \item \textbf{Owner:} what factors are his \alert{total transportation costs}?
+    \item \textbf{Nodes:} location (customers, supplier), flows (weight, volume), service level
+    \item \textbf{Candidate:}
+    \begin{itemize}
+      \item given list $\rightarrow$ integer problem
+      \item to-be-determined $\rightarrow$ Weber's problem
+    \end{itemize}
+    \item \textbf{transportation cost:} fixed costs, variable costs
+  \end{itemize}
+
+    \NextLine
+    \textbf{Examples}
+    \begin{itemize}
+      \item single facility (1D, 2D)
+      \item multiple facility
+    \end{itemize}
+
+
+  \note{
+    \begin{itemize}
+      \item
+    \end{itemize}
+  }
+\end{frame}
+
+
+Twenty-foot Equivalent Unit (TEU) smallest standard shipping container.                                                        	
+
+Demurrage
+DWT (Dead Weight tonnage)
+short ton/ long ton/ matric ton (tonne)
+
+

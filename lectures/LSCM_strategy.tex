@@ -1,0 +1,1746 @@
+% ###################
+% ## Filename: sCM_drivers.tex
+% ## Location: D:\Project\Prej_Teaching\ISE\SupplyChainMgt\presentation\scm_02_drivers
+% ## Created: Dec 14, 2010
+% ## Last updated: Dec 14, 2010
+% ## Figure Location: ..\Figures\
+% ## Note: Presentation, Teaching
+% ###################
+
+
+%\documentclass[10pt,presentation]{beamer}
+%\documentclass[10pt,handout]{beamer}
+\documentclass[10pt,handout,notes=show]{beamer}
+
+%============================================================================================================--
+\input{../marco.tex}
+\title[LSCM v3.0]{Lecture 02:\\ Supply Chain Perspective and Strategy}
+\hypersetup{
+  pdftitle={02 Supply Chain Perspective and Strategy},
+  pdfsubject={2104509lscm & 2184408scm handout},
+  pdfproducer={XeLatex/WinEdt},
+  pdfcreator={oran.k@chula.ac.th}
+}
+
+
+\begin{document}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Big picture of SCM (business perspective) and important strategy\\
+    \textbf{Leading Question:} What your BBA friends know about SCM?\\
+    \begin{itemize}
+      \item \textbf{Re-Cap:} SCM is around us and dynamic
+      \item \textbf{Diff btw Logistic \& SCM:} key diff including strategy, manufacturing, connectivity
+      \item \textbf{Disclaimer:} strategy is NOT OKC forte; it also takes time to review; no right or wrong; no middle road
+    \end{itemize}
+  }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \tableofcontents
+
+  \vfill
+  \begin{flushright}
+    \tiny{\textbf{General Reference:} \cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply} } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Outline topics\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{Perspective:} how to view about SCM; flow, process, and SCOR
+      \item \textbf{SCOR:} a managerial tool to implement SCM in company
+      \item \textbf{SCM Strategy:} how SCM link to business strategy
+      \item \textbf{SCM Fit:} how to craft a good SCM strategy what we should think
+      \item \textbf{SCM Matrix:} how to measure and improve
+      \item \textbf{Bullwhip:} phenomenal that unique to SCM, not logistics
+      \item \textbf{\code{EXTRA}: How improve your SCM:} how to think in terms of short-long terms and design-execute
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\section[Perspective]{Perspectives in Supply Chain Management}
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{SCM Development Time Line}
+
+   \begin{center}
+    \includegraphics[width=0.85\linewidth]{\figureLocation{scm_strategy/devlopSCM.png} }
+   \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Mamun Habib. ``Supply Chain Management-Applications and Simulations''} \hskip10em
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Evaluation of SCM\\
+    \textbf{Leading Question:} How our SCM perspective change company view?\\
+    \begin{itemize}
+      \item \textbf{traffic:} supp $\rightarrow$ company $\rightarrow$ cust:  manual/ many carries
+      \item \textbf{logistic:} suppOfsupp $\rightarrow~\cdots$ company $\cdots~\rightarrow$ custOfcust
+      \item[] max profit/low cost + measure / few carriers/ bar code
+      \item \textbf{supply chain:} suppOfsupp $\rightarrow~\cdots$ company $\cdots~\rightarrow$ custOfcust
+      \item[] value (speed/scale/outsoucing ) WMS/
+      \item \textbf{collaboration:} how to spring new business (data)
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+
+\begin{frame}
+  \frametitle{Changing view of company}
+
+  \begin{center}
+  \begin{tabular}{lr}
+    \includegraphics [width=0.35\textwidth]{\figureLocation{scm_strategy/tradView.png}}~
+    &
+    ~\includegraphics [width=0.35\textwidth]{\figureLocation{scm_strategy/scmView.png}}
+  \end{tabular}
+  \end{center}
+
+  \begin{center} \small{
+    \begin{tabular}{l|rr} \hline
+    \multicolumn{1}{c}{}
+                     & \multicolumn{1}{c}{\textbf{Traditional}}
+                     & \multicolumn{1}{c}{\textbf{Value creation}} \\ \hline
+    \textbf{Parties} & \alert{one company}      & \alert{every companies} \\
+    \textbf{Concept} & winner takes all         & focus on \alert{my 'things'} \\
+    \textbf{Lv Decision} & operation            & \alert{strategic} \\
+    \textbf{Values}  & cost                     & \alert{revenue stream}\\[2pt]
+                     &                           & , engagement, \alert{equity} \\[5pt]
+    \textbf{Tools}   & price \& quality         & speed \& information \\ \hline
+    \end{tabular} }
+  \end{center}
+
+  \NextHalfLine
+  \begin{block}{Question 1}{}
+    Do your customers care? If not, why bother?\\
+    \uncover<2-|handout:1>{\hfill \code{Effect:} cost-availability, reliability-flexibility, quality, convenience, fluctuation \hfill}
+  \end{block}
+
+  \note{
+    \textbf{Purpose:} Evaluation of SCM\\
+    \textbf{Leading Question:} How our 'flow' perspective change company view?\\
+    \begin{itemize}
+      \item \textbf{Impacts/Stories}
+        \begin{itemize} \scriptsize{
+          \item Grocery industry could save \$30 billion  by using effective supply chain strategies
+          \item Laura Ashley turned its inventory 10 times, five times faster than 3 years ago
+          \item In 1995, Compaq lost \$.5 to \$1 billion in sales because of laptop misplacing
+          \item When AMD introduced 1 gig processor, the 800 mb price dropped by 30\%
+          \item P\&G saved $\approx$ \$65 million by collaboration (better supply and demand matching)
+          \item Dell received \$2000 from a customer for a computer
+          \item In 1998, Blockbuster increased 5\% of the rental market at the start by sharing revenue with DVD companies
+          \item 7-Eleven invested in IT to manage supplies and demands
+          \item Toyota's plant could shift auto manufacturing for domestic market into export aborad }
+      \end{itemize}
+      \item \textbf{Trad \textsc{VS} Value:} what you must aware yourself
+      \item \textbf{Consumer = King:} important of experience, e.g. Amazon, Starbucks,
+    \end{itemize}
+
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{For Customer, Supply Chain is}
+
+  Goals of Supply Chain is to ensure that \alert{customers} got
+  \begin{itemize}
+    \item[] the right \alert{item}         (national \textsc{VS} store brands)
+    \item[] in the right \alert{quantity}  (EA \textsc{VS} DOZEN)
+    \item[] at the right \alert{price}     (7Eleven \textsc{VS} Makro)
+    \item[] at the right \alert{place}     (ENG canteen \textsc{VS} Airport)
+    \item[] at the right \alert{time}      (iPhone Camping)
+    \item[] in the right \alert{condition} (edible gelatine \textsc{VS} photo gelatine)
+    \item[] at the optimum cost to the \alert{organization(s)}
+  \end{itemize}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} CSCMP, ``SCM Goals –- The Seven Rights'' 2011 \hskip10em}\\
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Introduce to SCM from customer's view\\
+    \textbf{Leading Question:} What does a customer care?\\
+    \begin{itemize}
+      \item \textbf{why use 'Right':} why use 'right' $\rightarrow$ at what consumer perceptive
+      \item \textbf{Right Product/Condition/Price:} customization, complexity, unknown needs, e.g.  ergoChair, iPad
+      \item \textbf{Right Qty:} key for negotiation $\rightarrow$ \alert{away enough}
+      \item \textbf{Right Place:} global demand, global supply $\rightarrow$ \alert{away now}
+      \item \textbf{Right Time:} JIT, shorten LT, $\rightarrow$ \alert{away now}
+      \item \textbf{SCM \textsc{VS} Acct Time measurement:} used to be day; now hour
+      \item \textbf{Organization:} target customers; business strategy
+    \end{itemize}
+    %% (Chain 1st Quality, Intel, Harddrive)
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}
+  \frametitle{Other perspective of SCM}
+
+    \begin{description}
+      \item[Flows:] movement of 'things' along SC (traditional views)
+      \begin{minipage}{0.8\textwidth} \small{
+        \begin{tabular}{l|rr} \hline
+                                    & Upstream  & Downstream \\ \hline
+        \textbf{Materials:}   & return, repair, disposal&  RM, WIP, FG   \\
+        \textbf{Information:} & sales, promotion plan   &  capacity, delivery schedule \\
+        \textbf{Funds/Values:}& payment, consignment    & credit, invoice, payment\\ \hline
+        \end{tabular} }
+      \end{minipage} \NextHalfLine
+      \item[Process:] supply chain activity repeats itself (system views)
+      \begin{itemize}
+        \item \textbf{Cycle order:} process in SC as series of cycles each performed by interfaced parties
+        \item \textbf{Push/Pull:} processes in SC as responding (\alert{pull}) or in anticipating (\alert{push}) to order \NextHalfLine
+      \end{itemize}
+      \item[SCOR:] supply chain activity can be grouped by business function
+       \begin{itemize}
+        \item standardizing \& combining flow and process
+        \item introducing KPIs
+        \item allowing benchmark between companies
+       \end{itemize}
+    \end{description}
+
+  \note{
+    \textbf{Purpose:} Introduce three related perspective\\
+    \textbf{Leading Question:} Why 'flow' perspective of SCM was sexy and new? How those who worked in the area never though about it?\\
+    \begin{itemize}
+      \item \textbf{b/g:} limited info \& ecosystem $\rightarrow$ focus on a single company \& single department; logistics $\rightarrow$ cost center
+      \item \textbf{Flow:} visualizing how fund/info/physical connecting between parties $\rightarrow$ who create \alert{value}
+      \item \textbf{Process:} routining operations based on mistake or experiance, cycle of XXX (work on the same procedure without improvement) $\rightarrow$ how to \alert{done}
+      \item \textbf{SCOR:} flow + process + furthermore
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================
+\usetikzlibrary{arrows,positioning,decorations.pathmorphing,calc,shapes}
+\renewcommand{\textFont}[1]{\footnotesize{#1}}
+%================================================================================================-
+\begin{frame}
+  \frametitle{Cycle or Process Perspective }
+
+  \begin{center}
+  \begin{tabular}{lc}
+    \includegraphics[width=0.50\textwidth]{\figureLocation{scm_strategy/functionLogistics.png}}
+    &
+    \includegraphics[width=0.35\textwidth]{\figureLocation{scm_strategy/CycleProcess.png}}
+    \\
+    \tiny{~\hskip10em \textbf{source:} Martin Christopher, 2011~\cite{christopher2016logistics} }
+    &
+    \tiny{~\hskip10em \textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply}\hskip0em }
+  \end{tabular}
+  \end{center}
+
+  \begin{block}{Question 2}{}
+    What are triggers/information of these processes?
+  \end{block}
+
+  \note{
+    \textbf{Purpose:} Introduce to easy business process\\
+    \textbf{Leading Question:} How SCM operators work?\\
+    \begin{itemize}
+      \item \textbf{Cycle (right figure):} synchronize and repeat cycles of customer order/ replenishment/ manufactureing/ purchasing
+      \item \textbf{Note on Cycles:} lean \& mean $\rightarrow$ short cycle $\rightarrow$ new innovation, high inventory turnover
+      \item \textbf{Typical Process (left figure):} physical flow is easy. triggers of these processes are information.
+      \item \textbf{Question:} What are they? What do they derive from?
+      \item \textbf{Important Logistics Terms:} Order, GI, GR, Invoice, PO, Bill of Lading, Manifest, Freight Bill, L/C
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Production/Inventory Systems}
+
+  \uncover<2->{
+  \begin{center}
+  \begin{tabular}{rll} \hline
+    ~         & Push                    & Pull \\ \hline
+    Shipment  & large \& infrequent     & small \& frequent \\
+    Suppliers & many \& short term      & few \& long term \\
+    Information& minimal exchange       & constant exchange\\
+    Geographic& unimportant             & adjacent \\
+    Application& MRP & JIT \\ \hline
+  \end{tabular}
+  \end{center}
+  }
+
+  \NextLine
+  \textbf{Assembly Line Simulation}
+
+  \note{
+    \textbf{Purpose:} Understand Pull and Push and Push-Pull Boundary\\
+    \textbf{Leading Question:} <<none>> \\
+    \begin{itemize}
+      \item push \textsc{VS} pull: how to estimate demand"
+      \item \textbf{push:} long LT, low value \& large quality, common $\rightarrow$ high inventory
+      \item \textbf{pull:} quick response, high value, customize, spec $\rightarrow$ individual
+      \item \textbf{Simulation:} where is 'push-pull' boundary
+    \end{itemize}
+  }
+\end{frame}
+
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Push/Pull Perspective }
+
+  \begin{center}
+  \begin{tabular}{lr}
+    \only<1|handout:1>{\includegraphics[height=0.25\textheight]{\figureLocation{scm_strategy/PushPullProcess.png}}}
+    \only<2-|handout:0>{\includegraphics [height=0.25\textheight]{\figureLocation{scm_strategy/pushpullStr.png}}}
+    &
+    \only<1-|handout:1>{\includegraphics [height=0.25\textheight]{\figureLocation{scm_strategy/demandVSforecast.png}}}
+    \\
+    \tiny{~\hskip10em \textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply}\hskip0em }
+    &
+    \tiny{~\hskip10em \textbf{source:} Martin Christopher, 2011~\cite{christopher2016logistics} }
+  \end{tabular}
+  \end{center}
+
+  \NextHalfLine
+  \begin{block}{Question 3: Thinking Points}{}
+  What are good characteristics of push (pull) products? and How to leverage?
+
+  \end{block}
+
+  \note{
+    \textbf{Purpose:} diff strategy for diff business/product\\
+    \textbf{Leading Question:} what is the right strategy for me?\\
+    \begin{tabular}{cc}
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_strategy/PushPullProcess.png}} &
+      \includegraphics[width=0.4\textwidth]{\figureLocation{scm_strategy/pushpullStr.png}} \\
+    \end{tabular}
+    \begin{itemize}
+      \item Upstream $\rightarrow$ Push (far from end customer, low value, move in bulk)
+      \item Downstream $\rightarrow$ Pull (near end customer, high value)
+    \end{itemize}
+    \textbf{How should we think?}
+    \begin{itemize}
+      \item point of used (mfg \textsc{VS} spar part in auto industry)
+      \item leadtime \& rate of consumption (takt time)
+      \item qty / lifecycle of items
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Uncertainty and Scales }
+
+  \begin{center}
+    \includegraphics [width=0.6\textwidth]{\figureLocation{scm_strategy/pushpullMat.png}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Martin Christopher, 2011~\cite{christopher2016logistics} \hskip10em}
+  \end{flushright}
+
+  \begin{itemize}
+    \item \textbf{Pull Strategy (I):} high demand uncertainty without economy of scale
+    \item \textbf{Push Strategy (III):} low demand uncertainty with economy of scale
+  \end{itemize}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Matrix btw uncertainty and scale\\
+    \textbf{Leading Question:} Any guideline to mgt push/pull strategy\\
+    \begin{itemize}
+      \item \textbf{Push =} Supply Chain Planning processes are applied $\rightarrow$ ok to 'guess'
+      \item \textbf{Push:} low uncertainty, service level not an issue, focus on cost minimization, long lead times
+      \item[] \hskip3ex $\bullet$ better utilizing resources
+      \item[] \hskip3ex $\bullet$ minimizing inventory, transportation, and production costs
+      \item \textbf{Pull =} Order-fulfillment processes are applied $\rightarrow$ \alert{not ok} to 'guess'
+      \item \textbf{Push:} $<<$\emph{opposite to push}$>>$
+      \item[] \hskip3ex $\bullet$ quality matter; error can propagate (know first)
+      \item[] \hskip3ex $\bullet$ minimizing risk; induce experiance
+    \end{itemize}
+  }
+\end{frame}
+
+
+%============================================================================================================--
+\section[SCOR]{Supply Chain Operation Reference Model}
+%==============================================================================================================
+
+\begin{frame}
+  \frametitle{Overview of SCOR model}
+
+  \begin{center}
+    \only<1|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/scor_model_concept01.png}}}
+    \only<2-|handout:1>{\includegraphics[height=0.5\textheight]{\figureLocation{scm_strategy/scor_model_cV11.png}} }
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:}  Cohen, S. and Roussel, J 2001. ``Strategic Supply Chain Management'' \hskip5em}\\
+  \end{flushright}
+
+  \begin{itemize}
+    \item \textbf{What:} hierarchy business process framework
+    \item \textbf{Scopes:} all \alert{customer's interaction}, \alert{product transactions}, \alert{market interactions}
+    \item \textbf{Benefit:} std process, best practice, matrices for benchmark,
+    \item \textbf{Issues:} no details operation, ignored sale and markets, R\&D
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Introduce to SCOR model\\
+    \textbf{Leading Question:} what are minimal requirement for SCM student to know\\
+    \begin{tabular}{cc}
+      \includegraphics [width=0.4\textwidth]{\figureLocation{scm_strategy/scor_model_concept.png}} &
+      \includegraphics [width=0.4\textwidth]{\figureLocation{scm_strategy/SCOR_model_bV11.png}} \\
+    \end{tabular}
+    \begin{itemize}
+      \item \textbf{SCOR:} Supply Chain and Operation Reference, first to address the whole company with business function, common term,
+      \item \textbf{4 Levels:} processes, subprocess, activities, operation process (skipped)
+      \item \textbf{Two levels:} present a broad scope/focus on where business are common
+      \item \textbf{Make:} the hardest part, typically ignore,
+      \item \textbf{Serve as:} check point and framework
+      \item \textbf{Bad for:} starting point (too comprehensive model from beginning to the end)
+      \item \textbf{Goal:}  To develop a standard supply-chain process reference model enabling effective communication
+      \item \textbf{Assume}  Training, Quality, IT, admin
+      \item \textbf{Level:} Process, Process Element, Task, Activity (implement)
+    \end{itemize}
+  }
+
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{SCOR model: Semi-Perfect Concept }
+
+  \begin{center}
+    \only<1|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/scm_framework.png}}}
+    \only<2|handout:1>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/scor_lv0.png}}}
+    \only<3|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/scor_lv1.png}}}
+    \only<4|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/scor_lv2.png}}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:}  Cohen, S. and Roussel, J 2001. ``Strategic Supply Chain Management'' \hskip5em}\\
+  \end{flushright}
+
+
+  \begin{itemize}
+    \item \textbf{Lv1: Model} set scope, content, \alert{performance}, product-segment
+    \item \textbf{Lv2: Strategy} decide configuration, i.e., strategy, capability
+    \item \textbf{Lv3: Process} identify key business process, i.e., input, output, \alert{best practice}
+    \item \textbf{Lv4: Activity} improve activates using lean, TQM, \alert{benchmark}
+  \end{itemize}
+
+
+  \note{
+    \begin{tabular}{cc}
+    \includegraphics[width=0.4\textwidth]{\figureLocation{scm_strategy/scm_framework.png}} & \includegraphics[width=0.4\textwidth]{\figureLocation{scm_strategy/scor_lv.png}}  \\
+    \end{tabular}
+    \textbf{Purpose:} Introduce to SCOR model\\
+    \textbf{Leading Question:} why SCOR model is perfect but incompleted\\
+
+    \begin{itemize}
+      \item \textbf{Hierarchy:} connected level (process and KPIs)
+      \item \textbf{Focus:} Lv1 $\rightarrow$ key process, value proposition, focus
+      \item \textbf{Config:} Lv2 $\rightarrow$ main business?
+      \item \textbf{Activity:} Lv3 $\rightarrow$ how to process, input, output, data
+    \end{itemize}
+  }
+
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{SCOR model Lv 1 Metric}
+
+  \begin{center}
+    \includegraphics [width=0.70\textwidth]{\figureLocation{scm_strategy/scor_matrixLv1.png}} \\
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} \href{http://supply-chain.org/scor}{\code{http://supply-chain.org/scor}} \hskip5em}\\
+  \end{flushright}
+
+  %%%----
+  \note{
+    \textbf{Purpose:} select matrix and KPI\\
+    \textbf{Leading Question:} what is the main result of Lv1\\
+    Level 1 defines scope of process
+    \textsc{Customer-Facing}
+    \begin{itemize}
+      \item \textbf{Reliability:} fill rate, perfect order
+      \item \textbf{Responsiveness:} fulfilment lead time
+      \item \textbf{Flexibility:} supply chain response time
+    \end{itemize}
+
+    \NextLine
+    \textsc{Internal-Facing}
+    \begin{itemize}
+      \item \textbf{Cost:} supply chain cost, value-added, return cost
+      \item \textbf{Assets:} cash-to-cash, inventory day of supply,
+    \end{itemize}
+  }
+
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{SCOR model Lv 1 Scope}
+
+    \begin{itemize}
+    \item \textbf{Plan:} balance aggregate demand and supply $\rightarrow$ actions
+    \begin{itemize}
+      \item assess \& acquire \alert{resources} within requirements
+      \item plan inventory and distribution and communicate plan
+    \end{itemize}
+    \item \textbf{Source} procure components of goods for planned demands
+    \begin{itemize}
+      \item \alert{schedule} deliveries, transfer, contract, payment
+      \item certify, select \& assess suppliers (except ETO)
+    \end{itemize}
+    \item \textbf{Make:} transform product to a finished goods to meet demands
+    \begin{itemize}
+      \item schedule production, resource, \& infrastructure
+      \item cover assemble, repair, overhaul, recycle
+    \end{itemize}
+    \item \textbf{Deliver:} react, maintenance, and fulfillment of orders
+    \begin{itemize}
+      \item validation, consolidate, pick, pack, ship and invoice the ordered quantity
+    \end{itemize}
+    \item \textbf{Return:} returning or receiving returned products
+    \begin{itemize}
+      \item decide to return good \& container
+      \item perform return, substitution, refund, restock
+    \end{itemize}
+    \item \textbf{Enable:} managerial activities
+    \begin{itemize}
+      \item business rules \& procurement
+      \item mgt of performance, resources, data, contracts, network, compliance, risk
+    \end{itemize}
+  \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{source:} \href{http://supply-chain.org/scor}{\code{http://supply-chain.org/scor}} \hskip5em}\\
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Introduce to Level 1 \\
+    \textbf{Leading Question:} <<none>>\\
+    Because a company does more than things, it is important to identify how each BU integrates and what need to be doing in a company.
+    Level 1 defines scope of process
+    \begin{itemize}
+      \item \textbf{Plan:} Input/Process/Output planning and management; financial \& SC alignment
+      \item \textbf{Source:} Make-to-Stock, Make-to-Order, Assembly-to-Order, Engineering-to-Order
+      \item \textbf{Deliver:} order management, transportation management, and distribution management
+      \item[] \hskip3ex $\bullet$ \textsl{delivery retail products} processes used to acquire, merchandise, and sell finished goods at a retail store
+      \item \textbf{Make:} $<<$\emph{similar to source}$>>$
+      \item \textbf{Return:} of what (RM to source or FG from delivery). Types (defect/maintainace/excess) This depends on strategy and nature of business (underwear, period)
+      \item \textbf{Enable:} supporting and gauging, measuring, and improving the effectiveness of SCM
+    \end{itemize}
+  }
+
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{SCOR model: Level 2 Config}
+
+  \NextLine
+  \begin{center}
+    \only<1 |handout:1>{ \includegraphics [width=0.70\textwidth]{\figureLocation{scm_strategy/scor_lv0.png}}}
+    \only<2 |handout:0>{ \includegraphics [width=0.70\textwidth]{\figureLocation{scm_strategy/scor_cycleTime.jpg}}}
+    \only<3 |handout:0>{ \includegraphics [width=0.70\textwidth]{\figureLocation{scm_strategy/scor_cycleTime01.png}}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} ``A review and analysis of supply chain operations reference''~\cite{huan2004review} \hskip10em}\\
+  \end{flushright}
+  \hfill \hyperlink{scor_lv3}{\beamerbutton{Pg:SCOR Lv3}}
+
+  %%%----
+  \note{
+    \textbf{Purpose:} Introduce to Level 2\\
+    \textbf{Leading Question:} <<none>>\\
+    \includegraphics [width=0.40\textwidth]{\figureLocation{scm_strategy/scor_cycleTime.jpg}}
+
+    Level 1 defines scope of process, Lv2 defines config
+    \begin{itemize}
+      \item \textbf{MRO} maintenance-repair-operations
+      \item \textbf{Flexility:} avg day per schedule change
+    \end{itemize}
+  }
+
+\end{frame}
+
+%%==============================================================================================================
+\begin{frame}[label=scor_lv3]
+  \frametitle{SCOR Level 3: Example and Insights \forIE}
+
+  \NextHalfLine
+  \begin{center}
+    \only<1 |handout:1>{ \includegraphics [height=0.60\textheight]{\figureLocation{scm_strategy/scor_lv3_01.png}}}
+    \only<2 |handout:0>{ \includegraphics [height=0.60\textheight]{\figureLocation{scm_strategy/scor_lv3_02.png}}}
+    \only<3 |handout:0>{ \includegraphics [height=0.60\textheight]{\figureLocation{scm_strategy/scor_lv3_03.png}}}
+    \only<4 |handout:0>{ \includegraphics [height=0.60\textheight]{\figureLocation{scm_strategy/scor_lv3_04.png}}}
+  \end{center}
+
+  \NextHalfLine
+  %\textsc{OKC's Insights}
+  \begin{flushleft} \footnotesize{
+  \begin{itemize}
+    \item \textbf{Plan:} requirements $\pm \approx \pm$  resources $\rightarrow$ plan %$\overbrace{\pm}$
+    \item \textbf{Source$_{ETO}$ =} Source$_{MTO}$ + identify + select supplier
+    \item \textbf{Delivery$_{ETO} \approx$ } Delivery$_{MTO}$ w/  negotiation +  sch. installation
+    \item \textbf{Return$_{src}$ = } Return$_{dvy}$ + identify + disposition \alert{- transfer}
+  \end{itemize} }
+  \end{flushleft}
+
+%
+%
+  %%%----
+  \note{
+    \textbf{Purpose:} Introduce to Level 2\\
+    \textbf{Leading Question:} <<none>>\\
+    \includegraphics [width=0.40\textwidth]{\figureLocation{scm_strategy/scor_cycleTime.jpg}}
+    \begin{itemize}
+      \item \textbf{MRO} maintenance-repair-operations
+      \item \textbf{Flexility:} avg day per schedule change
+    \end{itemize}
+  }
+
+\end{frame}
+
+%=================================================================================================
+\section[Strategy]{Supply Chain Strategy}
+%=================================================================================================
+\begin{frame}
+  \frametitle{How a company compete with others?}
+
+   \begin{itemize}
+    \item \textbf{\code{Price}:} Wal-mart, Big Cola, Daiso
+    \item \textbf{Agility \& Responsive:} Zara, Dell, JAL (on time)
+    \item \textbf{Superb Quality:} Leica, Louis Vuitton
+    \item \textbf{Innovation \& Flexibility:} Apple, Intel
+    \item \textbf{Convenience \& Presence:} 7-Eleven, Starbucks, McDonald
+    \item \textbf{Service \& Coverage:} 3M, AIS, Facebook, CitiBank, IG
+   \end{itemize}
+
+  \NextLine
+  \begin{alertblock}{}{}
+    What are strategic components to compete?
+  \end{alertblock}
+
+  \note{
+    \textbf{Purpose:} Introduce to business strategy\\
+    \textbf{Leading Question:} How the company compete\\
+    \begin{itemize}
+      \item \textbf{Note:} without differentiation (black bullets), customer decides by price
+      \item \textbf{Flexibility}: change volume large (economy of scale $\leftrightarrow$ no layoff)/
+      \item \textbf{more example:} Taiwan Semiconductor Manufacturing Company (TSMC), Samsung as OEM of Singer TV, India pharisaical company
+    \end{itemize}
+
+    \begin{tabular}{lrrr} \hline
+      Strategy   & Advantage      & Compete                     & Key factor \\ \hline
+      Innovation & brand \& tech  & desirable features/products & t2Market, t2Volumne \\
+      Cost       & efficient oper & lowest prices               & cost/volumne \\
+      Service    & superb service & tailor customer needs       & design from customer persp \\
+      Quality    & safe \& reliable& no hassle                  & quality control \\ \hline
+    \end{tabular}
+
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=stra]
+  \frametitle{Understanding strategic components }
+
+   \begin{itemize}
+    \item \textbf{Operation strategy:} how to produce goods and services?
+    \item \textbf{Outsourcing strategy:} how to get products and services to buyers/ consumers?  \hfill \hyperlink{outs}{\beamerbutton{Pg:Outsourcing}}
+    \item \textbf{Channel strategy:} what are in-house skills and expertise? \hfill \hyperlink{chan}{\beamerbutton{Pg:Channel \& Service}}
+    \item \textbf{Customer service strategy:} what are customer's needs and how to turn into profits ? \hfill \hyperlink{chan}{\beamerbutton{Pg:Channel \& Service}}
+    \item \textbf{Asset network:} what are organization of resources? \hfill \hyperlink{asset}{\beamerbutton{Pg:Asset}}
+   \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{source:}  Cohen, S. and Roussel, J 2001. ``Strategic Supply Chain Management'' \hskip5em}\\
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} SCM strategy fitting with?\\
+    \textbf{Leading Question:} how SCM strategy related to other strategy?\\
+    \begin{itemize}
+      \item \textbf{operation VS outsoucing:} make or buy?
+      \item \textbf{rest} who and how to deliver 'value' and constraints
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================
+\begin{frame}
+  \frametitle{Operation Strategy  }
+
+  \begin{center}
+  \begin{tikzpicture}[xscale=1.65,yscale=0.60,>=stealth]
+
+    \draw[-, thick] (3.0,4.5) -- (3.0,-1.5) ;
+    \draw[<->,thick] (-3.0,4.0) -- node[pos=0.5,auto, blue,sloped] {\textFont{ETO}} (3.0,4.0) ;
+    \draw[<->,thick] (-1.8,3.0) -- node[pos=0.5,auto, blue,sloped] {\textFont{MTO}} (3.0,3.0) ;
+    \draw[<->,thick] (-0.6,2.0) -- node[pos=0.5,auto, blue,sloped] {\textFont{ATO}} (3.0,2.0) ;
+    \draw[<->,thick] (1.8,1.0) -- node[pos=0.5,auto, blue,sloped] {\textFont{MTS}} (3.0,1.0) ;
+
+    \draw[<->,thick] (-3.0,-1.25) -- node[pos=0.5,auto, black,sloped] {\tiny{Engineering}} (-1.8,-1.25) ;
+    \draw[<->,thick] (-1.8,-1.25) -- node[pos=0.5,auto, black,sloped] {\tiny{Procurement}} (-0.6,-1.25) ;
+    \draw[<->,thick] (-0.6,-1.25) -- node[pos=0.5,auto, black,sloped] {\tiny{Fabrication}} (0.6,-1.25) ;
+    \draw[<->,thick] (0.6,-1.25)  -- node[pos=0.5,auto, black,sloped] {\tiny{Assembly}} (1.8,-1.25) ;
+    \draw[<->,thick] (1.8,-1.25)  -- node[pos=0.5,auto, black,sloped] {\tiny{Delivery}} (3.0,-1.25) ;
+  \end{tikzpicture}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:}Jacob and Chase 2010~\cite{jacobs2010operations}.}
+  \end{flushright}
+
+
+  \footnotesize{
+  \begin{itemize}
+    \item \textbf{ETO:} work with the customer to design and then make the product
+    \item \textbf{MTO:} make the customer's product from raw mat'
+    \item \textbf{ATO:} combine a number of preassembled modules to meet customer's specifications
+    \item \textbf{MTS:} serve customers from finished goods inventory
+  \end{itemize}
+}
+
+  \note{
+    \textbf{Purpose:} Recap Operation strategy\\
+    \textbf{Leading Question:} demand info $\rightarrow$ mfg process $\rightarrow$ delivery \\
+    \begin{itemize}
+    \item \textbf{ETO:} fit to specific location $\rightarrow$ product design, e.g., overhead crane
+    \item \textbf{MTO:} expensive $\rightarrow$ part purchasing, e.g., super computer, airplane
+    \item \textbf{ATO:} high variation $\rightarrow$ part customization, e.g., automobile, dell computer
+    \item \textbf{MTS:} common goods/standardize $\rightarrow$ product delivery, e.g., TV, radio
+    \end{itemize}
+  }
+  \end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Which operation strategy?}
+
+  \begin{center}
+    \includegraphics [height=0.45\textheight]{\figureLocation{scm_strategy/invPositbyInd.png}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Performance Measurement Group, 2004 \hskip10em }\\
+  \end{flushright}
+
+  \begin{center} \small{
+    \begin{tabular}{lrr} \hline
+      Type& Condition & Key benefits \\ \hline
+      MTS & standard product w/ \alert{high volume}   & cost \& response \\
+      ATO & ~~~~~~~~ product w/ \alert{high variation}& reduce inventory \\
+      MTO & customized or infrequent demand product & low FG, many option \\
+      ETO & complex product w/ \alert{unique customer} & response to requirement \\ \hline
+    \end{tabular}}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} diff business/ industry/ product $\rightarrow$ diff oper strategy\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item some industry has dominate oper. strategy, i.e., package food
+      \item other industry is inconclusive
+      \item good to group, but bad to decide
+      \item \textbf{Note:} car (Faerie VS Honda motorcycle) and cooked foods (hi-end french VS military canteen) always bad example
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=outs]
+  \frametitle{Outsourcing strategy \forIE}
+
+  \begin{center} \small{
+  \begin{tabular}{cc}\hline
+    \textbf{benefit}                 & \textbf{concern} \\ \hline
+        ramp-up/down (scope/scale)   & balancing value \& power  \\
+        flexibility                  & culture \& execute \\
+        focus on core                & proprietary \\ \hline
+  \end{tabular} }
+  \end{center}
+
+	\NextHalfLine
+  \begin{block}{}{}
+    Every company eventually needs profit
+  \end{block}
+
+	\NextHalfLine
+	\textsc{Should you outsource?}
+  \begin{itemize}
+    \item What give you competitive advantage (rolex, cisco)?
+    \item What is your capability when fluctuation?
+    \item What is your internal uniqueness of business process (BTV)?
+    \item What is your power to negotiate (blink)? \hfill \hyperlink{stra}{\beamerbutton{Pg:Stratgic Components}}
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Introduce to outsoucing\\
+    \textbf{Leading Question:} should you outsource operation?\\
+    \begin{itemize}
+      \item how to reap benefit and prevent risk
+      \item answer and discuss later in "soucing" lecture
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=chan]
+  \frametitle{Customer Serv. \& Channel Strategy \forIE}
+
+  \begin{center}
+    \includegraphics [width=0.65\textwidth]{\figureLocation{scm_strategy/distChannel.png}}
+  \end{center}
+
+	\textsc{What are suitable channels?}
+  \begin{itemize}
+   \item Who is a targeted customer?
+   \item What are costs and value of sale?
+   \item What are channel partners should we have? \hfill \hyperlink{stra}{\beamerbutton{Pg:Stratgic Components}}
+  \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} Introduce to channel\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{direct} internet, tele-marketing, retailer
+      \item \textbf{indirect} wholesale, reseller, field agents
+      \item \textbf{level = numbers of parties:}
+      \item \textbf{Agent:} extension of manufacturers can communicate with customer or other parties. \alert{no inventory}. Example of 4-Lv is Coke.
+      \item \href{https://www.economicsdiscussion.net/distribution-channel/types-of-distribution-channels/31760}{\code{more info}}
+    \end{itemize}
+
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=asset]
+  \frametitle{Asset Network \forIE}
+
+  \begin{center}
+    \includegraphics [width=0.75\textwidth]{\figureLocation{scm_strategy/autoSupplyChain.png}}
+  \end{center}
+
+  \NextHalfLine
+  \textsc{Geography of Asset Network:} why multiple locations?
+  \begin{itemize}
+    \item \textbf{Global model} collaborate components , capital investment (intel)
+    \item \textbf{Regional model:} trade agreement (Asian Auto)
+    \item \textbf{Country model:} language, local content (TH Auto) \hfill \hyperlink{stra}{\beamerbutton{Pg:Stratgic Components}}
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} how and where to invest \\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{Balance:} Capital Intensive (cost of machine) \textsc{VS} Technology \textsc{VS} regulation \& trade block
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Strategic alignments }
+
+  \begin{center}
+    \includegraphics [width=0.70\textwidth]{\figureLocation{scm_strategy/alignment.png}}
+  \end{center}
+
+  \begin{itemize}
+    \item \textbf{Business strategy:} how to win customers \& make money
+    \item \textbf{Marketing strategy}: what is positioning of market and product
+    \item \textbf{Supply chain strategy}: mean to fulfill customer's need
+%    \begin{itemize}
+%      \item \textbf{Operation:} operation strategy
+%      \item \textbf{Procurement:} outsourcing, sourcing, partner
+%      \item \textbf{Network:} asset, channel,
+%    \end{itemize}
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Business first. Then, market and supply chain together \\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{Business strategy:} how to survive in long term (as brain \& heart)
+      \item \textbf{Mkt strategy}: how to engage customer (who? / story of company?) (as mouth and appearance)
+      \item \textbf{SCM strategy}: how to manufacturing and delivery (as limbs)
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Alignment of SC and Business strategy }
+
+%  \only<1 |handout:0>{
+%    \begin{center}
+%        \includegraphics [width=0.80\textwidth]{\figureLocation{scm_strategy/fiveForceExt.png}}
+%    \end{center}
+%   }
+  \only<1 |handout:0>{
+    \begin{center}
+        \includegraphics [width=0.80\textwidth]{\figureLocation{scm_strategy/fiveForceInt.png}}
+    \end{center}
+   }
+%  \only<3 |handout:0>{
+%    \begin{center}
+%        \includegraphics [width=0.80\textwidth]{\figureLocation{scm_strategy/SC_Enable_Framework.png}}
+%    \end{center}
+%   }
+  \only<2 |handout:0>{
+    \begin{center}
+        \includegraphics [width=0.80\textwidth]{\figureLocation{scm_strategy/SCOR_cycle_Framework.png}}
+    \end{center}
+   }
+  \only<3-|handout:1>{
+  \begin{center} \footnotesize{
+    \begin{tabular}{lrrrr} \hline \hline
+    \textbf{Business} & \textbf{Source of} & \textbf{Basis of}    & \textbf{Key supply chain}  \\
+    \textbf{Strategy} & \textbf{Advantage} & \textbf{Competition} & \textbf{Contribution}\\ \hline
+    \textsc{Cost}     & cost-eff. operation& lowest cost          & efficient, cost improv  \\[2pt]
+                      & \& mass            & \& economy of scale  &  risk \& global$^n$   \\[5pt]
+    \textsc{Innovation}& brand, tech        & hype, desirable,     & time2market, volume  \\[2pt]
+                      & \& niche           & \& innovative        &  \& manuf flex       \\[5pt]
+    \textsc{Service}  & superb service     & fitted with need     & designed for customer\\[2pt]
+                      &                    & \& after sale        & \& network           \\[5pt]
+    \textsc{Quality}  & safest \& reliable & always work          & SC excellence, QC    \\[2pt]
+                      &                    &  \& durable          & \& source            \\[5pt]
+    \textsc{Agile}    & speed \& flex      & responsive           & locations, mode      \\[2pt]
+                      &                    &                      & \& sync              \\[5pt]  \hline \hline
+    \end{tabular} }
+  \end{center}
+  }
+  \begin{flushright}
+    \hfill \tiny{\textbf{source:} Johnson, M. and Stevens, G. ``Integrating the Supply Chain... 25 years on''  \hskip10ex~}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} standard SCM and business strategy based on Porter 5 Forces\\
+    \textbf{Leading Question:} what are classical SCM strategy?\\
+    \begin{itemize}
+      \item \textbf{Porter 5 Forces:} competition $\propto$ supplier, customer, substitution, barrier,internal
+      \item \textbf{Innovative:} urge to buy a new innovation based on its brand $\rightarrow$ reliable and quick tech product
+      \item[] \hskip3ex capital \& brand loyalty as  barrier \& substitution
+      \item \textbf{Cost:} cheap to buy well-known product $\rightarrow$ low margin cost = $\frac{\mbox{value}}{\mbox{cost}}$
+      \item[] \hskip3ex small margin to keep out as barrier \& substitution
+      \item \textbf{Service:} comprehensive product/ service $\rightarrow$
+      \item[] \hskip3ex back-online to keep out as barrier \& substitution
+      \item \textbf{Quality:} lasting-reliable product; easy to fix $\rightarrow$ well-known product w/ second market
+      \item[] \hskip3ex reputation \& record to keep out as barrier \& substitution
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Category and examples of SC Strategy}
+
+  \begin{itemize}
+    \item \textbf{Structure:} vertical integr$^n$, horizontal integr$^n$, virtual integr$^n$, collaborative,
+    \item \textbf{Competitive Advantage:} low cost, differentiation
+    \item \textbf{Market:} board, focus, best-value, platform, collaborative
+    \item \textbf{Technology:} ecosystem, data centric, cyber-security, synchronization
+    \item \textbf{Resilience:} multi-sourcing, near-shoring, harmonization, sustainability, buffer
+    \item \textbf{Manufacturing:} diversification, globalization, localization, standard process
+  \end{itemize}
+
+  \NextLine
+  \begin{alertblock}{}{}
+    \begin{itemize}
+      \item How to select to achieve \alert{Strategic Fit}? Examples \hfill \hyperlink{SC-Fit}{\beamerbutton{Pg:SC-Fit}}
+      \item Is there any simplify or generic supply chain strategy? \hfill \hyperlink{SC-Strategy}{\beamerbutton{Pg:SC-Strategy}}
+    \end{itemize}
+  \end{alertblock}
+
+  \note{
+    \textbf{Purpose:} standard SCM and business strategy based on Porter 5 Forces\\
+    \textbf{Leading Question:} what are classical SCM strategy?\\
+    \begin{itemize}
+      \item \textbf{Porter 5 Forces:} competition $\propto$ supplier, customer, substitution, barrier,internal
+      \item \textbf{Innovative:} urge to buy a new innovation based on its brand $\rightarrow$ reliable and quick tech product
+      \item[] \hskip3ex capital \& brand loyalty as  barrier \& substitution
+      \item \textbf{Cost:} cheap to buy well-known product $\rightarrow$ low margin cost = $\frac{\mbox{value}}{\mbox{cost}}$
+      \item[] \hskip3ex small margin to keep out as barrier \& substitution
+      \item \textbf{Service:} comprehensive product/ service $\rightarrow$
+      \item[] \hskip3ex back-online to keep out as barrier \& substitution
+      \item \textbf{Quality:} lasting-reliable product; easy to fix $\rightarrow$ well-known product w/ second market
+      \item[] \hskip3ex reputation \& record to keep out as barrier \& substitution
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\section[SC strategy]{Strategic Fit and Supply Chain Strategy}
+%=================================================================================================
+\begin{frame}[label=SC-Fit]
+  \frametitle{Achieving Strategic Fit \forIE}
+
+   Alignment between \alert{business strategy} and \alert{supply chain}
+   \begin{itemize}
+    \item Understand \alert{nature of business}, i.e., customer, uncertainty, capacity
+    \item Build \alert{sufficient capabilities},
+    \item Deliver \alert{what customers value}
+   \end{itemize}
+
+  \NextLine
+  \textsc{Examples}
+  \begin{itemize}
+    \item \textbf{Airline industry:} perishable capacity $\rightarrow$ dynamic price \& channels
+    \item \textbf{Automotive industry:} variation, regulation, $\rightarrow$ JIT, module
+    \item \textbf{Consumer electronic industry:} innovation, short life cycle $\rightarrow$ roll-out, leased capacity
+    \item \textbf{Retail industry:} price \& availability $\rightarrow$ single DCs \& online, house brand
+  \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} step for alignment\\
+    \textbf{Leading Question:} how to translate these strategic into action \\
+    \begin{itemize}
+      \item \textbf{Airline:} time= expensive, must full as marginal cost
+      \item \textbf{Auto:} limited variation; some local/some global;  $\exists$ critical components such as seat belt, engine block,
+      \item \textbf{Consumer Electronic:} ; $\exists$ critical compony AMD \textsc{VS} Intel, AppMaterial
+      \item \textbf{Retailer:} low margin, focus on logistics
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{More Examples of Strategic Fit \forIE}
+
+
+  \only<1 |handout:0>{
+    \begin{center}
+        \includegraphics [height=0.75\textheight]{\figureLocation{scm_strategy/Stra_locCostAirline.png}}
+    \end{center}
+   }
+  \only<2 |handout:0>{
+    \begin{center}
+        \includegraphics [height=0.75\textheight]{\figureLocation{scm_strategy/Stra_ikea.png}}
+    \end{center}
+   }
+  \only<3 |handout:1>{
+    \begin{center}
+        \includegraphics [height=0.75\textheight]{\figureLocation{scm_strategy/Stra_zara.png}}
+    \end{center}
+   }
+  \begin{flushright}
+    \hfill \tiny{\textbf{source:} Porter, M.  \hskip10ex~}
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} step for alignment\\
+    \textbf{Leading Question:} how to translate these strategic into action \\
+    \begin{itemize}
+      \item \textbf{Airline:} time= expensive, must full as marginal cost
+      \item \textbf{Auto:} limited variation; some local/some global;  $\exists$ critical components such as seat belt, engine block,
+      \item \textbf{Consumer Electronic:} ; $\exists$ critical compony AMD \textsc{VS} Intel, AppMaterial
+      \item \textbf{Retailer:} low margin, focus on logistics
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Obstacles to Strategic Fit \forIE}
+
+  \begin{center}
+    \only<1|handout:1>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/StrategicFit.png}} }
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply}\hskip10em}\\
+  \end{flushright}
+
+
+  \begin{itemize}
+    \item \textbf{Business Nature:} variability (GM, FMCG), new feature (phone)
+    \item \textbf{Fragmentation:} many ownership, too much outsourcing e.g., K-Mart
+    \item \textbf{Globalization:} price, regulation, e.g., clothes
+    \item \textbf{Business environment:} tech, e.g., internet, EV
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} dynamic/shifted ground also applies to stratgy\\
+    \textbf{Leading Question:} Why some company fail on their SC strategy? \\
+    \begin{itemize}
+      \item \textbf{more SKU:} need more customer $\rightarrow$ complex
+      \item \textbf{short LC:} $\rightarrow$ little time to perfect
+      \item \textbf{more competitive:} cheaper, faster, better, safer, convince
+      \item \textbf{less risk:} share risk/more party
+      \item \textbf{more info/play field}
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=SC-Strategy]
+  \frametitle{Understanding demand and supply}
+
+  \NextLine
+  \begin{center}
+  \begin{tabular}{lcc}
+    Demand  &  \includegraphics [width=0.15\textwidth]{\figureLocation{scm_strategy/whiteShirt.png}}
+            &  \includegraphics [width=0.15\textwidth]{\figureLocation{scm_strategy/zaraShirt.png}}\\
+            &  \tiny{functional products} & \tiny{innovative products} \\
+    Supply  & \only<1|handout:1>{\includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/hydroPlant.png}}}
+              \only<2|handout:0>{\includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/sewingProcess.png}}}
+            & \only<1|handout:1>{\includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/gasPlant.png}} }
+              \only<2|handout:0>{\includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/compChipProcess.jpg}}}\\
+            & \tiny{stable processes} & \tiny{evolving processes} \\
+  \end{tabular}
+  \end{center}
+
+  \begin{block}{\footnotesize{Question 4}} \footnotesize{
+  \begin{itemize}
+    \item What are characteristics of \alert{functional products} and \alert{innovative products }
+    \item What are characteristics of \alert{stable processes} and \alert{evolving processes}
+  \end{itemize} }
+  \end{block}
+
+
+  \note{
+    \textbf{Purpose:} Introduce to classical supply chain strategy\\
+    \textbf{Leading Question:} how demand/supply affect supply chain and its strategy?\\
+    \begin{itemize}
+      \item \textbf{demand uncertain:} high functional/R\&D $\rightarrow$ innovative
+      \item \textbf{supply uncertain:} evolving process $\rightarrow$ low standard
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Uncertainty Matrix}
+
+  \begin{center}
+    \begin{tabular}{ll|p{0.35\textwidth}|p{0.35\textwidth}|}
+      \multirow{6}{*}{\rotatebox{90}{\textbf{Supply Processes}} }
+                        & \multicolumn{1}{c}{}
+                        & \multicolumn{2}{c}{\textbf{Demand Fluctuation}} \\
+                        &  \multicolumn{1}{c}{}
+                        & \multicolumn{1}{c}{\textsl{Functional}}
+                        & \multicolumn{1}{c}{\textsl{Innovative}} \\ \cline{3-4}
+      & \textsl{Stable} &  oil, gas, food      & fashion apparel,  \\
+      &                 &  basic clothes       & computer, music  \\[5pt]  \cline{3-4}
+      & \textsl{Evolve} &  hydro electric,     & telecommunication \\
+      &                 &  some food           & iPhone, iPad, CPU \\[5pt]  \cline{3-4}
+    \end{tabular}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} ``Aligning Supply Chain Strategies with Product Uncertainties''. \emph{Lee, H.L.} 2002~\cite{lee2002aligning} \hskip10em}\\
+    \tiny{\textbf{\hskip5ex} ``Introduction to Supply Chain Management''. \emph{Raz, Gal} 2009 \hskip10em}\\
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Introduce to products based on demand/supply uncertainty\\
+    \textbf{Leading Question:} How do we apply the concept? Why product?\\
+    \begin{itemize}
+      \item \textbf{Oil:} constant demand - proven tech
+      \item \textbf{Hydro:} constant demand - seasonal suuply
+      \item \textbf{Fashion:} shifted style - 100yr old tech
+      \item \textbf{iPhone:} saturated/need replaced smart phone-change techn 300nm last 20 years $\rightarrow$ 7nm
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+
+\begin{frame}
+  \frametitle{Supply chain capability}
+
+  \begin{center}
+    \includegraphics [width=0.8\textwidth]{\figureLocation{scm_strategy/ResponsiveSpectrum.png}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply} \hskip10em}\\
+  \end{flushright}
+
+
+  \begin{itemize}
+    \item \textbf{Efficient/Lean:} lean \& cost driven, e.g. grocery
+    \item \textbf{Responsive:} flexible and tailor to needs of customer, e.g. fashion apparel
+    \item \textbf{Risk-Hedging:} pooling and sharing resources with alternative sources, e.g. hydro-power
+    \item \textbf{Agile:} combining responsive and risk hedging, e.g. high tech, telecom (react \& quick execute)
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Spectrum of SC strategy\\
+    \textbf{Leading Question:} what are four SC strategy?\\
+    \begin{itemize}
+      \item $<<$explain bullets $>>$
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Lean SC VS Agile SC}
+
+  \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/leanSC.png}}~~
+    &
+      ~~\includegraphics [width=0.25\textwidth]{\figureLocation{scm_strategy/agileSC.png}}    \\
+    \end{tabular}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply}\hskip10em}\\
+  \end{flushright}
+
+  \begin{center}
+  \small{
+  \begin{tabular}{lrr} \hline
+                  & Lean SC   & Agile SC \\  \hline
+    product       & community & fashion \\
+    cust.driver   & cost      & other \\
+    profit margin & low       & high \\
+    main cost     & operation & marketing \\ \hline
+  \end{tabular}
+  }
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} Introduce two dominated/well-known strategy \\
+    \textbf{Leading Question:} What are typical/frequent strategy? \\
+    \begin{itemize}
+      \item \textbf{Lean SC Strategy:} high volume \& low variety/ planning consistency
+      \item \textbf{Agile SC Strategy:} high variety \& low volume/ quick reactive
+      \item \textbf{Note I:} lean $\neq$ agile $\rightarrow$ lagile (research topic)
+      \item \textbf{Note II:}
+      \begin{itemize} \scriptsize{
+        \item There is a cost to achieving responsiveness
+        \item Supply chain efficiency: cost of making and delivering the product to the customer
+        \item \alert{Increasing responsiveness} results in \alert{higher costs} that lower efficiency }
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{Principles of Lean Supply Chain}
+
+  \begin{center}
+    \only<1>{ \includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/7wastes.png}} }
+    \only<2|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/valueStreamMapping.jpg}}}
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl 2010~\cite{chopra2007supply}\hskip10em}\\
+  \end{flushright}
+
+  \small{
+  \begin{itemize}
+    \item \textbf{Principle:} eliminating wastes by marginal gain, bottom up, training
+    \item \textbf{7Wastes:} TIM WOOD B.
+    \item \textbf{Basic:} 5S, layout, work procedure with visual,
+    \item \textbf{Adv.} value stream mapping, reducing batch size \& \# suppliers
+    \item \textbf{Logistics:} crossdock, back haul, postponement
+  \end{itemize} }
+
+  \note{
+    \textbf{Purpose:} Introduce to lean supply chain \\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{history of lean SCM:} toyota $\rightarrow$ office $\rightarrow$ process
+      \item \textbf{7Wastes:} defects, production, transportation, inventory, motion, process, waiting
+      \item \textbf{SC Tech}: JIT delivery, kitting for POU, VMI, 3PL
+      \item \alert{Increasing responsiveness} results in \alert{higher costs} that lower efficiency
+      \item \textbf{Scope:} add \alert{value} (i.e., physical changes, customer cares)
+      \begin{itemize} \scriptsize{
+        \item focus on \alert{people/department} who directly add value
+        \item involve suppliers in R\&D and logistics
+        \item optimize across organization}
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%%=================================================================================================
+\begin{frame}
+  \frametitle{Principles of Agile Supply Chain}
+
+  \begin{center}
+    \only<1 |handout:1>{\includegraphics[height=0.6\textheight]{\figureLocation{scm_strategy/agileSC_concept02.png}}}
+    \only<2-|handout:0>{\includegraphics[height=0.6\textheight]{\figureLocation{scm_strategy/agileSC_integrate01.png}}}
+  \end{center}
+
+  \begin{flushright}
+    \tiny{\textbf{source:} Chopra and Meindl 2010~\cite{goetschalckx2011supply} \hskip10em}\\
+  \end{flushright}
+
+  \begin{itemize}
+    \item \textbf{What:} rapidly response to \alert{unpredictable market demand} driven by innovation
+    \item \textbf{Scope:} extend \alert{end-to-end} of supply chain
+  \end{itemize}
+
+  \note{
+    \tiny{Agile SC framework: configuration and structure are not fixed (fast) \& for innovative products (smart)} \\
+    \textbf{Purpose:} Introduce to agile supply chain\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{virtual integration:} shared info, collaborated plan, end2end visibility
+      \item \textbf{market sensitive:} know consumer, daily POS, capture emerging trend
+      \item \textbf{process alignment:} internal process (forecasting $\rightarrow$ delivery)// market based forecast
+      \item \textbf{dynamic:} capabilities for responsive / anticipate unpredictable change // short term
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\section[Metrics]{Supply Chain Performance Matric}
+%================================================================================================-
+\begin{frame}
+  \frametitle{SCM: Strategic Cost Management}
+
+  \begin{quotation}
+    If you can not measure it, you can not improve it.
+  \end{quotation}
+  \begin{flushright}
+    \hfill \tiny{\textbf{source:} William Thomson (Lord Kelvin) \hskip10ex~}
+  \end{flushright}
+
+  \NextHalfLine
+  %\textsc{Major SCM Cost Element}
+  \begin{center}
+    \only<1|handout:1>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/business_supplychain.png}}}
+    \only<2|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/perfFramework.png}}}
+    \only<3|handout:0>{\includegraphics [height=0.5\textheight]{\figureLocation{scm_strategy/majorSCMCost.png}}}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} To achieve better SCM, must measure\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{matrix hierarchy:} linage from strategy $\rightarrow$ objective $\rightarrow$ KPI
+      \item \textbf{perspective}: operation, financial, customer
+      \item \textbf{Note}
+      \begin{itemize} \scriptsize{
+        \item 47\% implements SCM for cost reduction
+        \item where can find cost? \#transaction or impact or \#touch or \# party}
+      \end{itemize}
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Performance Matrix }
+
+  \textsc{Perspective}
+  \begin{itemize}
+    \item \textbf{Customer Service:} indicator of ability to meet \alert{customers} timely needs and create values
+    \item \textbf{Operational:} indicator of \alert{processes} and \alert{decisions} to meet customer expectations
+    \item \textbf{Financial:} indicator of value creation for \alert{shareholders}
+  \end{itemize}
+
+  \NextHalfLine
+  \textsc{Dimensions}
+    \begin{itemize}
+      \item \textbf{Cost:} \alert{capital} required to meet expected process and operation
+      \item \textbf{Responsiveness /Time:} speed in which expectations is met
+      \item \textbf{Reliability:} trust/\alert{quality} of service and accuracy of information
+      \item \textbf{Agility:}  ability and flexibility to \alert{respond to external} influences
+      \item \textbf{Asset Management Efficiency:} ability to efficiently utilize \alert{assets}
+    \end{itemize}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Introduce to matrix\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{Perspective} from strategy
+      \item \textbf{Dimension} from SCOR model
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Importance Performance Measure }
+
+  \NextHalfLine
+  Discuss the following popular SCM indicators in terms of perspective and dimension\\
+  \begin{block}{}{}{}
+    \begin{tabular}{ll}
+      $\bullet$ inventory day                       & $\bullet$ forecasting accuracy   \\
+      $\bullet$ cash-to-cash cycle time             & $\bullet$ overall value at risk      \\
+      $\bullet$ on-time delivery                    & $\bullet$ order fulfillment lead time \\
+      $\bullet$ return of equity (ROE)              & $\bullet$ rate of good return \\
+      $\bullet$ perfect order fulfillment \hskip5ex & $\bullet$ $\frac{\mbox{logistic cost}}{\mbox{cost of good sold}}$ \\
+    \end{tabular}
+  \end{block}
+
+  Elaborate activities or department effected by these indicators
+  \begin{alertblock}{\small{Question 5}}{}
+    \begin{itemize}
+      \item Elaborate activities or department effected by these indicators
+      %\item Does Thailand have any benchmark?     \hfill \hyperlink{benchmark}{\beamerbutton{Pg:Benchmark}}
+      \item How should we improve SC of our company?  \hfill \hyperlink{improve}{\beamerbutton{Pg:Design Improve}}
+    \end{itemize}
+  \end{alertblock}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} example of popular KPIs/ research these KPIs\\
+    \textbf{Leading Question:} what are popular matrix? \\
+    \begin{itemize}
+      \item \textbf{Note:} always ask how to calculate
+      \item \textbf{Reliability:} perfect order fulfillment
+      \item \textbf{AM}: cash2cash cycle time, Return on supply chain fixed assets
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Benefits of Performance Measure }
+
+   \begin{itemize}
+    \item \textbf{Learning:} comparing and evaluating an organization \alert{internally}
+    \item \textbf{Coordination:} indicating 'weak' points and \alert{re-allocate resources}
+    \item \textbf{Motivation \& Goal:} communicating business strategy to operational \alert{goal}
+    \item \textbf{Benchmark:} comparing 'our' performance and adopting \alert{best practice}
+  \end{itemize}
+
+  \NextLine
+  \textsc{OKC's Note on Measurement}
+  \begin{itemize}
+    \item \textbf{Measuring = Non-Value Added:} require \alert{time}, effort, \alert{tool}, revision
+    \item \textbf{Measuring $\rightarrow$ Action:} aware of top-down (econ$_{K9}$, art), find \alert{conflicts}
+    \item \textbf{RE-Method in Business:} KPI \textsc{VS} Balance Scorecard \textsc{VS} OKR
+  \end{itemize}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Introduce to textbook\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item \textbf{Learning:} historical tracking/ possible for analysis and trouble shooting
+      \item \textbf{Coordination \& Motivation \& Goal:} similar to budgeting, internal measuring in case conflict
+      \item \textbf{Benchmark:} comparing company to the best in other area/ same area (Glillet/DHL country party Story)
+      \item \textbf{Objective Key Result:} pick 3-5 top key numerical result / popularized by google/ 70\% = business as usual
+      \item \textbf{Balance Scorecard:} multi-facet strategic perf measurement comprise of Financial, Customer, Operation, Growth
+    \end{itemize}
+  }
+\end{frame}
+
+%%================================================================================================-
+%\begin{frame}
+%  \frametitle{Office of Logistics ILPI \forIE}
+%
+%  \begin{center}
+%  \begin{tabular}{cc}
+%    \multicolumn{2}{c}{\only<1|handout:0>{\includegraphics [width=0.8\textwidth]{\figureLocation{scm_strategy/ilpi01.png}}}} \\
+%    \only<2|handout:1>{\includegraphics [width=0.45\textwidth]{\figureLocation{scm_strategy/ilpi02.png}}} &
+%    \only<2|handout:1>{\includegraphics [width=0.45\textwidth]{\figureLocation{scm_strategy/ilpi03.png}}}
+%  \end{tabular}
+%  \end{center}
+%
+%%  \begin{flushright}
+%%   % \hfill \tiny{ \textbf{source:} \href{https://dol.dip.go.th/uploadcontent/DOL/Pert/ILPI\%202019\%20.pdf}{\code{https://dol.dip.go.th}} \hskip10ex~}
+%%  \end{flushright}
+%
+%  %%%------
+%  \note{
+%    \textbf{Purpose:} Introduce to textbook\\
+%    \textbf{Leading Question:} <<none>>\\
+%    \begin{itemize}
+%      \item \textbf{Story:} dept of logistic groups and trys to benchmark industry in thailand
+%      \item \textbf{LPI} Industrial Logistic Performance Index /
+%    \end{itemize}
+%  }
+%\end{frame}
+
+%================================================================================================-
+\section[Bullwhip Effect]{Information and Bullwhip Effect}
+%================================================================================================-
+\begin{frame}
+  \frametitle{Bullwhip Effect}
+
+  \begin{center}
+    \only<1|handout:0>{\includegraphics [height=0.45\textheight]{\figureLocation{scm_strategy/distChannel01.png}}}
+    \only<2|handout:0>{\includegraphics [height=0.45\textheight]{\figureLocation{scm_strategy/OKCbeergame.png}}}
+    \only<3->{
+      \begin{itemize}
+        \item \textbf{What:} \alert{distortion} of \alert{demand information} within SC
+        \item \textbf{Nature:} distortion \alert{increases in} higher \alert{upstream} of SC
+        \item \textbf{Causes:}
+        \begin{itemize}
+          \item Information delay: \alert{uncertainty} in quantities and pattern of demand
+          \item Length of chain: \alert{aggregated demands} of each party
+        \end{itemize}
+        \item \textbf{Effects:}  inventory (dead stock, backlog), production smoothness, expedition
+        \item \textbf{Examples:} Proctor \& Gamble (Pampers); HP (printers); Barilla (pasta)
+        \item \textbf{Remedy:} coordination (POS, forecasting), shorten SC, volume discount in fixed period
+      \end{itemize}
+    }
+  \end{center}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Introduce to MIT beer game/ a classical example of bull whipeffect\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item Increasing overall inventory $\rightarrow$ \alert{dead stock}
+      \item Increasing transportation cost/ production
+      \item Decreasing response time
+      \item Evolving into a game between parties in supply chain
+      \item \textbf{course:} promotion, price change
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Demand Fluctuation}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics[width=0.75\linewidth]{\figureLocation{scm_strategy/BullWhipEffect.png}}\\
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chase and Jacob. 2011.\hskip10em}\\
+  \end{flushright}
+
+  %%%------
+   \note{
+    \textbf{Purpose:} Show inventory result of game\\
+    \textbf{Leading Question:} <<none>>\\
+    \begin{itemize}
+      \item <<explain figures>>
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}[label=improve]
+  \frametitle{Art of Supply Chain Improvement }
+
+    \textsc{Supply Chain Basic Steps}
+    \begin{itemize}
+      \item \textbf{[D] Begin with customers:} need of \code{every customers} (Amazon.com, Zippo.com)
+      \item \textbf{[D] Keep SCM simple:} focus on process (i.e., purchase, analyze, transport), not function
+      \item \textbf{[I] Measure what important, and improve them:}
+      \item \textbf{[I] Build bridge, eliminate wall:}  Realtime communication (UF), quantify investment, focus on people
+    \end{itemize}
+
+    \textsc{Supply Chain Advance}
+    \begin{itemize}
+      \item \textbf{[D] Focus on core, outsource others:}
+      \item \textbf{[D] Aware roles change:} technology, opportunity, new comer
+      \item \textbf{[D] Catch the vision, map it out:} know critical weak spot/ people, what value created
+      \item \textbf{[I] Use Tech. as enabler:}
+      \item \textbf{[I] Remind Fair $\neq$ equal relationship:}
+    \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{source:} Fawcett, S. and Magnan, G. 2004.\hskip10em~}\\
+  \end{flushright}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Step to improve SCM: Basic/Advance\\
+    \textbf{Leading Question:} How you would improve any SCM? \\
+    \begin{itemize}
+      \item \textbf{D} for design SCM, \textbf{I} for implement
+      \item \textbf{Note:} in practice, there no clear separation between Basic and Advance, and may repeat
+      \item human is main SCM problem; \#SKU $\rightarrow$ more complex \& difficult \& IT
+      \item $<<$explain bullets$>>$
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{Reference}
+
+  \begin{footnotesize}
+    \bibliography{\refLocation{Coordination},\refLocation{logisticProvider}}
+  \end{footnotesize}
+
+  \note{
+    [empty] note for citation page
+  }
+
+\end{frame}
+
+%=================================================================================================
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Frame Title Here}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Responsibility}
+
+    \begin{center}
+    \begin{tabular}{rr} \hline
+      7-Eleven   & Owner   \\ \hline
+      \alert{Supply products}
+    &
+      \alert{Operate} \& \alert{maintain} store
+    \\
+      Accounting, Advertising, IT Systems
+    &
+      Hiring staff \& customer service
+    \\
+      Install and remodel
+    &
+      Order products
+    \\ \hline
+    \end{tabular}
+    \end{center}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Efficient and Responsive in Supply Chains}
+
+  \begin{center}
+  \small{
+  \begin{tabular}{lP{0.25\textwidth} P{0.25\textwidth}P{0.25\textwidth} } \hline
+    	                 & 	Efficient	           &  Responsive      & Differentiation \\ \hline
+    ~~~Primary goal	   &  cost	               &  speed           & brand \& R\&D \\
+    Design 	           &  min prod. cost	     &  short setup     & modularity\\
+    Pricing	           &  low margin	         &  high margin     & high margin\\
+    Manufacturing 	   &  high util.	         &  flex. capacity  & mass customization \\
+    Inventory 	       &  min inventory	       &  buffer          & avoid obsolete  \\
+    Lead time 	       &  N/A	                 &  short manuf.    & short R\&D\\
+    Selection          &  cost $\rightarrow$ quality	
+                       &  speed, flex, quality
+                       &  joint partner \\
+    Transportation 	   &  low-cost mode	       &  fast modes      & depend \\ \hline
+  \end{tabular}
+  }
+  \end{center}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{Seafood supply chain}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics [width=0.90\textwidth]{\figureLocation{seafoodSC.png}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Sal Forest Report \hskip10em }\\
+  \end{flushright}
+
+  \note{
+    \begin{itemize}
+      \item important and motivation of SCM~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}
+      \item SCM is an elective class/key application of ICE
+    \end{itemize}
+  }
+\end{frame}
+%=================================================================================================
+
+\begin{frame}
+  \frametitle{Petrochemical supply chain}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics [width=0.90\textwidth]{\figureLocation{oilSC.png}}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Oil Industry Overview \hskip10em }\\
+  \end{flushright}
+
+  \note{
+    \begin{itemize}
+      \item important and motivation of SCM~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}
+      \item SCM is an elective class/key application of ICE
+    \end{itemize}
+  }
+\end{frame}
+
+%=================================================================================================
+\begin{frame}
+  \frametitle{How to archived strategic fit? }
+
+  \textsc{1. Understanding customer and supply chain uncertainty:} \alert{nature of business}
+  \begin{alertblock}{}{}
+    Attribute of customer demand + demand uncertainty $\rightarrow$ supply chain uncertainty
+  \end{alertblock}
+
+  \NextHalfLine
+  \textsc{2. Understanding supply chain capability:} \alert{how a company meet the nature}
+  \begin{alertblock}{}{}
+    Responsiveness \textbf{VS} Efficiency \textbf{VS} Differentiate
+  \end{alertblock}
+
+  \NextHalfLine
+  \textsc{3. Archiving Strategic fit:} \alert{match uncertainty with capability}
+
+  \note{
+    \begin{itemize}
+      \item Identify \alert{needs} and \alert{customer segment}
+      \item Quantify \alert{lot size}
+      \item Sniff 'acceptable' \alert{response time} and \alert{service level}
+      \item Determine suitable \alert{product variety} and \alert{innovated cycle}
+      \item Select/Accept \alert{price} of product
+    \end{itemize}
+  }
+\end{frame}
+
+
+
+

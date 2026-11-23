@@ -1,0 +1,1509 @@
+% ###################
+% ## Filename: scm_bullWhip.tex
+% ## Location: D:\Project\Prej_Teaching\ISE\SupplyChainMgt\presentation\scm_03_bullWhip
+% ## Created: Dec 14, 2010
+% ## Last updated: Dec 14, 2010
+% ## Figure Location: ..\Figures\
+% ## Note: Presentation, Teaching
+% ###################
+
+
+\documentclass[10pt,presentation]{beamer}
+%\documentclass[10pt,handout]{beamer}
+%\documentclass[10pt,handout,notes=show]{beamer}
+
+%============================================================================================================--
+\input{../marco.tex}
+\title[LSCM v3.0]{Lecture 05:\\ Global Supply Chain and Outsourcing}
+\hypersetup{
+  pdftitle={05 Global Supply Chain and Outsourcing},
+  pdfsubject={2104509lscm & 2184408scm handout},
+  pdfproducer={XeLatex/WinEdt},
+  pdfcreator={oran.k@chula.ac.th}
+}
+
+
+\begin{document}
+
+%==============================================================================================================
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+  \vfill
+  \begin{flushright}
+    \tiny{\textbf{General Reference:} \cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply} } \hskip3ex
+  \end{flushright}
+
+  \note{
+    \textbf{Purpose:} Global Logistics and Sourcing Strategy \\
+    \textbf{Leading Question:} SCM = Global Logistics, What do you know about past and current issues?  \\
+    \begin{itemize}
+      \item \textbf{Note:} This lecture is a concurrent issue that requires constant update. This lecture provides a basis knowledge and how issues may unfold.
+      \item \textbf{Aware:} The best textbook of this lecture is newspaper
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================--
+\begin{frame}[t]
+  \frametitle{Outline}
+
+  \tableofcontents
+
+  \note{
+    \textbf{Purpose:} Global Logistics and Sourcing Strategy \\
+    \textbf{Leading Question:} SCM = Global Logistics, What do you know about past and current issues?  \\
+    \begin{itemize}
+      \item $<<$Bullet Explanation$>>$
+      \item \textbf{Globalization:} good/bad/ugly of globalization. Why we no longer hear this word.
+      \item \textbf{Sourcing:} How and Way of a company purchasing
+      \item \textbf{Outsourcing:} when to outsourcing and issue
+      \item \textbf{787:} when a classical approach failed
+      \item \textbf{Decision:} a quantitative tool for accessing risks
+      \item important and motivation of SCM~\cite{jacobs2010operations}~\cite{ballou2007evolution} \cite{chopra2007supply} \cite{goetschalckx2011supply}
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\section[Global Logistic]{Importance of Global Logistic and Globalization}
+%================================================================================================-
+\begin{frame}
+  \frametitle{What you know about global trade?}
+
+  \begin{center}
+  \begin{tabular}{cc}
+    \only<1|handout:0>{\includegraphics[width=0.45\textwidth]{\figureLocation{scm_global/globalTrade.jpg}} }
+    \only<2-|handout:1>{\includegraphics[width=0.45\textwidth]{\figureLocation{scm_global/globalVSEnv.jpg}} }
+    &
+    \only<1|handout:0>{\includegraphics[width=0.45\textwidth]{\figureLocation{scm_global/proGlobalCartoon.jpg}} }
+    \only<2-|handout:1>{\includegraphics[width=0.45\textwidth]{\figureLocation{scm_global/wtoCartoon.jpg}} }
+  \end{tabular}
+  \end{center}
+
+  \begin{itemize}
+    \item \textbf{Motivation:} resources, labor, law, quota, markets, technology
+    \item \textbf{Criticism:} destroy SME, environment, neo-colonization,
+  \end{itemize}
+
+  \note{
+    \begin{center}
+    \begin{tabular}{cc}
+      \includegraphics[width=0.25\textwidth]{\figureLocation{scm_global/globalTrade.jpg}}
+      &
+      \includegraphics[width=0.25\textwidth]{\figureLocation{scm_global/proGlobalCartoon.jpg}}
+    \end{tabular}
+    \end{center}
+    \textbf{Purpose:} Introduce Global trading \& WTO \\
+    \textbf{Leading Question:} Are WTO and Gloabl Trading Good or Bad for a developing country?  \\
+    \begin{itemize}
+      \item \textbf{Trade is liberator}
+      \begin{itemize} \tiny{
+        \item \textbf{Law-Tech:} Finance/Accounting Practice, Business Friendly Environment (Telavi)
+        \item \textbf{Quota-Market:} Oil in SG, Textile
+        \item \textbf{Resource-Labor:} uneven resource (rare-earth, diamonds, oil), skilled/trained labor (IT--India, Dedicate--THAI)  }
+      \end{itemize}
+      \item \textbf{Trade is harmful}
+      \begin{itemize} \tiny{
+        \item \textbf{Environment:} Carbon, Itai-Itai (Cadmium), Minanata (mercury), Yokkaishi (S2O), Union Carbide India
+        \item \textbf{SME:} 7Eleven VS Grocery Store
+        \item \textbf{Neo-Colonization:} cannot pay for loan $\rightarrow$ take-over, JPN town \@ Siracha, Sumsung town in Vietnam }
+      \end{itemize}
+      \item \textbf{Key Issue:} sustainable \textbf{VS} investable
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Global trade and Globalization}
+
+  \begin{itemize}
+    \item Network of VA activities of goods and services spanning many countries
+    \item For specialization $\rightarrow$ \alert{growing revenues} and \alert{reducing costs}
+    \item Opportunities includes  \alert{risks} (e.g., demand, prices, exchange rates, and market)
+  \end{itemize}
+
+  \NextLine
+  \textsc{Characteristics of Global Trade}
+  \begin{itemize}
+    \item \textbf{Borderless:} products (milk), brands, service (TH medical), money
+    \item \textbf{Cluster:} cluster of industry \& markets $\rightarrow$ organization (WTO, FTA)
+    \item \textbf{Deregulation:} transportation, steel, machine, economic zone (ASIAN+4)
+    \item \textbf{Barrier:} ESG as tool (seafood, CO$_2$, Trump's tariff, CHIP Act)
+  \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} Overview on Globalization and transition to global trade\\
+    \textbf{Leading Question:} What are characteristic of globalization and global trade? \\
+    \begin{itemize}
+      \item \textbf{Borderless:} movement of goods, consumers, issues
+      \begin{itemize} \tiny{
+        \item \textbf{Milk} FTA between AUS and THA, higher protein, better climate, cheaper even transport and dry powder, consolidate of Co-Op in AUS and NZL
+        \item \textbf{Medical Tourist:} BDMS \& BH targets rich Arabs and MYR, BSMS buys โรงแรมปาร์คนายเลิศ for 10,800.0 Milli for health rejuvenate
+      \item \textbf{Elec-Auto:} Clarion Asia (jointed btw JPN and MY) auto-radio plant in thailand 15,000 $\rightarrow$ 50,000 $\rightarrow$ 5000 people            }
+      \end{itemize}
+      \item \textbf{Connected:} local connection of high capital SCM (Auto/Elec/Med) and global market
+      \item \textbf{Deregulation:} reduce entry barrier in AirTrans, Steel Production (Steel$_{TH}>$ 2 Steel$_{CH}$),
+      \item \textbf{Environment and Practice as new Barrier:} roam free/happy chicken farm, less processed but more expensive organic rice, JPN people doesn't like US cigarettes or beef, farm-grew shrimp owners were asked to buy catch-release equipment from US
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Trivial of Global Trade }
+
+    \begin{itemize}
+      \item \textbf{History:} silk road, anti-missionary, colonization, Suez Canal (EGY), Panama Cannel (PAN)
+      \item \textbf{Transportation Mode:} 95\% Maritime \NextHalfLine
+    \end{itemize}
+
+
+    \begin{minipage}{0.35\textwidth}
+      \includegraphics[width=\textwidth]{\figureLocation{scm_global/billoflading.png}}
+    \end{minipage}
+    \begin{minipage}{0.6\textwidth}
+      \begin{itemize}
+        \item \textbf{Offshore:} moving a firm's activities to \alert{different countries}
+        \item \textbf{Outsourcing:} moving a firm's internal activities to \alert{outside providers}
+        \begin{itemize}
+          \item<2-> \textbf{Shipper:} owner of goods or service
+          \item<2-> \textbf{Carrier/Shipping Agent:} deliver of goods or service
+          \item<2-> \textbf{Consignee:} receiver of goods or service
+          \item<3-> \textbf{Third Party Logistic (3PL):} (e.g., UPS, Xiva (old TNT), FedEx)
+          \item<3-> \textbf{Forth Party Logistic (4PL):} (e.g., Li \& Fung)
+        \end{itemize}
+      \end{itemize}
+    \end{minipage}
+
+  \note{
+    \textbf{Purpose:} Overview and Trivial of Global Trade\\
+    \textbf{Leading Question:} How does the world develop global trade
+      \begin{itemize}
+      \item \textbf{Distant Past:} hunter-gathering, raise of agriculture/ruler/military/craftmen, excess production $\rightarrow$ trade
+      \item \textbf{Key Idea of Trade:} each region are difference in terms of resources and skills. Therefore, do what is best, sell additional stuff
+      \item \textbf{Medieval--silk road:} tea/spice/silk/ceremic $\rightarrow^{arab}$ silver/iron work/cotton/ ivory/ wool
+      \item \textbf{Wave of missionary and plague:} region and discede played important roles in Xenophobia and Anit-missionary. Some even leads to colonization
+      \item \textbf{Key Cannels} Since there are two modes (very fast/very slow), majority uses maritime. Suez Cannal (EGY) no water lifts connects Mediterranean Sea to Red/Aribian Sea; Panama Cannel (PAN) with water lifts connects Pacific Ocean to Atlantic Ocean.
+      \item[] \textsc{Terminology in Trading}
+      \item shipper in some context can mean carrier or origin of good
+      \item \textbf{outsource} international/domestic site owned by other because of not core business
+      \item \textbf{offshore} international site owned by a company usually closed to a boarder/assembly site because of labor intensive, large volumes, low variety, low transportation costs
+      \item \textbf{3PL:} outsourcer who stores and delivers goods to customers without owner's direction
+      \item \textbf{4PL:} outsourcer who consults or schedules operations of many 2PLs and 3PLs
+    \end{itemize}
+  }
+\end{frame}
+
+%============================================================================================================
+\usetikzlibrary{arrows,positioning,decorations.pathmorphing,calc,shapes}
+\renewcommand{\textFont}[1]{\footnotesize{#1}}
+\tikzstyle{lvBlock}    =[rectangle,draw=black!80,thick,text centered,text width=25mm,text height=5mm] %rounded  corners=3mm,
+\tikzstyle{detailBlock}=[rectangle,draw=black!80,text width=35mm,text height=5mm]
+%================================================================================================-
+\begin{frame}
+  \frametitle{Global Manufacturing Potential}
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=4,yscale=2]
+      \node[lvBlock,fill=blue!15] (center) []  {\textbf{Global Manuf. Potential}};
+      \node[detailBlock,fill=red!15](tech)  [right = of center]  {\textFont{
+      \textbf{Technology}\\
+      \begin{tabular}{l}
+        $\bullet$ critical componets \\
+        $\bullet$ talents \\
+        $\bullet$ tech transfer
+      \end{tabular}
+      }};
+      \node[detailBlock,fill=red!15](cost)  [left = of center]  {\textFont{
+      \textbf{Cost}\\
+      \begin{tabular}{l}
+        $\bullet$ dir.labor, labor intensity\\
+        $\bullet$ utility, infrastructure\\
+        $\bullet$ non-union, gov.incentive
+      \end{tabular}
+      }};
+      \node[detailBlock,fill=green!25](market)  [above = of center] {\textFont{
+      \textbf{Market}\\
+      \begin{tabular}{l}
+        $\bullet$ \# competitor\\
+        $\bullet$ growth demand \\
+        $\bullet$ market sophi.
+      \end{tabular}
+      }};
+      \node[detailBlock,fill=green!25](political)  [below = of center] {\textFont{
+      \textbf{Political \& Economic}\\
+      \begin{tabular}{l}
+        $\bullet$ exchange rate\\
+        $\bullet$ political event\\
+        $\bullet$ regulation, restriction
+      \end{tabular}
+      }};
+      \node[](temp) [right = of political] {\hyperlink{participate}{\beamerbutton{Pg:Participate}}} ;
+      \draw[->,thick] (center) -- (cost);
+      \draw[->,thick] (center) -- (market);
+      \draw[->,thick] (center) -- (political);
+      \draw[->,thick] (center) -- (tech);
+    \end{tikzpicture}
+  \end{center}
+
+
+  \note{
+    \textbf{Purpose:} Overview on Global Operating Options \\
+    \textbf{Leading Question:} What are reasons and risks for a company that operates across global \\
+    \begin{itemize}
+      \item \textbf{Cost:} \#1 reason; Vietnam's infrastructure \& high depreciation turned some THAI off, Elec industry and BOI
+      \item \textbf{Market:} \#2 reason once country be more sophisticated; hidden potential of elite; growth in INDO
+      \item \textbf{Political:} USa/some EU countries prohibits companies from direct investment during Thai Junta Gov
+      \item \textbf{Tech:} Law/Legal/Account System can be barrier;  de-caffeine extraction in CAN
+        \item \textbf{Strategic sourcing} development and management of supplier relationships to acquire goods and services
+        \item \textbf{Specificity:} how common the item is, how many substitutes might be available
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}[label=participate]
+  \frametitle{Participation Strategy \forIE}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics[width=0.45\linewidth]{\figureLocation{scm_global/StrategyOptions.png}}\\
+  \end{center}
+
+  \small{
+  \begin{itemize}
+    \item \textbf{Exporting:} selling of products \alert{manufactured in one country} to other countries
+    \item \textbf{Licensing:} obtaining \alert{right to manufacture} products for specific countries
+    \item \textbf{JV:} partnering with \alert{local companies} to penetrate market, proprietary knowledge
+    \item \textbf{Foreign branch:} \alert{directly operating} in specific countries
+    \item \textbf{Foreign Subsidiary:} \alert{directly investing} to manufacture and distribute product
+  \end{itemize}
+  }
+
+  \note{
+    \textbf{Purpose:} Option in global trade and their risks\\
+    \textbf{Leading Question:} Once decide to go global, what are option in global trade and their risks  \\
+    \begin{itemize}
+      \item \textbf{Diversity:} type and variation of products offered in market
+      \item \textbf{Complexity:} taste and sophistication of market. sometime include market penetration and regulation
+      \item \textbf{Franchising:} obtaining \alert{right to identify} with its trademark and business format. \textbf{issue} control \textsc{VS} reliable
+      \item \textbf{Exporting:} ship goods w/o agreement \textbf{issue:} std, quality, availability from indirect vendors (MBK--shop)
+      \item \textbf{Licensing:} permit some vendor to sell/manuf product \textbf{issue:} benefit sharing, role, cost (coke syrup model)
+      \item \textbf{Joint Venture:} ask local or many vendor to sharing ownership in terms of technology or capital \textbf{issue:} roles, control (SCG-DOW, Sony Ericson, China)
+      \item \textbf{Fore.Branch:} legal present in country \textbf{issue:} response time, exposure, market size (IBM, Assenture)
+      \item \textbf{Fore.Subsidiary:} build production capacity \textbf{issue:} start from scratch \textsc{VS} acquisition. Who? (P\&G)
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Challenges in global trade}
+
+%  \begin{center}
+%    \includegraphics[width=0.6\textwidth]{\figureLocation{scm_global/boeing787Component02.jpg}}
+%  \end{center}
+
+  \begin{itemize}
+    \item \textbf{More Risk:} geo-politic, shorten life cycle, disruption (Robot, CISCO)
+    \item \textbf{Dependence:} demand-supply, orientation-segmentation, technology
+    \item \textbf{Cost-optimizing:} too lean, subcontracted manufacturing,
+  \end{itemize}
+
+  \NextLine
+  \textsc{Surviving global trade challenge}
+  \begin{itemize}
+    \item \textbf{Collaboration:} resource sharing, synergy, risk sharing, innovation, closed-tight partners
+    \item \textbf{Divergent product portfolio:} cover all range (vertical and horizontal)
+    \item \textbf{Blue Ocean strategy:} avoid competition, find new market or spin-off
+    \item \textbf{World Class standard:} think global and ahead (trade=two-way street)
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Aware of issues in global trade \\
+    \textbf{Leading Question:} What should we are aware in global trade   \\
+    \begin{itemize}
+      \item \textbf{Uncertainty:} everyone connected, one's problem could be everyone's problem, (Starbuck \textsc{VS} KFC)
+      \item \textbf{Business Practices:} lean and mean to reduce key suppliers, difficult to switch, (Tanaka Seatbelt)
+      \item \textbf{Disruption:} high margin, high barrier $\rightarrow$ tech disruption, change in regulation, provide total solution
+      \item \textbf{Collaborate \& Integration:} bring few others to share risk/benefit/ and forge closed bonds
+      \item \textbf{Diversify:} do not put your eggs in one basket \textbf{issue:} aware of CSR and competitor
+      \item \textbf{Blue Ocean \& World Class:} avoid pricing fight (duopoly is equilibrium), SCG cement during Economic Crisis
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\section[Source]{Purchasing or Souring items}
+%================================================================================================-
+\begin{frame}
+  \frametitle{How a company purchase component?}
+
+  \RemoveLine
+  \begin{center}
+    \includegraphics[width=0.8\linewidth]{\figureLocation{scm_global/PurchasingOptions.png}}\\
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chase and Jacob. 2011.\hskip10em}\\
+  \end{flushright}
+  \begin{center}
+    Transaction cost \textsc{VS} Contract length
+  \end{center}
+
+   \note{
+    \textbf{Purpose:} Introduce sourcing \\
+    \textbf{Leading Question:} What SCM use purchasing as strategy?   \\
+     \begin{tabular}{cc}
+        \includegraphics[height=0.4\textheight]{\figureLocation{scm_global/valueRiskMatrix.png}} &
+        \includegraphics[height=0.4\textheight]{\figureLocation{scm_global/kraljicStraMatrix.png}}\\
+     \end{tabular} \\
+    \begin{itemize}
+      \item Explanation in the next slide
+      \item \textbf{Trivial:} In the past, sourcing was another name for purchasing. However, sourcing implies a more complex process as commonly available products can be purchased using a relatively simple process.
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Souring Options}
+
+    \begin{itemize}
+      \item \textbf{Spot Purchasing:} common and standardized products
+      \item \textbf{Request for proposal:} specialized and customized products, few suppliers; required proposal and negotiation
+      \item \textbf{Request for bidding \& Auction:} similar to 'Request for proposal' but no proposal or less negotiation
+      \item \textbf{Strategic Alliance:} long-term trade partner
+      \item \textbf{Electronic catalog:} not-so common products
+      \item \textbf{Vender Management Inventory:} supplier monitors and ships products
+    \end{itemize}
+
+   \NextHalfLine
+   \begin{alertblock}
+    \footnotesize{ Do you take \textbf{Value} and \textbf{Risk~} (\# manuf.) into account?  \hfill \hyperlink{sourcing}{\beamerbutton{Pg:Sourcing}} }
+   \end{alertblock}
+
+   \note{
+    \textbf{Purpose:} Explanation of Sourcing Policy\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Spot Purchase:} buy community from future market, e.g., oil, coffee bean, rice, copper, vessel (North Atlantic Dry fleet)
+      \item \textbf{Bidding/Auction:} a popular method for gov. private to purchase expensive item. must be able to write the spec.
+      \item \textbf{RFP:} request for quotation/proposal; require engineering and design to fit, usually large equipment with conveyor
+      \item \textbf{VMI:}instant delivery with inventory level sharing and agreed ordering system of simple item
+      \item \textbf{Strategic Alliance:} share technology/experists of hi-tech item; long term collaboration;
+      \item \textbf{eCatalog:} online of simple item
+    \end{itemize}
+
+      }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}[label=sourcing]
+  \frametitle{Kraljic's Matrix: Sourcing Strategy \forIE}
+
+  \begin{center}
+    \includegraphics[height=0.55\textheight]{\figureLocation{scm_global/soucingMatrix.png}}
+  \end{center}
+
+  \NextHalfLine
+  \textsc{Concept}
+  \begin{itemize}
+    \item \textbf{Idea:} How to classify and manage your supplier
+    \item \textbf{Matrix:} future attractiveness \textsc{VS} spending values of suppliers
+    \item \textbf{Application:} replace \emph{routine}, negotiate \emph{leverage}, foster \emph{the rest}
+  \end{itemize}
+
+   \note{
+   \begin{tabular}{c}
+      \includegraphics[height=0.45\textheight]{\figureLocation{scm_global/soucingNote.png}}
+   \end{tabular} \\
+    \textbf{Purpose:} Position and Negoitation\\
+    \textbf{Leading Question:} how evaluate your suppliers? Attraction VS Spend   \\
+    \begin{itemize}
+      \item \textbf{Development (Bottleneck):} hi-attrac \& lo-spend $\rightarrow$ Developing/ more opportunity \& business
+      \item \textbf{Core (Critical):} hi-attrac \& hi-spend  $\rightarrow$ Negotiation using relationship/ retain
+      \item \textbf{Explorable (Leverage):} lo-attrac \& hi-spend  $\rightarrow$ Negotiation using volume/ max profit
+      \item \textbf{Nuisance (Routine):} lo-attrac \& lo-spend  $\rightarrow$ Replace/Eliminate
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{What do you should aware?}
+
+  \begin{minipage}{0.35\textwidth}
+  \begin{center}
+    \includegraphics[width=\linewidth]{\figureLocation{scm_global/movingTrade.jpg}}\\
+  \end{center}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.6\textwidth}
+  \small{
+    \begin{itemize}
+      \item \textbf{Money:} x-rate, payment term, credit
+      \item \textbf{Transport:} resilience, inco-term, LT
+      \item \textbf{Social:} power, culture, Communication
+      \item \textbf{Global Risk:} political, regulation, disruption
+      \item \textbf{Technology:} E-business, cyber-security, IP
+      \item \textbf{Labor:} skill, qty, migration, wage
+    \end{itemize}
+    }
+  \end{minipage}
+
+%   \begin{block}{\small{\textbf{Uncertainty Reduction}}}
+%   \footnotesize{
+%    \begin{itemize}
+%      \item Combine strategic planning and financial planning
+%      \item Use quantitative method and do sensitivity analysis
+%    \end{itemize}
+%    }
+%   \end{block}
+
+
+  \note{
+    \textbf{Purpose:} More supplier $\rightarrow$ more risks because awareness for global sourcing\\
+    \textbf{Leading Question:} What should we aware for global sourcing  \\
+    \begin{itemize}
+      \item \textbf{Currency:} keep USD from export to purchase international goods, keep money international or save haven
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\section[Outsoucing]{Outsoucing and Supply Chain Management}
+%================================================================================================-
+\begin{frame}
+  \frametitle{Overview of Outsoucing}
+
+  \textsc{Think points}
+  \begin{itemize}
+    \item What is the difference between \alert{outsourcing} and \alert{supply}
+    \item How to distinguish \alert{outsourcing} and \alert{subcontracting}
+    \item What is the connection between \alert{outsourcing} and \alert{vertical integration}
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{\figureLocation{scm_global/outsourceCartoon01.jpg}}
+ \end{center}
+
+  \textsc{Original of Outsoucing}
+  \begin{itemize}
+    \item \textbf{Before 1990s:} no essential/ administrative functions, e.g. payroll, IT, HR
+    \item \textbf{1990s-Present:} cover every functions, e.g.,  make, delivery, or product design
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Overview of outsoucing \\
+    \textbf{Leading Question:} How can we define outsourcing  \\
+    \begin{itemize}
+      \item \textbf{Think Points} Outsource can include services (Accounting) with our responsibility, but not entirely owns (Dynamics/Gosoft by CPAll).
+      \item \textbf{Scope before 1990s:} lacks of companies/scales, a company decides to own everything (PTT driver)
+      \item \textbf{1990-2000:} core competency and down-sizing $\rightarrow$ remove non-core
+      \item \textbf{2000-Presents:} seek expert and total solution
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Strategic Outsoucing}
+
+  \begin{center} \small{
+    \begin{block}{Outsoucing}
+      capability and process to obtain supply of an external product/service that has strategic significance. As a company wants to:
+        \begin{itemize}
+          \item focus on \alert{core competency}
+          \item leverage \alert{skill}, technology, and \alert{capital}
+  \end{itemize}
+    \end{block} }
+  \end{center}
+
+  \NextHalfLine
+  \textsc{Popular outsourced functions}
+  \begin{itemize}
+    \item \textbf{Resource intensive:} high labour (HMPRO) or capital costs
+    \item \textbf{Changed in technology/ market/ capacity:} photovoltaic (AMD, memory)
+    \item \textbf{Require specialist:} accounting/ consulting/ project/ connection/ IT
+    \item \textbf{Relatively discrete:} isolated or standardised (HR) or security
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} explain strategic Outsoucing \\
+    \textbf{Leading Question:} What are characteristics of outsoucing  \\
+    \begin{itemize}
+      \item \textbf{characteristics:} no core, need to scale quickly
+      \item[] \textsc{Popular Activity that a company outsouces}
+      \item \textbf{Resources:} need many human or capital to do
+      \item \textbf{Rapid:} techonology/market/production capacity are change rapidly and become difficult to keep up with scale and utilization
+      \item \textbf{Knowledge:}
+      \item \textbf{Discrete:} need, but not core.
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decide what should be outsource \forIE}
+
+  \begin{center}
+  \begin{tabular}{lcr}
+    \includegraphics[height=0.80\textheight]{\figureLocation{scm_global/decAnalysis.png}}
+    &
+    ~~
+    &
+    \begin{minipage}{0.30\textwidth}
+      \vskip-160pt
+      \begin{block}{\small{Outsouce when}}{}
+        \small{ \alert{non-core} activities and \alert{little threat} to competition }
+      \end{block}
+      \NextLine
+      \begin{alertblock}{\small{Do-It, ourselves when}}{}
+        \footnotesize{ \alert{core} activities and  more \alert{capable}  }
+      \end{alertblock}
+      \NextLine
+      \begin{block}{\small{Spin-Off when}}{}
+        \footnotesize{no external or non-competitive sources }
+      \end{block}
+    \end{minipage}
+  \end{tabular}
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{source:} Chase and Jacob. 2011.\hskip10em}\\
+  \end{flushright}
+
+   \note{
+    \textbf{Purpose:} Literature on Outsourcing\\
+    \textbf{Leading Question:} How to decide which one to outsource?  \\
+    \begin{itemize}
+      \item \textbf{Keyword:} Outsourcing only non-core
+      \item \textbf{Note:} If we better than other, consider to spin-off when there is no competitor (invest) or to maintain level
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\section[Risk]{Supply Chain Risk: Management or Resilience}
+%================================================================================================-
+\begin{frame}
+  \frametitle{What is Risks? Supply Chain Risk}
+
+  \begin{center}
+    \only<1 |handout:0>{ \includegraphics [width=0.95\textwidth]{\figureLocation{scm_global/risk/riskDefISO01.png}} }
+    \only<2 |handout:1>{ \includegraphics [width=0.95\textwidth]{\figureLocation{scm_global/risk/riskDefISO02.png}} }
+    \only<3-|handout:0>{ \includegraphics [width=0.95\textwidth]{\figureLocation{scm_global/risk/riskDefISO03.png}} }
+  \end{center}
+  \begin{flushright}
+    \tiny{\textbf{sources:} ISO 31000~~~}
+  \end{flushright}
+
+
+  \uncover<3 |handout:1>{
+  \begin{block}{}{}
+     \begin{description}
+       \item[Supply Chain Risk:] \alert{potential} for disruptions or failures within a supply chain that \alert{negative impacts} operations, reputation, and financial
+       \item[Risk Management:] \[  \overbrace{ \mbox{risk} }^{\mbox{sources \& events} }= \mbox{loss} \times \mbox{likelihood} \]
+     \end{description}
+  \end{block}
+  }
+
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Background and Creation of 787\\
+    \textbf{Leading Question:} What is an example of implementation failure in SCM?  \\
+    \begin{itemize}
+    \item \textbf{SC Risk:} Supply chain risks come from a wide range of sources, including suppliers, customers, internal operations, and external environmental or geopolitical factors. Understanding these risks is crucial for building a resilient supply chain that can adapt to unexpected disruptions. Effective risk management strategies should involve monitoring, contingency planning, and building flexibility into the supply chain to reduce vulnerability and ensure smooth operations
+    \item \textbf{Types:} many school;
+    \begin{itemize}
+      \item by source: internal, external  (e.g., regulation, technology, terrorism )
+      \item by effect: reputation, operation, financial, hazard, compliance, economic,
+      \item by nature: operational, financial, environmental, geopolitical
+    \end{itemize}
+  \end{itemize}
+  }
+
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Classification of Supply Chain Risks}
+
+  \begin{itemize}
+    \item \textbf{Demand-Supply:} issues on supplier or fluctuations of demands, e.g., bankruptcy, capacity constraints, preferences, forecasting
+    \item \textbf{Operational \& Logistics :} \alert{internal} and transportation \alert{processes} that fail or inefficient, e.g. M/C failures, human error, port delay,
+    \item \textbf{Financial:} financial instability affecting cost structure e.g., fluctuations in X-rate, oil prices
+    \item \textbf{Environmental \& Geo-Political:}  \alert{external} or political events that beyond direct control, e.g., natural disasters, COVID
+    \item \textbf{Cyber-security:} IT-related risks, e.g., hacking, data breaches
+  \end{itemize}
+
+  \NextLine
+  \begin{block}{\small{Important Questions:} } \small{
+    \begin{itemize}
+      \item Why risk management is critical for the stability of supply chains ?
+      \item Can we manage all risks?
+    \end{itemize} }
+  \end{block}
+
+  %%%------
+  \note{
+    \textbf{Purpose:} Background and Creation of 787\\
+    \textbf{Leading Question:} What is an example of implementation failure in SCM?  \\
+    Supply chain risks come from a wide range of sources, including suppliers, customers, internal operations, and external environmental or geopolitical factors. Understanding these risks is crucial for building a resilient supply chain that can adapt to unexpected disruptions. Effective risk management strategies should involve monitoring, contingency planning, and building flexibility into the supply chain to reduce vulnerability and ensure smooth operations
+
+  }
+
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Examples and Importance of Risk Management}
+
+  \begin{itemize}
+    \item \textbf{Redundancy:} extra inventories or capacities more than 'typical' demands
+    \item \textbf{Legal Instrument:} transferring responsibility (insurance, term-of-uses) or capping liability (bank deposit)
+    \item \textbf{Screening Condition:} checking trigger/historical/information (health check before hiring, silence period)
+    \item \textbf{Governing Body:} professional organization that promotes standard practice and ethics (mal-practice) $\rightarrow$ external independent risk committee
+  \end{itemize}
+
+  \NextLine
+  \textsc{Why do we need risk management?}
+  \begin{flushleft} \small{
+  \begin{description}
+    \item[Risk Mgt =]<2-> \alert{iterative process} that aligns strategy, achieves objective, makes informed decision
+    \item[Risk Mgt =]<2->  \alert{good governance} and \alert{leadership} $\rightarrow$ system improvement \& aware \alert{sources of risk}
+    \item[Risk Mgt $\in$]<2-> external factors, internal factors (human behavior, culture), and their combination (suppliers)
+  \end{description} }
+  \end{flushleft}
+
+
+  %%--------------------
+  \note{ \footnotesize{
+    \textbf{Purpose:} show how to due with risk\\
+    \textbf{Leading Question:} How a company handle risk and insight of risk mgt?   \\
+    \begin{itemize}
+      \item \textbf{Other Ex:} hedging, use smartest/experiance people, too big to fall, pool together absorb all risk
+      \item \textbf{evaluation} KPI(PESTEL)
+      \item \textbf{priority:} amounts of money, new item
+      \item \textbf{trade-off:} investment + effort $\leq$ possible loss
+      \item \textbf{key take away:} Many risks have the same symptom/possible outcome. Nevertheless, control sources of risk, not symptom. Control symptom = last leg
+    \end{itemize}
+  } }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Risk Management Process}
+
+%  \begin{flushright}
+%  \begin{minipage}{0.7\textwidth}
+%    \begin{quotation}
+%    systematic process of identifying, analyzing, and responding to project risk
+%    \end{quotation}
+%  \end{minipage}
+%  \end{flushright}
+
+%  \vskip-10pt
+  \begin{minipage}{0.35\textwidth}
+    \includegraphics[width=\textwidth]{\figureLocation{scm_global/risk/riskMgtProcessISO01.png}}\\
+  \end{minipage}
+  \begin{minipage}{0.6\textwidth} \small{
+      \begin{itemize}        
+        \item<2-> \textbf{Scope:} Lv/ incentive/ involvement of stakeholder \uncover<3->{ $\rightarrow$ \code{threshold, time, resource traceability} }
+        \item<2-> \textbf{Context:} interaction between internal and external \uncover<3->{ $\rightarrow$ \code{category }}
+        \item<2-> \textbf{Criteria} amount and type based on values  \uncover<3->{ $\rightarrow$ \code{rubric }}
+        \item<2-> \code{\textbf{Risk Assessment:}} systematic, iterative, collaborative process of \alert{prioritizing} risks
+        \item<2-> \code{\textbf{Risk Treatment:}} determining how to act terminate, treat, transfer, take        
+      \end{itemize}    }
+  \end{minipage}
+
+  \begin{flushleft} \small{
+    \begin{itemize}        
+        \item<2-> \textbf{Comm. and Consultation:} providing \alert{timely, matter, accurate} and \alert{clear} info \uncover<3->{$\rightarrow$ \code{informed decision}}
+        \item<2-> \textbf{Monitoring and Review:} monitoring/periodic reviewing \alert{process} and its \alert{outcomes} \uncover<3->{$\rightarrow$ \code{ \alert{who} \& \alert{when} to act on \alert{how} \& \alert{what} risks}}
+        \item<2-> \textbf{Recording and Reporting:} documenting risks
+    \end{itemize} }
+  \end{flushleft}
+    \begin{flushright}
+      \tiny{\textbf{sources:} ISO 31000~~~}
+    \end{flushright}
+
+  %%--------------------
+  \note{ \footnotesize{
+    \includegraphics [width=0.55\textwidth]{\figureLocation{scm_global/risk/riskMgtProcessDetail.png}}\\
+    \textbf{Purpose:} inventory and production\\
+    \textbf{Leading Question:} As a factory, what you want to do after get forecasting?   \\
+    \begin{itemize}
+      \item \textbf{Main diff:} inventory, production $\neq$ sale $\neq$ purchasing
+      \item \textbf{Location:} SE near seaport. why?
+      \item \textbf{LT:} normally 2week (even 4week) for leadtime IND/AUS to matraput
+    \end{itemize}
+  } }
+\end{frame}
+
+%==============================================================================================================
+\begin{frame}
+  \frametitle{Risk Treatment Strategy}
+
+  \begin{tabular}{lr}  
+      \begin{minipage}{0.40\textwidth}
+        \only<1-|handout:1>{ \includegraphics [height=0.65\textheight]{\figureLocation{scm_global/risk/RiskTreatmentScale.png}} }
+      \end{minipage}
+    &
+      \begin{minipage}{0.55\textwidth} \small{
+        \begin{itemize}
+          \item \textbf{Terminate:} avoid risk by \alert{not engage in activity} or remove \alert{risk source} (soda, \emph{valproate})
+          \item \textbf{Treat:} reduce risks by change likelihood, impact, consequence, or process (belt, fence)
+          \item \textbf{Transfer:} sharing losses by contracts or insurance (car accident: 1.0-1.5M/40.0M)
+          \item \textbf{Tolerate/Take:} retain risk by \alert{informed decisions} (accept \& plan B) $\Rightarrow$ \textsc{Resilience}
+        \end{itemize} }
+      \end{minipage}
+  \end{tabular}
+
+  %%--------------------
+  \note{ \footnotesize{
+    \includegraphics [width=0.4\textwidth]{\figureLocation{scm_global/risk/riskTreatmentNote.png}}\\
+    \textbf{Purpose:} Recap\\
+    \textbf{Leading Question:} What you should know so far? / Many of these terms are overlapped  \\
+    \begin{itemize}
+      \item \textbf{risk:} probability of unpleasant events that may affects the objective of project
+      \item \textbf{risk = loss $\times$ likelihood} focus on negative impact with
+      \item \textbf{why mgt risk:} spell out what can go wrong
+      \item \textbf{new concept:} who, when, how, what on a project to manage risks
+    \end{itemize}
+  } }
+
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Supply Chain Resilience}
+
+
+  \begin{minipage}{0.38\textwidth}
+    \includegraphics[width=\textwidth]{\figureLocation{scm_global/risk/buildResilient.png}}
+  \end{minipage}
+  \begin{minipage}{0.6\textwidth}
+  \begin{itemize}
+    \item \textbf{What:} avoid risk by \alert{not engage in activity}, remove \alert{risk sources}, or \alert{quickly response} to disruption
+
+    \item \textbf{How:}  Resistance \textsc{VS} Recovery
+  \end{itemize}
+  \end{minipage}
+  \begin{itemize}
+    \item[]
+    \item \textbf{Redundancy:} more suppliers-facilities-inventory-capacities $\rightarrow$ \code{more money}
+    \item \textbf{Flexibility:} common parts, rent capacity, near-shoring  $\rightarrow$ \code{more channel}
+    \item \textbf{Ecosystem:} collaborate \& communicate with partners $\rightarrow$ \code{more alignment}
+    \item \textbf{Technology:} digital tools (AI, IoT) to predict and respond  $\rightarrow$ \code{more visibility}
+    \item \textbf{Scenario:} board assessment, train, educate, brainstorm events $\rightarrow$ \code{more plan}
+  \end{itemize}
+  \begin{flushright}
+    \tiny{\textbf{sources:} Richard Wilding 2011~~~}
+  \end{flushright}
+
+  %%--------------------
+  \note{ \footnotesize{
+    \includegraphics [width=0.4\textwidth]{\figureLocation{scm_global/risk/riskTreatmentNote.png}}\\
+    \textbf{Purpose:} Recap\\
+    \textbf{Leading Question:} What you should know so far? / Many of these terms are overlapped  \\
+    \begin{itemize}
+      \item \textbf{risk:} probability of unpleasant events that may affects the objective of project
+      \item \textbf{risk = loss $\times$ likelihood} focus on negative impact with
+      \item \textbf{why mgt risk:} spell out what can go wrong
+      \item \textbf{new concept:} who, when, how, what on a project to manage risks
+      \item pillar Visibility, Flexibility, Collaboration, and Control
+    \end{itemize}
+  } }
+
+\end{frame}
+
+
+%================================================================================================-
+\section[Case Study]{Case Studies on Global Supply and SC Disruption}
+%================================================================================================-
+\subsection{Boeing 787 Story}
+%================================================================================================-
+\begin{frame}
+  \frametitle{Boeing 787: Dreaming proposal}
+
+    \textbf{Before 'dreamliner'}
+    \begin{itemize}
+      \item \textbf{Boeing:} two core business units, largest aircraft manufacturer
+      \item \textbf{Background:} subsidiary war between \alert{Boeing} VS \alert{Airbus}, merge with McDonnell Douglas
+      \item \textbf{Boom-and-Bust:} excess \alert{capacity }(all in-house) \& \alert{discount price} in 1997-1998
+    \end{itemize}
+
+  \NextLine
+  \textbf{Proposal:}
+  \begin{itemize}
+      \item \textbf{Demands:} take all $\rightarrow$ \alert{club fluctuated} demands
+      \item \textbf{Production:} in-house $\rightarrow$ \alert{global collaboration} \& outsource 'risky' parts
+      \item \textbf{Attitude:} do-it-all $\rightarrow$ \alert{design} \& \alert{assemble}
+      \item \textbf{Dreamliner:} design, procurement \& supply chain using 747
+      \item \textbf{Worries:} partner selection, common suppliers
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Background and Creation of 787\\
+    \textbf{Leading Question:} What is an example of implementation failure in SCM?  \\
+    \begin{itemize}
+      \item \textbf{History:} 717	or MD 95 after merge in 1998-2006
+      \item \textbf{new design:} eco-friendly (20\% fuel save, quite landing), fuel save $\rightarrow$ composite materials (nano carbon tube)
+      \item \textbf{Product life cycle:} 707 (58-79), 727 (63-84), 747 (69-now); 757 (82-04); 767 (82-now); 777 (92-now)
+      \item \textbf{underlying price} low price 120 million USD
+      \item \textbf{Expected delivery:} May 2008
+     \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Boeing 787: Nightmarish outcomes}
+
+  \textbf{Reality: three years of delay}
+  \begin{itemize}
+    \item \textbf{Engineering:} composite materials, modular assembly, re-design, overweight
+    \item \textbf{Supply chain:} fastener \alert{shortage}, expensive investment, flight-control software
+    \item \textbf{Supplier:} 50 suppliers (28 non-US), communication (document), tier one coordination, control
+    \item \textbf{Capacity:} additional assemble at Charleston, Vought tookover
+  \end{itemize}
+
+  \NextLine
+  \textbf{Lesson learnt}
+  \begin{itemize}
+    \item \textbf{Make or Buy:} risks of outsourcing in new design
+    \item \textbf{Innovative:}
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} Reality of 787\\
+    \textbf{Leading Question:} What can go wrong in this project, will?  \\
+    \begin{itemize}
+      \item \textbf{Fist Batch} December 2006 that the first six 787s were overweight
+      \item \textbf{Reality} 60\% outsource of \alert{design} \& production $\rightarrow$ difficult to collaborate
+      \item \textbf{False Price} dreamlifter (using hollow 747 to delivery fuselage \& wings is expensive); 787 and 747-8. It is cheaper to demolish bridges and build a new one
+      \item \textbf{Shortage:} simple component like Al bolts
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\subsection{US-China Trade War}
+%================================================================================================-
+\begin{frame}
+  \frametitle{Case Study: US-China Trade War \forIE}
+
+  \only<1 |handout:1>{
+  \begin{minipage}{0.45\textwidth}
+    \includegraphics[width=\linewidth]{\figureLocation{scm_global/sweetDeal.png}}
+  \end{minipage}
+  \begin{minipage}{0.5\textwidth} \footnotesize{
+    \begin{itemize}
+      \item \textbf{BG:} no trade benefit for US. Others want US for \alert{security}; CHN for \alert{economics} (JPN experiance).
+      \item \textbf{Why:} keep tech advantage, protect farmers, access to CHN market
+      \item \textbf{Tariff:} Deficit reduced, but VET, MEX, THA increase
+      \item \textbf{Perfect Timing:} COVID worsed by fail implementation, more subsidies, intellectual property. (TESLA, APPLE)
+      \item \textbf{Build-In:} CHN as competitor. In Biden, no improvement, more transparent, more ally, clear redline.
+      \end{itemize}  }
+  \end{minipage}
+  }
+
+  \begin{center}
+    \only<2 |handout:0>{ \includegraphics[height=0.55\textheight]{\figureLocation{scm_global/chinaRetailiation.png}} }
+    \only<3 |handout:0>{ \includegraphics[height=0.55\textheight]{\figureLocation{scm_global/impactIndustry.png}} }
+    \only<4 |handout:0>{ \includegraphics[height=0.55\textheight]{\figureLocation{scm_global/thImpact.png}} }
+  \end{center}
+
+  \NextHalfLine
+  \begin{alertblock}{}{}
+    \small{ Who involve/win in this conflict: economically, politically, socially, military?}
+  \end{alertblock}{}{}
+
+  \note{
+    \textbf{Purpose:} Reality of 787\\
+    \textbf{Leading Question:} What can go wrong in this project, will?  \\
+    \begin{flushleft} \scriptsize{
+      \begin{itemize}
+      \item US goal is keep advantage in top industry and service sectors, while gives local businesses protection \& put for symmetrical access to Chinese market.
+      \item US is no longer benefit for globalization $\rightarrow$ no happy. Country relies on US for security and China for economics. In "phase one“ deal (2020-01-15),
+	    \begin{itemize}
+        \item US will not slap tariffs
+	      \item China will buy more energy, farm, service
+      \end{itemize}
+        \item During this period, US trade deficit with China reduced, but increase with other nation
+        \item Pandemic and unrealized promises cause fail implementation. Argument points are subsidies, intellectual property, Chinese companies and agencies, and restricted access area
+        \item With new US admin, trade relationship is not reverse back, but things become more transparent and redline becomes more clear. There is a potential for deal and gradually return to normal, but it is also threat by political pressure.
+      \end{itemize} }
+    \end{flushleft}
+    \begin{itemize}
+      \item \textbf{Economically:} worst-off (5G--Hauwai),
+      \item \textbf{Politically:} decoupling, taunting
+      \item \textbf{Socially:}
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Concurrent Topics in Global Logistics}
+
+  \begin{itemize}
+    \item \textbf{After-COVID:} eCommerce, work-from-home $\rightarrow$ universal basic income/ population
+    \item \textbf{Geo-Politic:} Decoupling (TicTok), Trading-Security block,
+    \item \textbf{Digital Revolution:} data VS security (cable), automation, AI
+    \item \textbf{Climate Change \& ESG:} tracing \& accounting, consensus \textsc{VS} price (coffee)
+    \item \textbf{Capacity \& Infrastructure:} logistics-financial hub, green revolution (data center),
+  \end{itemize}
+
+  \NextLine
+  \begin{block}{}{}
+    Future of global logistics is uncertain, \alert{disruption} and \alert{re-alignment} are ahead
+  \end{block}
+
+  \note{
+    \textbf{Purpose:} Show reference\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item [empty] note for citation page
+    \end{itemize}
+  }
+
+\end{frame}
+
+
+
+%================================================================================================-
+
+\begin{frame}
+  \frametitle{Reference}
+
+  \begin{footnotesize}
+    \bibliography{\refLocation{Coordination},\refLocation{logisticProvider}}
+  \end{footnotesize}
+
+  \note{
+    \textbf{Purpose:} Show reference\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item [empty] note for citation page
+    \end{itemize}
+  }
+
+\end{frame}
+
+%================================================================================================-
+
+
+
+%================================================================================================-
+\end{document}
+
+
+%=================================================================================================
+\section[Decision]{Decision Tree for Global Logistics Decision \forIE}
+%=================================================================================================
+\begin{frame}
+  \frametitle{What is decision tree? \forIE}
+
+  \begin{itemize}
+    \item \textbf{What:} diagram that explain \alert{series of decisions} and \alert{outcomes} at different points
+    \item \textbf{For:} determine optimal decisions
+    \item \textbf{Consist of:}
+    \begin{itemize}
+      \item \textbf{decision node:} point to make a decision
+      \item \textbf{event node:} possible outcome with associated prob
+      \item \textbf{terminal branch:} end of tree with result
+    \end{itemize}
+    \item \textbf{Solution Concept:}
+    \begin{itemize}
+      \item \alert{draw diagram} from root to \alert{terminal branch}
+      \item assume situation and trace \alert{backward} to decision fork
+      \item mark \alert{best decision} base on given situation
+    \end{itemize}
+  \end{itemize}
+
+
+  \note{
+    \textbf{Purpose:} Overview on Decision Tree\\
+    \textbf{Leading Question:} How can we quantify risk in global SCM?  \\
+    \begin{itemize}
+      \item \textbf{Concept:} expand probability and expected value (rational decision)/ always ask sequential question
+      \item \textbf{root node:} origin of decision and outcomes
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Example: Decision tree analysis \forIE }
+
+  \begin{center}
+    \includegraphics[width=0.80\linewidth]{\figureLocation{scm_global/winston_13_ex4a.png}}\\
+  \end{center}
+
+  \begin{center}
+  \renewcommand{\textFont}{\scriptsize}
+  \begin{tikzpicture}[xscale=1.25,yscale=0.35]
+      \tikzstyle{decise}=[rectangle,draw,fill=blue!5,inner sep=0pt, minimum size=3mm];
+      \tikzstyle{chance}=[circle,draw,fill=red!5,inner sep=0pt, minimum size=3mm];
+      \tikzstyle{line}=[gray,->] ;
+      \tikzstyle{lineSol}=[red,thick,-] ;
+      \tikzstyle{edgeText}=[blue,above];
+
+      \uncover<2->{
+        \node[decise]   (d1)   at (-2.0,0.0) {};
+        \node[chance]   (c1)   at (-0.5,-2.0){};
+        \node[]         (o1)   at (-0.5, 2.0){\textFont{50.0-40.0=10.0k}};
+        \node[]         (o5)   at ( 1.0,-3.0){\textFont{ 0.0k}};
+
+        \draw[line]     (c1) -- node[edgeText]{\tiny{$0.6$ sold}} (o5);
+        \draw[line]     (d1) -- node[edgeText]{\tiny{buy}}  (o1);
+        \draw[line]     (d1) -- node[edgeText]{\tiny{no buy}} (c1);
+      }
+
+      \uncover<3->{
+        \node[decise]   (d2)   at ( 1.0,0.0) {};
+        \node[decise]   (d3)   at ( 4.0,0.0) {};
+        \node[chance]   (c2)   at ( 2.5,-2.0){};
+        \node[]         (o2)   at ( 2.5, 2.0){\textFont{50.0-30.0=20.0k}};
+        \node[]         (o3)   at ( 5.5, 2.0){\textFont{50.0-26.0=24.0k}};
+        \node[]         (o4)   at ( 5.5,-2.0){\textFont{ 0.0k}};
+        \node[]         (o6)   at ( 4.0,-3.0){\textFont{ 0.0k}};
+
+
+        \draw[line]     (c1) -- node[edgeText]{\tiny{$0.4$ available}} (d2);
+        \draw[line]     (d2) -- node[edgeText]{\tiny{buy}}  (o2);
+        \draw[line]     (d2) -- node[edgeText]{\tiny{no buy}} (c2);
+        \draw[line]     (c2) -- node[edgeText]{\tiny{$0.4$ available}} (d3);
+        \draw[line]     (c2) -- node[edgeText]{\tiny{$0.6$ sold}} (o6);
+        \draw[line]     (d3) -- node[edgeText]{\tiny{buy}}  (o3);
+        \draw[line]     (d3) -- node[edgeText]{\tiny{no buy}} (o4);
+      }
+
+    \uncover<4-|handout:0>{
+      \draw[lineSol]  (d3) -- (o3);
+      \draw[lineSol]  (d3) -- (c2);
+      \node[red,below]  at (d3) {\textFont{\textbf{24.0k}}} ;
+      \node[red,below]  at (c2) {\textFont{\textbf{0.4x24.0=9.6k}}} ;
+    }
+
+    \uncover<5-|handout:0>{
+      \draw[lineSol]  (d2) -- (o2);
+      \draw[lineSol]  (d2) -- (c1);
+      \node[red,below]  at (d2) {\textFont{\textbf{20.0k}}} ;
+      \node[red,below]  at (c1) {\textFont{\textbf{0.4x20.0=8.0k}}} ;
+    }
+
+    \uncover<6-|handout:0>{
+      \draw[lineSol]  (d1) -- (o1);
+      \node[red,below]  at (d1) {\textFont{\textbf{10.0k}}} ;
+    }
+
+  \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} Example of decision tree\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Questions:} What are decisions in each stage?;
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decision tree analysis \forIE }
+
+  \footnotesize{A manager at Solar Cell Panel faces decision regarding uncertainty of demand and exchange rate.  With the main market in Europe, the current demand in Europe is 100,000 units per year and market price is 70 EUR per panel. The manager must decide location of plant in Europe or China. In either case, the installed capacity of plant is 120,000 panels per year. He estimates that both uncertainty are independent from each other with probability and percentage of change as follows:
+  \begin{center} \tiny{
+  \begin{tabular}{lrrclrr}
+    \multicolumn{3}{c}{Demand uncertainty}    &      & \multicolumn{3}{c}{Exchange rate uncertainty} \\ \cline{1-3} \cline{5-7}
+                    & prob & \% changed & ~~~~ &                  & prob & \% changed \\  \cline{1-3}  \cline{5-7}
+    Demand increase & 0.8         & 20\%      &      & Yuan increase  &          0.7&     10\%  \\
+    Demand decrease & 0.2         & 20\%      &      & Yuan decrease  &          0.3&     10\%  \\  \cline{1-3} \cline{5-7}
+  \end{tabular}
+  ~\\ At present, the operational costs in the \alert{local currency} are: \\
+  \begin{tabular}{ccccccc}
+    \multicolumn{3}{c}{Euro Plan}                      &      & \multicolumn{3}{c}{Chinese Plant} \\ \cline{1-3} \cline{5-7}
+    Fixed Cost (Euro) & Var.Cost (Euro)& Cap range     & ~~~~ & fixed Cost (Yuan)   & Var.Cost  & Cap range\\  \cline{1-3} \cline{5-7}
+    1 million/year    & 40/panel       & [60.0k,150.k] &      & 8 million/year      & 340/panel & [100.0k,130.0k] \\  \cline{1-3} \cline{5-7}
+  \end{tabular}
+  }
+  \end{center}
+    If he consider a tactical decision that lasts 3 years and current exchange rate EUR:CHY is 9.0:1.0, answer the following questions:
+    \begin{itemize}
+      \item[1.] Illustrate decision tree diagram if annual discount rate is 10\%
+      \item[2.] Calculate expect profit at each period for European plant
+      \item[3.] Where he should build the plant to maximize expected profit?
+    \end{itemize}
+  }
+
+  \note{
+    \textbf{Purpose:} In-Class example of decision tree\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Questions:} What are decisions in each stage?;
+    \end{itemize}
+  }
+\end{frame}
+
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decision tree analysis: Europe \forIE}
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=1.5,yscale=0.375]
+      \tikzstyle{stage}=[circle split,draw,fill=blue!5,every lower node part/.style={red},inner sep=0pt, minimum size=5mm];
+      \tikzstyle{line}=[gray,->] ;
+      \tikzstyle{edgeText}=[green,above];
+
+      \node[] (P0)   at (-2.0,6.0) {\textbf{Period 0}};
+      \node[] (P1)   at ( 0.0,6.0) {\textbf{Period 1}};
+      \node[] (P2)   at ( 3.0,6.0) {\textbf{Period 2}};
+
+      %\tikz[every lower node part/.style={red}];
+      \node[stage,label=above:\tiny{(70-40)100.0k-1000.0k}]   (T00)   at (-2.0,0.0)  {\tiny{$100$} \nodepart{lower} \tiny{9.00}  }; % \tiny{D=100}\\ \tiny{p=1.20}
+
+      \node[stage,label=above:\tiny{(70-40)120.0k-1000.0k}]   (T10)   at ( 0.0, 1.5) {\tiny{120}\nodepart{lower} \tiny{9.90}}; % \tiny{D=120}\\ \tiny{p=1.32}
+      \node[stage,label=above:\tiny{(70-40)120.0k-1000.0k}]   (T11)   at ( 0.0,-1.5) {\tiny{120}\nodepart{lower} \tiny{8.10} };
+      \node[stage,label=above:\tiny{(70-40)80.0k-1000.0k} ]   (T12)   at ( 0.0,-4.0) {\tiny{80} \nodepart{lower} \tiny{9.90} };
+      \node[stage,label=above:\tiny{(70-40)80.0k-1000.0k} ]   (T13)   at ( 0.0,-6.0) {\tiny{80} \nodepart{lower} \tiny{8.10} };
+
+      \node[stage,label=above:\tiny{(70-40)144.0k-1000.0k}]   (T20)   at ( 3.0,4.0)   {\tiny{144} \nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70-40)144.0k-1000.0k}]   (T21)   at ( 3.0,2.0)   {\tiny{144} \nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70-40)96.0k-1000.0k} ]   (T22)   at ( 3.0,0.0)   {\tiny{96} \nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70-40)144.0k-1000.0k}]   (T23)   at ( 3.0,-2.0)  {\tiny{144}\nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70-40)96.0k-1000.0k} ]   (T24)   at ( 3.0,-4.0)  {\tiny{96}\nodepart{lower} \tiny{7.29} };
+      \node[stage,label=above:\tiny{(70-40)96.0k-1000.0k} ]   (T25)   at ( 3.0,-6.0)  {\tiny{96}\nodepart{lower} \tiny{7.29} };
+      \node[stage,label=above:\tiny{(70-40)64.0k-1000.0k} ]   (T26)   at ( 3.0,-8.0)  {\tiny{64}\nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70-40)64.0k-1000.0k} ]   (T27)   at ( 3.0,-10.0) {\tiny{64}\nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70-40)64.0k-1000.0k} ]   (T28)   at ( 3.0,-12.0) {\tiny{64}\nodepart{lower} \tiny{7.29} };
+
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.8\times.3$}}  (T10);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.8\times.7$}}  (T11);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.2\times.3$}}  (T12);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.2\times.7$}}  (T13);
+
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.8\times.3$}}  (T20);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.8\times.7$}}  (T21);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.2\times.3$}}  (T22);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.2\times.7$}}  (T24);
+
+      \draw[line]   (T11) --   (T21);
+      \draw[line]   (T11) --   (T23);
+      \draw[line]   (T11) --   (T24);
+      \draw[line]   (T11) --   (T25);
+
+      \draw[line]   (T12) --   (T22);
+      \draw[line]   (T12) --   (T24);
+      \draw[line]   (T12) --   (T26);
+      \draw[line]   (T12) --   (T27);
+
+      \draw[line]   (T13) --   (T24);
+      \draw[line]   (T13) --   (T25);
+      \draw[line]   (T13) --   (T27);
+      \draw[line]   (T13) --   (T28);
+
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} In-Class example of decision tree\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Questions:} What are decisions in each stage?;
+    \end{itemize}  }
+
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decision tree analysis: China \forIE}
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=1.5,yscale=0.375]
+      \tikzstyle{stage}=[circle split,draw,fill=blue!5,every lower node part/.style={red},inner sep=0pt, minimum size=5mm];
+      \tikzstyle{line}=[gray,->] ;
+      \tikzstyle{edgeText}=[green,above];
+
+      \node[] (P0)   at (-2.0,6.0) {\textbf{Period 0}};
+      \node[] (P1)   at ( 0.0,6.0) {\textbf{Period 1}};
+      \node[] (P2)   at ( 3.0,6.0) {\textbf{Period 2}};
+
+      %\tikz[every lower node part/.style={red}];
+      \node[stage,label=above:\tiny{(70)100.0k-(37.7)100.0k-880.0k}]   (T00)   at (-2.0,0.0) { \tiny{$100$} \nodepart{lower} \tiny{9.00}  }; % \tiny{D=100}\\ \tiny{p=1.20}
+
+      \node[stage,label=above:\tiny{(70)100.0k-(34.3)120.0k-808.0k}]   (T10)   at ( 0.0,1.0)  {\tiny{120}\nodepart{lower} \tiny{9.90}}; % \tiny{D=120}\\ \tiny{p=1.32}
+      \node[stage,label=above:\tiny{(70)120.0k-(41.9)120.0k-987.6k}]   (T11)   at ( 0.0,-1.0) {\tiny{120}\nodepart{lower} \tiny{8.10} };
+      \node[stage,label=above:\tiny{(70)100.0k-(34.3)100.0k-880.0k}]   (T12)   at ( 0.0,-3.0) {\tiny{80} \nodepart{lower} \tiny{9.90} };
+      \node[stage,label=above:\tiny{(70) 80.0k-(41.9)100.0k-987.6k}]   (T13)   at ( 0.0,-5.0) {\tiny{80} \nodepart{lower} \tiny{8.10} };
+
+      \node[stage,label=above:\tiny{(70)130.0k-(31.2)130.0k-734.6k}]   (T20)   at ( 3.0,4.0) {\tiny{144} \nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70)130.0k-(38.1)130.0k-897.8k}]   (T21)   at ( 3.0,2.0) {\tiny{144} \nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70)96.0k-(31.2)100.0k-734.6k}]    (T22)   at ( 3.0,0.0) {\tiny{96} \nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70)130.0k-(38.1)130.0k-897.8k}]   (T23)   at ( 3.0,-2.0) {\tiny{144}\nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70)96.0k-(46.6)100.0k-1097.4k}]   (T24)   at ( 3.0,-4.0) {\tiny{96}\nodepart{lower} \tiny{7.29} };
+      \node[stage,label=above:\tiny{(70)96.0k-(46.6)100.0k-1097.4k}]   (T25)   at ( 3.0,-6.0) {\tiny{96}\nodepart{lower} \tiny{7.29} };
+      \node[stage,label=above:\tiny{(70)41.0k-(31.2)100.0k-734.6k}]    (T26)   at ( 3.0,-8.0) {\tiny{64}\nodepart{lower} \tiny{10.89} };
+      \node[stage,label=above:\tiny{(70)64.0k-(38.1)100.0k-897.8k}]    (T27)   at ( 3.0,-10.0) {\tiny{64}\nodepart{lower} \tiny{8.91} };
+      \node[stage,label=above:\tiny{(70)64.0k-(46.6)100.0k-1097.4k}]   (T28)   at ( 3.0,-12.0) {\tiny{64}\nodepart{lower} \tiny{7.29} };
+
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.8\times.3$}}  (T10);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.8\times.7$}}  (T11);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.2\times.3$}}  (T12);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{$.2\times.7$}}  (T13);
+
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.8\times.3$}}  (T20);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.8\times.7$}}  (T21);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.2\times.3$}}  (T22);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{$.2\times.7$}}  (T24);
+
+      \draw[line]   (T11) --   (T21);
+      \draw[line]   (T11) --   (T23);
+      \draw[line]   (T11) --   (T24);
+      \draw[line]   (T11) --   (T25);
+
+      \draw[line]   (T12) --   (T22);
+      \draw[line]   (T12) --   (T24);
+      \draw[line]   (T12) --   (T26);
+      \draw[line]   (T12) --   (T27);
+
+      \draw[line]   (T13) --   (T24);
+      \draw[line]   (T13) --   (T25);
+      \draw[line]   (T13) --   (T27);
+      \draw[line]   (T13) --   (T28);
+
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \textbf{Purpose:} In-Class example of decision tree\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Questions:} What are decisions in each stage?;
+    \end{itemize}  }
+
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Econ analysis: Europe V. China \forIE}
+
+  \begin{center} \footnotesize{
+  \textbf{Expected Profits and Leftover}
+  \begin{tabular}{lrrrcrrr}\hline
+          & \multicolumn{3}{c}{\textbf{E[Unsold]}}   &~~& \multicolumn{3}{c}{\textbf{E[Profits]}}\\ \cline{2-4} \cline{6-8}
+    ~     & Period 0 & Period 1 & Period 2& & Period 0  & Period 1 & Period 2 \\ \hline
+    Europe& 0.0k     & 0.0k     & 0.0k    & & 2,000.0k  &	2,360.0k & 2,763.2k \\
+    China & 0.0k     & 4.0k     & 2.7k    & & 2,333.3k	& 2,302.7k & 2,203.2k \\ \hline
+  \end{tabular}
+  \vskip2em
+  \textbf{Range of Profits}\\
+  \begin{tabular}{lrrr}\hline
+    ~     & Period 0          & Period 1            & Period 2  \\ \hline
+    Europe& [2000.0k,2000.0k] & [1400.0k,2600.0k]   & [3320.0k,920.0k]      \\
+    China & [2333.3k,2333.3k] & [414.8k,3470.7k]    & [-1281.3k,4306.6k]      \\ \hline
+  \end{tabular}
+  }
+  \end{center}
+
+  \begin{itemize}
+    \item \textbf{NPV$_{euro}$:}  6429.1k EURO
+    \item \textbf{NPV$_{china}$:} 6247.5k EURO
+  \end{itemize}
+
+  \note{
+    \textbf{Purpose:} In-Class example of decision tree\\
+    \textbf{Leading Question:} $<<$None$>>$  \\
+    \begin{itemize}
+      \item \textbf{Questions:} What are decisions in each stage?;
+    \end{itemize}
+  }
+
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decision tree analysis: }
+
+  \footnotesize{A manager at Trips Logistics faces decision regarding uncertainty of demand and cost of rental space. For every 100 units of demand, the company requires a 100 $m^2$ of warehouse space and earn 1.22 USD per year. At present, the current demand is 100,000 units per year and market price of rental space is 1.2 USD per $m^2$ per year. The manager estimates that both uncertainty are independent from each other with probability and percentage of change as follows:
+
+  \begin{center} \tiny{
+  \begin{tabular}{lrrclrr}
+    \multicolumn{3}{c}{Demand uncertainty}    &      & \multicolumn{3}{c}{Rental cost uncertainty} \\ \cline{1-3} \cline{5-7}
+                    & Probability & \% changed & ~~~~ &                  & Probability & \% changed \\  \cline{1-3} \cline{5-7}
+    Demand increase & 0.5         & 20\%      &      & Rental increase  &          0.5&     10\%  \\
+    Demand decrease & 0.5         & 20\%      &      & Rental decrease  &          0.5&     10\%.  \\  \cline{1-3} \cline{5-7}
+  \end{tabular} }
+  \end{center}
+    If he currently consider a tactical decision that lasts 3 years, answer the following questions:
+    \begin{itemize}
+      \item[1.] Illustrate decision tree diagram if annual discount rate is 10\%
+      \item[2.] Determine expected rental cost if he decides to rent space for three years
+      \item[3.] Sign three year contract to rental fixed space at 1.0 USD per $m^2$ and rent more if needed
+    \end{itemize}
+  }
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Decision tree analysis: Europe }
+
+  \begin{center}
+    \begin{tikzpicture}[xscale=1.5,yscale=0.25]
+      \tikzstyle{stage}=[circle split,draw,fill=blue!5,every lower node part/.style={red},inner sep=0pt, minimum size=5mm];
+      \tikzstyle{line}=[gray,->] ;
+      \tikzstyle{edgeText}=[gray,above];
+
+      \node[] (P0)   at (-2.0,5.0) {\textbf{Period 0}};
+      \node[] (P1)   at ( 0.0,5.0) {\textbf{Period 1}};
+      \node[] (P2)   at ( 3.0,5.0) {\textbf{Period 2}};
+
+      %\tikz[every lower node part/.style={red}];
+      \node[stage]   (T00)   at (-2.0,0.0) { \tiny{$100$} \nodepart{lower} \tiny{$1.20$}  }; % \tiny{D=100}\\ \tiny{p=1.20}
+
+      \node[stage]   (T10)   at ( 0.0,1.0)  {\tiny{120}\nodepart{lower} \tiny{9.90}}; % \tiny{D=120}\\ \tiny{p=1.32}
+      \node[stage]   (T11)   at ( 0.0,-1.0) {\tiny{120}\nodepart{lower} \tiny{8.10} };
+      \node[stage]   (T12)   at ( 0.0,-3.0) {\tiny{80} \nodepart{lower} \tiny{9.90} };
+      \node[stage]   (T13)   at ( 0.0,-5.0) {\tiny{80} \nodepart{lower} \tiny{8.10} };
+
+      \node[stage]   (T20)   at ( 3.0,4.0) {\tiny{144} \nodepart{lower} \tiny{10.89} };
+      \node[stage]   (T21)   at ( 3.0,2.0) {\tiny{144} \nodepart{lower} \tiny{8.91} };
+      \node[stage]   (T22)   at ( 3.0,0.0) {\tiny{96} \nodepart{lower} \tiny{10.9} };
+      \node[stage]   (T23)   at ( 3.0,-2.0) {\tiny{144}\nodepart{lower} \tiny{0.97} };
+      \node[stage]   (T24)   at ( 3.0,-4.0) {\tiny{96}\nodepart{lower} \tiny{1.19} };
+      \node[stage]   (T25)   at ( 3.0,-6.0) {\tiny{96}\nodepart{lower} \tiny{0.97} };
+      \node[stage]   (T26)   at ( 3.0,-8.0) {\tiny{64}\nodepart{lower} \tiny{1.45} };
+      \node[stage]   (T27)   at ( 3.0,-10.0) {\tiny{64}\nodepart{lower} \tiny{1.19} };
+      \node[stage]   (T28)   at ( 3.0,-12.0) {\tiny{64}\nodepart{lower} \tiny{0.97} };
+
+      \draw[line]   (T00) -- node[edgeText]{\tiny{0.25}}  (T10);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{0.25}}  (T11);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{0.25}}  (T12);
+      \draw[line]   (T00) -- node[edgeText]{\tiny{0.25}}  (T13);
+
+      \draw[line]   (T10) -- node[edgeText]{\tiny{0.25}}  (T20);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{0.25}}  (T21);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{0.25}}  (T22);
+      \draw[line]   (T10) -- node[edgeText]{\tiny{0.25}}  (T24);
+
+      \draw[line]   (T11) --   (T21);
+      \draw[line]   (T11) --   (T23);
+      \draw[line]   (T11) --   (T24);
+      \draw[line]   (T11) --   (T25);
+
+      \draw[line]   (T12) --   (T22);
+      \draw[line]   (T12) --   (T24);
+      \draw[line]   (T12) --   (T26);
+      \draw[line]   (T12) --   (T27);
+
+      \draw[line]   (T13) --   (T24);
+      \draw[line]   (T13) --   (T25);
+      \draw[line]   (T13) --   (T27);
+      \draw[line]   (T13) --   (T28);
+
+
+    \end{tikzpicture}
+  \end{center}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+
+%============================================================================================================--
+\begin{frame}[t]
+  \titlepage \label{Slide:Title}
+
+  \NextLine   \NextLine
+  \begin{flushright}
+    \tiny{ \textbf{last updated:} \today } \hskip3ex
+  \end{flushright}
+
+  \note{ Executive review on supply chain
+    \begin{itemize}
+      \item So far, what is supply chain (parties involve)?
+      \item four supply chain strategies; How SC strategy fit with a company
+      \item conceptual design in terms of \# stores
+      \item 7-Eleven Japan $\rightarrow$ example/application
+    \end{itemize}
+
+    Practical Wake in SC and Broad scope of SC (what a typical audience think about supply chain)
+    \begin{itemize}
+      \item some thing that transform traditional view of SC
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Frame Title Here}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+
+%================================================================================================-
+\begin{frame}
+  \frametitle{Impact of E-Business}
+
+  \textbf{Customer Service}
+    \begin{itemize}
+      \item \textbf{Response time:} price flexibility, mass customization
+      \item \textbf{Time to market:} simultaneous lunch
+      \item \textbf{Order visibility}: tracking and scanning system, GPS, RFID,
+      \item \textbf{Direct sales to customers:} bullwhip effect, dead stock, few return
+      \item \textbf{Efficient funds transfer}: paypal, credit card
+    \end{itemize}
+
+  \NextLine
+  \textbf{Costs}
+  \begin{itemize}
+      \item \textbf{Inventory:} centralized slow moving sku
+      \item \textbf{Facility:} location, size
+      \item \textbf{Information:} integrate
+      \item \textbf{Transportation:} UPS, FedEx
+  \end{itemize}
+
+  \note{
+    \begin{itemize}
+      \item info
+    \end{itemize}
+  }
+\end{frame}
+
+%================================================================================================-
+
+      \item \textbf{Inventory turnover:} how often inventory is replaced during the year
+      \item \textbf{Cost of goods sold:} the annual cost for a company to produce the goods or services provided to customers
+      \item \textbf{Average aggregate inventory value:} the total value of all items held in inventory
+      \item[] \hskip3em $ \mbox{Inventory turnover} = \frac{ \mbox{Cost of Good sold} }{ \mbox{Average aggregate inventory value} } $
+      \item \textbf{Weeks of supply:} how many weeks worth of inventory is in the system at a particular point in time
+      \item[] \hskip3em $ \mbox{Weeks of supply} = \frac{1}{52 \cdot \mbox{Inventory turnover}} $
