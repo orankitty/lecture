@@ -1,0 +1,35 @@
+# LSCM_aggregated lecture audit
+
+The source has 27 active frames and 7 dormant frames. The supplied PDF has 27 slide pages and 27 instructor-note pages. All pages were assigned using the numbered slide footer and, for notes, the preceding slide. Repeated footer numbers identify presentation overlays. The mapping records page correspondence from the supplied baseline.
+
+Every frame was checked against source structure, note coverage, and PDF text. Targeted baseline images were visually inspected on PDF pages 17, 23, 43, 45. The layout heuristics count text and rendered assets in the PDF body. A frame without a detected flag still needs an instructor judgment about the original case facts and final projection layout.
+
+| Frame | Section | Title | TeX line | PDF slides | PDF notes | Severity | Evidence | Leading question in draft |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Opening | Title page | 28 | 1 | 2 | Low | Small live text detected. Embedded visual asset present. | Where have you encountered this kind of supply-chain decision? |
+| 2 | Opening | Outline | 49 | 3 | 4 | Low | Small live text detected. Embedded visual asset present. Original leading question missing or a placeholder. | Which topic would you consult first for the decision raised at the opening? |
+| 3 | Opening | Game Plan: From Conception to Shipping... | 73 | 5 | 6 | Low | Embedded visual asset present. | Where does a forecast first change a production decision? |
+| 4 | Understanding your demands | What are demands? | 108 | 7 | 8 | Low | Embedded visual asset present. | Which signals reflect real demand rather than orders distorted by stockouts? |
+| 5 | Understanding your demands | How should we manage demands? | 147 | 9 | 10 | Low | Embedded visual asset present. | Which demand should the firm serve, shift, or decline? |
+| 6 | Understanding your demands | Understanding nature of demands: | 188 | 11 | 12 | Low | Small live text detected. Embedded visual asset present. | Which demand movements repeat and which would require a new forecast? |
+| 7 | Understanding your demands | Postponement: delay differentiation | 232 | 13 | 14 | Low | Embedded visual asset present. Original leading question missing or a placeholder. | Which product feature could be decided after the customer order? |
+| 8 | Understanding your demands | Prioritizing demand with parieto principle | 280 | 15 | 16 | Low | The Pareto principle is misspelled in the title and the rank thresholds are discussion aids. Embedded visual asset present. | Which items deserve the most review effort under a value-based ABC policy? |
+| 9 | Understanding your demands | Example of ABC analysis | 313 | 17 | 18 | High | The ten values sum to 233,450. The displayed 223,450 conflicts with the percentages. The note rounds the group shares incorrectly. Embedded visual asset present. Original leading question missing or a placeholder. | How much annual dollar value is concentrated in the top two items? |
+| 10 | Forecasting SCM Demand | What should know on forecasting | 360 | 19 | 20 | Low | Embedded visual asset present. | What decision horizon determines how accurate a forecast must be? |
+| 11 | Forecasting SCM Demand | What should aware before forecast | 406 | 21 | 22 | Low | Embedded visual asset present. | What baseline would a forecast have to beat before we use it? |
+| 12 | Forecasting SCM Demand | Example: US Air Passengers 1949-1951 | 439 | 23 | 24 | Medium | The historical series shows rising levels and recurring peaks. The month and axis labels are small at projection scale. Small live text detected. | How can you tell seasonality and growth apart in the passenger series? |
+| 13 | Forecasting SCM Demand | Time Series Review: Workshop | 478 | 25 | 26 | High | The slide labels a single residual as accuracy and the note labels individual loss terms as MAPE and MSE. Embedded visual asset present. Original leading question missing or a placeholder. | What information is available at the time each forecast is made? |
+| 14 | Forecasting SCM Demand | Communicating and updating demand forecast | 510 | 27 | 28 | Low | Embedded visual asset present. | Who should see the forecast error and how should it change the next plan? |
+| 15 | Forecasting SCM Demand | Strategies for Responding to demands | 546 | 29 | 30 | Low | Embedded visual asset present. | How can production respond to a temporary demand increase? |
+| 16 | Forecasting SCM Demand | Influencing demand | 580 | 31 | 32 | Low | Embedded visual asset present. | Which demand could be shifted to a lower-load period without losing the customer? |
+| 17 | Operational Planning Concepts | What is planning? | 610 | 33 | 34 | Low | Embedded visual asset present. | What is committed now and what can change at the next planning cycle? |
+| 18 | Operational Planning Concepts | Operation Planning Concept | 646 | 35 | 36 | Low | Embedded visual asset present. | How do product families in a plan become individual production orders? |
+| 19 | Operational Planning Concepts | Production Process | 688 | 37 | 38 | Low | Small live text detected. Embedded visual asset present. | How does a process bottleneck constrain aggregate output? |
+| 20 | Operational Planning Concepts | Closed-Looped Production Planning | 794 | 39 | 40 | Low | Source frame matched the supplied PDF footer. | What happens when the scheduled output exceeds capacity? |
+| 21 | Aggregate Planning | Aggregate Planning | 885 | 41 | 42 | Low | Embedded visual asset present. Original leading question missing or a placeholder. | What costs and service outcomes distinguish level and chase plans? |
+| 22 | Aggregate Planning | Red Tomato: Aggregate planning | 911 | 43 | 44 | High | The monthly demands total 16,000, and the case statement is ambiguous about the terminal inventory and backlog. Dense text in the PDF body. Small live text detected. | How many new units are needed over six months if June backlog is zero? |
+| 23 | Aggregate Planning | Red Tomato: Model and Excel | 954 | 45 | 46 | Medium | The network diagram has small edge labels. Its spreadsheet image indicates an ending inventory equality while the case says at least 500. Embedded visual asset present. | Which constraint prevents the spreadsheet from producing infeasible output? |
+| 24 | Aggregate Planning | Problems with aggregate planning | 982 | 47 | 48 | Low | Embedded visual asset present. | Which assumptions would make an aggregate plan misleading? |
+| 25 | Sales and Operations Planning | HS.0132: Sale and Operation Planning | 1016 | 49 | 50 | Low | Small live text detected. Embedded visual asset present. | What does S&OP decide when the sales forecast exceeds the feasible plan? |
+| 26 | Sales and Operations Planning | S&OP Process | 1054 | 51 | 52 | Low | Small live text detected. Embedded visual asset present. | What should the S&OP meeting leave each function able to do? |
+| 27 | Sales and Operations Planning | Reference | 1094 | 53 | 54 | Low | Source frame matched the supplied PDF footer. | What would you check before reusing a figure, fact, or model from this lecture? |
